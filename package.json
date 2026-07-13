@@ -1,0 +1,43 @@
+{
+  "name": "ytmusic-taste-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "import:takeout": "node scripts/import-takeout.mjs",
+    "model": "node scripts/build-taste-model.mjs",
+    "cosmos": "node scripts/build-cosmos.mjs",
+    "enrich": "node scripts/enrich-artists.mjs",
+    "analyze": "node scripts/build-analysis.mjs",
+    "refresh": "node scripts/refresh.mjs"
+  },
+  "dependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "cheerio": "^1.2.0",
+    "fflate": "^0.8.2",
+    "lucide-react": "^0.525.0",
+    "ml-kmeans": "^7.0.1",
+    "next": "16.2.10",
+    "papaparse": "^5.5.3",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "recharts": "3.9.2",
+    "seedrandom": "^3.0.5",
+    "typescript": "^5.8.0",
+    "umap-js": "^1.4.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@types/papaparse": "^5.3.16",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "16.2.10"
+  },
+  "overrides": {
+    "postcss": "8.5.10"
+  }
+}

@@ -1,0 +1,8567 @@
+{
+  "Kanye West": {
+    "count": 30,
+    "matched": true,
+    "name": "Kanye West Tribute Band",
+    "score": 100,
+    "mbid": "0eb17834-1d29-47ef-a422-9dc68d73c5e4",
+    "type": "Group",
+    "country": null,
+    "area": null,
+    "tags": []
+  },
+  "Kendrick Lamar": {
+    "count": 27,
+    "matched": true,
+    "name": "Kendrick Lamar",
+    "score": 100,
+    "mbid": "381086ea-f511-4aba-bdf9-71c753dc5077",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 15,
+        "name": "hip hop"
+      },
+      {
+        "count": 10,
+        "name": "conscious hip hop"
+      },
+      {
+        "count": 9,
+        "name": "jazz rap"
+      },
+      {
+        "count": 8,
+        "name": "west coast hip hop"
+      },
+      {
+        "count": 6,
+        "name": "hardcore hip hop"
+      },
+      {
+        "count": 5,
+        "name": "rap"
+      },
+      {
+        "count": 4,
+        "name": "pop"
+      },
+      {
+        "count": 2,
+        "name": "pop rap"
+      },
+      {
+        "count": 2,
+        "name": "alternative hip hop"
+      },
+      {
+        "count": 2,
+        "name": "2010s"
+      },
+      {
+        "count": 2,
+        "name": "trap"
+      },
+      {
+        "count": 2,
+        "name": "2020s"
+      },
+      {
+        "count": 1,
+        "name": "jazz"
+      },
+      {
+        "count": 1,
+        "name": "dance"
+      }
+    ]
+  },
+  "The Beatles": {
+    "count": 21,
+    "matched": true,
+    "name": "The Beatles",
+    "score": 100,
+    "mbid": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 47,
+        "name": "rock"
+      },
+      {
+        "count": 28,
+        "name": "pop"
+      },
+      {
+        "count": 23,
+        "name": "pop rock"
+      },
+      {
+        "count": 22,
+        "name": "british"
+      },
+      {
+        "count": 16,
+        "name": "psychedelic pop"
+      },
+      {
+        "count": 15,
+        "name": "merseybeat"
+      },
+      {
+        "count": 9,
+        "name": "british invasion"
+      },
+      {
+        "count": 7,
+        "name": "psychedelic rock"
+      },
+      {
+        "count": 6,
+        "name": "60s"
+      },
+      {
+        "count": 2,
+        "name": "classic rock"
+      },
+      {
+        "count": 2,
+        "name": "rock and roll"
+      },
+      {
+        "count": 1,
+        "name": "britpop"
+      },
+      {
+        "count": 1,
+        "name": "beat"
+      },
+      {
+        "count": 1,
+        "name": "rock music"
+      }
+    ]
+  },
+  "Yumi Matsutoya": {
+    "count": 21,
+    "matched": false,
+    "tags": []
+  },
+  "Joe Hisaishi": {
+    "count": 19,
+    "matched": false,
+    "tags": []
+  },
+  "Radiohead": {
+    "count": 18,
+    "matched": true,
+    "name": "Radiohead",
+    "score": 100,
+    "mbid": "a74b1b7f-71a5-4011-9441-d0b5e4122711",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 41,
+        "name": "alternative rock"
+      },
+      {
+        "count": 29,
+        "name": "art rock"
+      },
+      {
+        "count": 18,
+        "name": "rock"
+      },
+      {
+        "count": 14,
+        "name": "british"
+      },
+      {
+        "count": 14,
+        "name": "experimental rock"
+      },
+      {
+        "count": 13,
+        "name": "electronic"
+      },
+      {
+        "count": 4,
+        "name": "indie rock"
+      },
+      {
+        "count": 3,
+        "name": "art pop"
+      },
+      {
+        "count": 2,
+        "name": "experimental"
+      },
+      {
+        "count": 2,
+        "name": "electronica"
+      },
+      {
+        "count": 2,
+        "name": "alternative"
+      },
+      {
+        "count": 2,
+        "name": "alternative rock music"
+      },
+      {
+        "count": 2,
+        "name": "post-britpop"
+      },
+      {
+        "count": 2,
+        "name": "progressive rock music"
+      }
+    ]
+  },
+  "Muse": {
+    "count": 17,
+    "matched": true,
+    "name": "Muse",
+    "score": 100,
+    "mbid": "9c9f1380-2516-4fc9-a3e6-f9f61941d090",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 30,
+        "name": "alternative rock"
+      },
+      {
+        "count": 18,
+        "name": "rock"
+      },
+      {
+        "count": 11,
+        "name": "progressive rock"
+      },
+      {
+        "count": 6,
+        "name": "uk"
+      },
+      {
+        "count": 6,
+        "name": "symphonic rock"
+      },
+      {
+        "count": 5,
+        "name": "british"
+      },
+      {
+        "count": 4,
+        "name": "pop rock"
+      },
+      {
+        "count": 2,
+        "name": "art rock"
+      },
+      {
+        "count": 2,
+        "name": "alternative metal"
+      },
+      {
+        "count": 2,
+        "name": "alternative dance"
+      },
+      {
+        "count": 1,
+        "name": "post-grunge"
+      },
+      {
+        "count": 1,
+        "name": "neo-progressive rock"
+      },
+      {
+        "count": 0,
+        "name": "political"
+      },
+      {
+        "count": 0,
+        "name": "synthpop"
+      }
+    ]
+  },
+  "Pink Floyd": {
+    "count": 17,
+    "matched": true,
+    "name": "Pink Floyd",
+    "score": 100,
+    "mbid": "83d91898-7763-47d7-b03b-b92132375c47",
+    "type": "Group",
+    "country": null,
+    "area": "England",
+    "tags": [
+      {
+        "count": 55,
+        "name": "progressive rock"
+      },
+      {
+        "count": 44,
+        "name": "psychedelic rock"
+      },
+      {
+        "count": 29,
+        "name": "rock"
+      },
+      {
+        "count": 21,
+        "name": "art rock"
+      },
+      {
+        "count": 15,
+        "name": "space rock"
+      },
+      {
+        "count": 9,
+        "name": "progressive"
+      },
+      {
+        "count": 6,
+        "name": "rock opera"
+      },
+      {
+        "count": 5,
+        "name": "classic rock"
+      },
+      {
+        "count": 4,
+        "name": "psychedelic"
+      },
+      {
+        "count": 3,
+        "name": "blues rock"
+      },
+      {
+        "count": 2,
+        "name": "album rock"
+      },
+      {
+        "count": 2,
+        "name": "psychedelic pop"
+      },
+      {
+        "count": 2,
+        "name": "experimental rock"
+      },
+      {
+        "count": 2,
+        "name": "acid rock"
+      }
+    ]
+  },
+  "Yumi Arai": {
+    "count": 16,
+    "matched": false,
+    "tags": []
+  },
+  "Daft Punk": {
+    "count": 15,
+    "matched": true,
+    "name": "Daft Punk",
+    "score": 100,
+    "mbid": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+    "type": "Group",
+    "country": "FR",
+    "area": "France",
+    "tags": [
+      {
+        "count": 40,
+        "name": "electronic"
+      },
+      {
+        "count": 20,
+        "name": "house"
+      },
+      {
+        "count": 18,
+        "name": "french house"
+      },
+      {
+        "count": 8,
+        "name": "french"
+      },
+      {
+        "count": 5,
+        "name": "dance"
+      },
+      {
+        "count": 4,
+        "name": "disco"
+      },
+      {
+        "count": 2,
+        "name": "electro"
+      },
+      {
+        "count": 2,
+        "name": "vocoder"
+      },
+      {
+        "count": 2,
+        "name": "funk"
+      },
+      {
+        "count": 2,
+        "name": "electronica"
+      },
+      {
+        "count": 2,
+        "name": "synth-pop"
+      },
+      {
+        "count": 2,
+        "name": "film score"
+      },
+      {
+        "count": 2,
+        "name": "club"
+      },
+      {
+        "count": 2,
+        "name": "electro house"
+      }
+    ]
+  },
+  "Linkin Park": {
+    "count": 15,
+    "matched": true,
+    "name": "Linkin Park",
+    "score": 100,
+    "mbid": "f59c5520-5f46-4d2c-b2c4-822eabf53419",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 38,
+        "name": "nu metal"
+      },
+      {
+        "count": 22,
+        "name": "rock"
+      },
+      {
+        "count": 15,
+        "name": "rap rock"
+      },
+      {
+        "count": 13,
+        "name": "metal"
+      },
+      {
+        "count": 7,
+        "name": "alternative rock"
+      },
+      {
+        "count": 6,
+        "name": "rap metal"
+      },
+      {
+        "count": 1,
+        "name": "alt rock"
+      },
+      {
+        "count": 0,
+        "name": "american"
+      },
+      {
+        "count": 0,
+        "name": "usa"
+      },
+      {
+        "count": 0,
+        "name": "electropop"
+      },
+      {
+        "count": 0,
+        "name": "art rock"
+      },
+      {
+        "count": 0,
+        "name": "alternative metal"
+      },
+      {
+        "count": 0,
+        "name": "pop rock"
+      },
+      {
+        "count": 0,
+        "name": "rapcore"
+      }
+    ]
+  },
+  "Avenged Sevenfold": {
+    "count": 12,
+    "matched": true,
+    "name": "Avenged Sevenfold",
+    "score": 100,
+    "mbid": "24e1b53c-3085-4581-8472-0b0088d2508c",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 10,
+        "name": "metal"
+      },
+      {
+        "count": 6,
+        "name": "hard rock"
+      },
+      {
+        "count": 5,
+        "name": "alternative metal"
+      },
+      {
+        "count": 3,
+        "name": "heavy metal"
+      },
+      {
+        "count": 3,
+        "name": "metalcore"
+      },
+      {
+        "count": 3,
+        "name": "melodic metalcore"
+      },
+      {
+        "count": 2,
+        "name": "avant-garde metal"
+      },
+      {
+        "count": 0,
+        "name": "progressive metal"
+      },
+      {
+        "count": 0,
+        "name": "american"
+      },
+      {
+        "count": 0,
+        "name": "united states"
+      }
+    ]
+  },
+  "Frank Sinatra": {
+    "count": 12,
+    "matched": true,
+    "name": "Frank Sinatra",
+    "score": 100,
+    "mbid": "197450cd-0124-4164-b723-3c22dd16494d",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 10,
+        "name": "jazz"
+      },
+      {
+        "count": 8,
+        "name": "swing"
+      },
+      {
+        "count": 7,
+        "name": "vocal jazz"
+      },
+      {
+        "count": 7,
+        "name": "traditional pop"
+      },
+      {
+        "count": 3,
+        "name": "big band"
+      },
+      {
+        "count": 3,
+        "name": "standards"
+      },
+      {
+        "count": 3,
+        "name": "christmas music"
+      },
+      {
+        "count": 2,
+        "name": "easy listening"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "vocal"
+      },
+      {
+        "count": 1,
+        "name": "lounge"
+      },
+      {
+        "count": 1,
+        "name": "christmas"
+      },
+      {
+        "count": 1,
+        "name": "singers"
+      },
+      {
+        "count": 1,
+        "name": "acting"
+      }
+    ]
+  },
+  "Queen": {
+    "count": 12,
+    "matched": true,
+    "name": "Queen",
+    "score": 100,
+    "mbid": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 43,
+        "name": "rock"
+      },
+      {
+        "count": 24,
+        "name": "glam rock"
+      },
+      {
+        "count": 21,
+        "name": "hard rock"
+      },
+      {
+        "count": 15,
+        "name": "british"
+      },
+      {
+        "count": 15,
+        "name": "art rock"
+      },
+      {
+        "count": 11,
+        "name": "pop rock"
+      },
+      {
+        "count": 7,
+        "name": "classic rock"
+      },
+      {
+        "count": 6,
+        "name": "symphonic rock"
+      },
+      {
+        "count": 5,
+        "name": "progressive rock"
+      },
+      {
+        "count": 5,
+        "name": "uk"
+      },
+      {
+        "count": 3,
+        "name": "glorious"
+      },
+      {
+        "count": 2,
+        "name": "beholder"
+      },
+      {
+        "count": 2,
+        "name": "70's"
+      },
+      {
+        "count": 1,
+        "name": "80s"
+      }
+    ]
+  },
+  "A.R. Rahman": {
+    "count": 10,
+    "matched": false,
+    "tags": []
+  },
+  "Billy Joel": {
+    "count": 10,
+    "matched": true,
+    "name": "Billy Joel",
+    "score": 100,
+    "mbid": "64b94289-9474-4d43-8c93-918ccc1920d1",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 5,
+        "name": "rock"
+      },
+      {
+        "count": 5,
+        "name": "pop"
+      },
+      {
+        "count": 5,
+        "name": "piano rock"
+      },
+      {
+        "count": 2,
+        "name": "soft rock"
+      },
+      {
+        "count": 2,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "american"
+      },
+      {
+        "count": 1,
+        "name": "singer-songwriter"
+      },
+      {
+        "count": 1,
+        "name": "classic rock"
+      },
+      {
+        "count": 0,
+        "name": "classical"
+      },
+      {
+        "count": 0,
+        "name": "usa"
+      },
+      {
+        "count": 0,
+        "name": "new york"
+      },
+      {
+        "count": 0,
+        "name": "melodic"
+      },
+      {
+        "count": 0,
+        "name": "english"
+      },
+      {
+        "count": 0,
+        "name": "classic pop and rock"
+      }
+    ]
+  },
+  "Eminem": {
+    "count": 10,
+    "matched": true,
+    "name": "Eminem",
+    "score": 100,
+    "mbid": "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 37,
+        "name": "hip hop"
+      },
+      {
+        "count": 16,
+        "name": "rap"
+      },
+      {
+        "count": 8,
+        "name": "detroit"
+      },
+      {
+        "count": 7,
+        "name": "hardcore hip hop"
+      },
+      {
+        "count": 6,
+        "name": "pop rap"
+      },
+      {
+        "count": 5,
+        "name": "midwest hip hop"
+      },
+      {
+        "count": 5,
+        "name": "detroit hip hop"
+      },
+      {
+        "count": 4,
+        "name": "hip-hop"
+      },
+      {
+        "count": 3,
+        "name": "boom bap"
+      },
+      {
+        "count": 2,
+        "name": "conscious hip hop"
+      },
+      {
+        "count": 2,
+        "name": "midwestern hip-hop"
+      },
+      {
+        "count": 1,
+        "name": "actor"
+      },
+      {
+        "count": 1,
+        "name": "songwriter"
+      },
+      {
+        "count": 1,
+        "name": "singer"
+      }
+    ]
+  },
+  "Samuel Kim": {
+    "count": 10,
+    "matched": true,
+    "name": "Samuel Kim",
+    "score": 100,
+    "mbid": "2d8ef618-048d-492d-91fe-c07a3534eb54",
+    "type": "Person",
+    "country": "CA",
+    "area": "Canada",
+    "tags": [
+      {
+        "count": 1,
+        "name": "soundtrack"
+      },
+      {
+        "count": 1,
+        "name": "score"
+      },
+      {
+        "count": 1,
+        "name": "film score"
+      }
+    ]
+  },
+  "Sid Sriram": {
+    "count": 9,
+    "matched": true,
+    "name": "Sid Sriram",
+    "score": 100,
+    "mbid": "00fc05b6-4a0d-4e0e-be4c-2cd4b94ce1e9",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "The Strokes": {
+    "count": 9,
+    "matched": true,
+    "name": "The Strokes",
+    "score": 100,
+    "mbid": "f181961b-20f7-459e-89de-920ef03c7ed0",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 18,
+        "name": "indie rock"
+      },
+      {
+        "count": 9,
+        "name": "garage rock revival"
+      },
+      {
+        "count": 6,
+        "name": "post-punk revival"
+      },
+      {
+        "count": 4,
+        "name": "new wave"
+      },
+      {
+        "count": 3,
+        "name": "rock"
+      },
+      {
+        "count": 2,
+        "name": "synth-pop"
+      },
+      {
+        "count": 2,
+        "name": "alternative rock music"
+      },
+      {
+        "count": 1,
+        "name": "garage rock"
+      },
+      {
+        "count": 1,
+        "name": "rock music"
+      },
+      {
+        "count": 1,
+        "name": "garage rock music"
+      },
+      {
+        "count": 0,
+        "name": "alternative rock"
+      },
+      {
+        "count": 0,
+        "name": "american"
+      },
+      {
+        "count": 0,
+        "name": "usa"
+      },
+      {
+        "count": 0,
+        "name": "américain"
+      }
+    ]
+  },
+  "Red Hot Chili Peppers": {
+    "count": 8,
+    "matched": true,
+    "name": "Red Hot Chili Peppers",
+    "score": 100,
+    "mbid": "8bfac288-ccc5-448d-9573-c33ea2aa5c30",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 22,
+        "name": "funk rock"
+      },
+      {
+        "count": 21,
+        "name": "rock"
+      },
+      {
+        "count": 21,
+        "name": "alternative rock"
+      },
+      {
+        "count": 9,
+        "name": "rap rock"
+      },
+      {
+        "count": 7,
+        "name": "pop rock"
+      },
+      {
+        "count": 6,
+        "name": "funk metal"
+      },
+      {
+        "count": 4,
+        "name": "funk"
+      },
+      {
+        "count": 0,
+        "name": "80s"
+      },
+      {
+        "count": 0,
+        "name": "90s"
+      },
+      {
+        "count": 0,
+        "name": "punk rock"
+      },
+      {
+        "count": 0,
+        "name": "psychedelic rock"
+      },
+      {
+        "count": 0,
+        "name": "live"
+      }
+    ]
+  },
+  "The Weeknd": {
+    "count": 8,
+    "matched": true,
+    "name": "The Weeknd",
+    "score": 100,
+    "mbid": "c8b03190-306c-4120-bb0b-6f2ebfc06ea9",
+    "type": "Person",
+    "country": "CA",
+    "area": "Canada",
+    "tags": [
+      {
+        "count": 12,
+        "name": "r&b"
+      },
+      {
+        "count": 7,
+        "name": "alternative r&b"
+      },
+      {
+        "count": 6,
+        "name": "synth-pop"
+      },
+      {
+        "count": 6,
+        "name": "dance-pop"
+      },
+      {
+        "count": 6,
+        "name": "contemporary r&b"
+      },
+      {
+        "count": 3,
+        "name": "2010s"
+      },
+      {
+        "count": 3,
+        "name": "2020s"
+      },
+      {
+        "count": 2,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "hypnagogic pop"
+      },
+      {
+        "count": 0,
+        "name": "rnb"
+      },
+      {
+        "count": 0,
+        "name": "pbr&b"
+      }
+    ]
+  },
+  "ALI": {
+    "count": 7,
+    "matched": true,
+    "name": "Nusrat Fateh Ali Khan",
+    "score": 100,
+    "mbid": "5968383c-11c1-4c5b-ada0-504a38cec8e7",
+    "type": "Person",
+    "country": "PK",
+    "area": "Pakistan",
+    "tags": [
+      {
+        "count": 6,
+        "name": "qawwali"
+      },
+      {
+        "count": 3,
+        "name": "pakistani"
+      },
+      {
+        "count": 3,
+        "name": "sufi"
+      },
+      {
+        "count": 2,
+        "name": "classical"
+      },
+      {
+        "count": 2,
+        "name": "world"
+      },
+      {
+        "count": 2,
+        "name": "ghazal"
+      },
+      {
+        "count": 1,
+        "name": "vocals"
+      },
+      {
+        "count": 1,
+        "name": "punjabi"
+      },
+      {
+        "count": 1,
+        "name": "asian"
+      },
+      {
+        "count": 1,
+        "name": "religious"
+      },
+      {
+        "count": 1,
+        "name": "ascetic"
+      },
+      {
+        "count": 1,
+        "name": "pakistani qawwali"
+      },
+      {
+        "count": 1,
+        "name": "classical folk"
+      }
+    ]
+  },
+  "Mariya Takeuchi": {
+    "count": 7,
+    "matched": false,
+    "tags": []
+  },
+  "Shankar Mahadevan": {
+    "count": 7,
+    "matched": true,
+    "name": "Shankar Mahadevan",
+    "score": 100,
+    "mbid": "bdbafa57-cf3f-4b7e-b956-fb6e0071ecd4",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": [
+      {
+        "count": 1,
+        "name": "filmi"
+      },
+      {
+        "count": 1,
+        "name": "hindi"
+      },
+      {
+        "count": 1,
+        "name": "bollywood"
+      }
+    ]
+  },
+  "Eiichi Ohtaki": {
+    "count": 6,
+    "matched": false,
+    "tags": []
+  },
+  "Hikaru Utada": {
+    "count": 6,
+    "matched": true,
+    "name": "[Hikaru Utada’s son]",
+    "score": 100,
+    "mbid": "a15dd07b-0112-44e8-9904-592e57dfd069",
+    "type": "Person",
+    "country": null,
+    "area": null,
+    "tags": []
+  },
+  "Tame Impala": {
+    "count": 6,
+    "matched": true,
+    "name": "Tame Impala",
+    "score": 100,
+    "mbid": "63aa26c3-d59b-4da4-84ac-716b54f1ef4d",
+    "type": "Person",
+    "country": "AU",
+    "area": "Australia",
+    "tags": [
+      {
+        "count": 13,
+        "name": "psychedelic rock"
+      },
+      {
+        "count": 12,
+        "name": "neo-psychedelia"
+      },
+      {
+        "count": 8,
+        "name": "psychedelic pop"
+      },
+      {
+        "count": 5,
+        "name": "alternative rock"
+      },
+      {
+        "count": 3,
+        "name": "indie rock"
+      },
+      {
+        "count": 3,
+        "name": "synth-pop"
+      },
+      {
+        "count": 3,
+        "name": "dream pop"
+      },
+      {
+        "count": 2,
+        "name": "australia"
+      },
+      {
+        "count": 2,
+        "name": "indietronica"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "australian"
+      },
+      {
+        "count": 1,
+        "name": "perth"
+      },
+      {
+        "count": 1,
+        "name": "remix"
+      }
+    ]
+  },
+  "The Beach Boys": {
+    "count": 6,
+    "matched": true,
+    "name": "The Beach Boys",
+    "score": 100,
+    "mbid": "ebfc1398-8d96-47e3-82c3-f782abcdb13d",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 17,
+        "name": "surf rock"
+      },
+      {
+        "count": 11,
+        "name": "pop"
+      },
+      {
+        "count": 9,
+        "name": "sunshine pop"
+      },
+      {
+        "count": 7,
+        "name": "pop rock"
+      },
+      {
+        "count": 6,
+        "name": "psychedelic pop"
+      },
+      {
+        "count": 5,
+        "name": "baroque pop"
+      },
+      {
+        "count": 3,
+        "name": "american"
+      },
+      {
+        "count": 3,
+        "name": "progressive pop"
+      },
+      {
+        "count": 2,
+        "name": "vocal surf"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "classic rock"
+      },
+      {
+        "count": 0,
+        "name": "usa"
+      },
+      {
+        "count": 0,
+        "name": "psychedelic rock"
+      },
+      {
+        "count": 0,
+        "name": "rock and roll"
+      }
+    ]
+  },
+  "Yugo Kanno": {
+    "count": 6,
+    "matched": false,
+    "tags": []
+  },
+  "Arctic Monkeys": {
+    "count": 5,
+    "matched": true,
+    "name": "Arctic Monkeys",
+    "score": 100,
+    "mbid": "ada7a83c-e3e1-40f1-93f9-3e73dbc9298a",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 19,
+        "name": "indie rock"
+      },
+      {
+        "count": 9,
+        "name": "alternative rock"
+      },
+      {
+        "count": 7,
+        "name": "garage rock revival"
+      },
+      {
+        "count": 7,
+        "name": "post-punk revival"
+      },
+      {
+        "count": 5,
+        "name": "british"
+      },
+      {
+        "count": 3,
+        "name": "baroque pop"
+      },
+      {
+        "count": 3,
+        "name": "garage rock"
+      },
+      {
+        "count": 2,
+        "name": "rock"
+      },
+      {
+        "count": 2,
+        "name": "uk"
+      },
+      {
+        "count": 2,
+        "name": "psychedelic rock"
+      },
+      {
+        "count": 2,
+        "name": "neo-psychedelia"
+      },
+      {
+        "count": 2,
+        "name": "sheffield"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "dance"
+      }
+    ]
+  },
+  "Bruno Mars": {
+    "count": 5,
+    "matched": true,
+    "name": "Bruno Mars",
+    "score": 100,
+    "mbid": "afb680f2-b6eb-4cd7-a70b-a63b25c763d5",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 12,
+        "name": "pop"
+      },
+      {
+        "count": 5,
+        "name": "funk"
+      },
+      {
+        "count": 4,
+        "name": "r&b"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "soul"
+      },
+      {
+        "count": 1,
+        "name": "2010s"
+      },
+      {
+        "count": 1,
+        "name": "relic inn"
+      },
+      {
+        "count": 1,
+        "name": "music for soccer moms"
+      },
+      {
+        "count": 0,
+        "name": "new wave"
+      },
+      {
+        "count": 0,
+        "name": "pop rock"
+      },
+      {
+        "count": 0,
+        "name": "pop soul"
+      },
+      {
+        "count": 0,
+        "name": "contemporary r&b"
+      },
+      {
+        "count": 0,
+        "name": "synth funk"
+      },
+      {
+        "count": 0,
+        "name": "a filk artist"
+      }
+    ]
+  },
+  "Chinmayi": {
+    "count": 5,
+    "matched": true,
+    "name": "Chinmayi",
+    "score": 100,
+    "mbid": "5a14bca0-8afa-4c1d-a885-bf5938af7f16",
+    "type": "Person",
+    "country": null,
+    "area": "Tamil Nadu",
+    "tags": [
+      {
+        "count": 1,
+        "name": "filmi"
+      }
+    ]
+  },
+  "Fleetwood Mac": {
+    "count": 5,
+    "matched": true,
+    "name": "Fleetwood Mac",
+    "score": 100,
+    "mbid": "bd13909f-1c29-4c27-a874-d4aaf27c5b1a",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 17,
+        "name": "rock"
+      },
+      {
+        "count": 13,
+        "name": "soft rock"
+      },
+      {
+        "count": 11,
+        "name": "blues rock"
+      },
+      {
+        "count": 10,
+        "name": "pop rock"
+      },
+      {
+        "count": 6,
+        "name": "blues"
+      },
+      {
+        "count": 5,
+        "name": "british blues"
+      },
+      {
+        "count": 4,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "classic rock"
+      },
+      {
+        "count": 1,
+        "name": "art pop"
+      },
+      {
+        "count": 0,
+        "name": "british"
+      },
+      {
+        "count": 0,
+        "name": "folk rock"
+      },
+      {
+        "count": 0,
+        "name": "psychedelic rock"
+      },
+      {
+        "count": 0,
+        "name": "jam band"
+      },
+      {
+        "count": 0,
+        "name": "acoustic rock"
+      }
+    ]
+  },
+  "Geese": {
+    "count": 5,
+    "matched": true,
+    "name": "Geese",
+    "score": 100,
+    "mbid": "e0c97a4d-c392-41a9-a374-57af3e3eeab3",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 4,
+        "name": "indie rock"
+      },
+      {
+        "count": 4,
+        "name": "art punk"
+      },
+      {
+        "count": 2,
+        "name": "post-punk"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "cowpunk"
+      },
+      {
+        "count": 1,
+        "name": "punk blues"
+      }
+    ]
+  },
+  "Harris Jayaraj": {
+    "count": 5,
+    "matched": true,
+    "name": "Harris Jayaraj",
+    "score": 100,
+    "mbid": "ecdd5aa9-b760-47d4-9541-3c3d04da433b",
+    "type": "Person",
+    "country": null,
+    "area": "Chennai",
+    "tags": [
+      {
+        "count": 1,
+        "name": "film composer"
+      },
+      {
+        "count": 1,
+        "name": "filmi"
+      }
+    ]
+  },
+  "John Lennon": {
+    "count": 5,
+    "matched": true,
+    "name": "John Lennon",
+    "score": 100,
+    "mbid": "4d5447d7-c61c-4120-ba1b-d7f471d385b9",
+    "type": "Person",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 10,
+        "name": "rock"
+      },
+      {
+        "count": 7,
+        "name": "pop"
+      },
+      {
+        "count": 6,
+        "name": "experimental"
+      },
+      {
+        "count": 4,
+        "name": "british"
+      },
+      {
+        "count": 4,
+        "name": "singer-songwriter"
+      },
+      {
+        "count": 2,
+        "name": "uk"
+      },
+      {
+        "count": 2,
+        "name": "classic rock"
+      },
+      {
+        "count": 2,
+        "name": "pop rock"
+      },
+      {
+        "count": 2,
+        "name": "peace"
+      },
+      {
+        "count": 1,
+        "name": "rock and roll"
+      },
+      {
+        "count": 1,
+        "name": "english"
+      },
+      {
+        "count": 1,
+        "name": "death by murder"
+      },
+      {
+        "count": 1,
+        "name": "rock & roll"
+      },
+      {
+        "count": 0,
+        "name": "folk"
+      }
+    ]
+  },
+  "Michael Jackson": {
+    "count": 5,
+    "matched": true,
+    "name": "Michael Jackson",
+    "score": 100,
+    "mbid": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 34,
+        "name": "pop"
+      },
+      {
+        "count": 20,
+        "name": "dance-pop"
+      },
+      {
+        "count": 18,
+        "name": "disco"
+      },
+      {
+        "count": 17,
+        "name": "contemporary r&b"
+      },
+      {
+        "count": 9,
+        "name": "pop soul"
+      },
+      {
+        "count": 5,
+        "name": "soul"
+      },
+      {
+        "count": 4,
+        "name": "r&b"
+      },
+      {
+        "count": 3,
+        "name": "pop rock"
+      },
+      {
+        "count": 3,
+        "name": "new jack swing"
+      },
+      {
+        "count": 3,
+        "name": "post-disco"
+      },
+      {
+        "count": 1,
+        "name": "dance"
+      },
+      {
+        "count": 1,
+        "name": "american"
+      },
+      {
+        "count": 1,
+        "name": "hip hop"
+      },
+      {
+        "count": 1,
+        "name": "pop rap"
+      }
+    ]
+  },
+  "Parcels": {
+    "count": 5,
+    "matched": true,
+    "name": "Parcels",
+    "score": 100,
+    "mbid": "5318e774-f5b6-4ee0-82cb-4dcf398c3ff8",
+    "type": "Group",
+    "country": "AU",
+    "area": "Australia",
+    "tags": [
+      {
+        "count": 1,
+        "name": "electronic"
+      },
+      {
+        "count": 1,
+        "name": "disco"
+      },
+      {
+        "count": 1,
+        "name": "boogie"
+      },
+      {
+        "count": 1,
+        "name": "indietronica"
+      },
+      {
+        "count": 1,
+        "name": "nu disco"
+      },
+      {
+        "count": 1,
+        "name": "nu-disco"
+      }
+    ]
+  },
+  "Rousseau": {
+    "count": 5,
+    "matched": true,
+    "name": "Rousseau",
+    "score": 97,
+    "mbid": "0beea40e-efd4-4bf3-bde0-e06243cc0623",
+    "type": "Group",
+    "country": "DE",
+    "area": "Germany",
+    "tags": []
+  },
+  "Seatbelts": {
+    "count": 5,
+    "matched": true,
+    "name": "Seatbelts",
+    "score": 100,
+    "mbid": "9ca6c1a7-9580-40fb-ba0a-88d32cb88c9e",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": []
+  },
+  "Shiro SAGISU": {
+    "count": 5,
+    "matched": false,
+    "tags": []
+  },
+  "Takako Mamiya": {
+    "count": 5,
+    "matched": false,
+    "tags": []
+  },
+  "ABBA": {
+    "count": 4,
+    "matched": true,
+    "name": "ABBA",
+    "score": 100,
+    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+    "type": "Group",
+    "country": "SE",
+    "area": "Sweden",
+    "tags": [
+      {
+        "count": 17,
+        "name": "pop"
+      },
+      {
+        "count": 15,
+        "name": "disco"
+      },
+      {
+        "count": 8,
+        "name": "europop"
+      },
+      {
+        "count": 3,
+        "name": "glam rock"
+      },
+      {
+        "count": 2,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "sweden"
+      },
+      {
+        "count": 1,
+        "name": "pop-rock"
+      },
+      {
+        "count": 1,
+        "name": "1980s"
+      },
+      {
+        "count": 1,
+        "name": "1990s"
+      },
+      {
+        "count": 1,
+        "name": "dance music"
+      },
+      {
+        "count": 1,
+        "name": "euro-pop"
+      },
+      {
+        "count": 1,
+        "name": "am pop"
+      },
+      {
+        "count": 1,
+        "name": "mainstream rock"
+      }
+    ]
+  },
+  "Anri": {
+    "count": 4,
+    "matched": true,
+    "name": "anri",
+    "score": 99,
+    "mbid": "7c1b0ad7-6fe4-4733-972d-aacb39512349",
+    "type": "Person",
+    "country": "JP",
+    "area": "Japan",
+    "tags": []
+  },
+  "Bee Gees": {
+    "count": 4,
+    "matched": true,
+    "name": "Bee Gees",
+    "score": 100,
+    "mbid": "bf0f7e29-dfe1-416c-b5c6-f9ebc19ea810",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 10,
+        "name": "disco"
+      },
+      {
+        "count": 8,
+        "name": "pop"
+      },
+      {
+        "count": 3,
+        "name": "baroque pop"
+      },
+      {
+        "count": 3,
+        "name": "soft rock"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "dance"
+      },
+      {
+        "count": 1,
+        "name": "british"
+      },
+      {
+        "count": 1,
+        "name": "psychedelic pop"
+      },
+      {
+        "count": 1,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "blue-eyed soul"
+      },
+      {
+        "count": 1,
+        "name": "classic pop and rock"
+      },
+      {
+        "count": 0,
+        "name": "uk"
+      },
+      {
+        "count": 0,
+        "name": "adult contemporary"
+      },
+      {
+        "count": 0,
+        "name": "english"
+      }
+    ]
+  },
+  "Cage The Elephant": {
+    "count": 4,
+    "matched": true,
+    "name": "Cage the Elephant",
+    "score": 100,
+    "mbid": "b41b38d4-ef3e-4f37-8c75-cfe9af999696",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 10,
+        "name": "alternative rock"
+      },
+      {
+        "count": 8,
+        "name": "indie rock"
+      },
+      {
+        "count": 6,
+        "name": "garage rock"
+      },
+      {
+        "count": 2,
+        "name": "punk rock"
+      },
+      {
+        "count": 2,
+        "name": "psychedelic rock"
+      },
+      {
+        "count": 2,
+        "name": "garage rock revival"
+      },
+      {
+        "count": 2,
+        "name": "punk blues"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "alternative"
+      },
+      {
+        "count": 1,
+        "name": "acoustic rock"
+      },
+      {
+        "count": 1,
+        "name": "post-punk revival"
+      },
+      {
+        "count": 1,
+        "name": "neo-psychedelia"
+      },
+      {
+        "count": 1,
+        "name": "american trad rock"
+      }
+    ]
+  },
+  "Childish Gambino": {
+    "count": 4,
+    "matched": true,
+    "name": "Childish Gambino",
+    "score": 100,
+    "mbid": "7fb57fba-a6ef-44c2-abab-2fa3bdee607e",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 6,
+        "name": "hip hop"
+      },
+      {
+        "count": 1,
+        "name": "neo soul"
+      },
+      {
+        "count": 1,
+        "name": "r&b"
+      },
+      {
+        "count": 1,
+        "name": "contemporary r&b"
+      },
+      {
+        "count": 1,
+        "name": "nuno"
+      },
+      {
+        "count": 0,
+        "name": "rap"
+      },
+      {
+        "count": 0,
+        "name": "pbr&b"
+      }
+    ]
+  },
+  "Foo Fighters": {
+    "count": 4,
+    "matched": true,
+    "name": "Foo Fighters",
+    "score": 100,
+    "mbid": "67f66c07-6e61-4026-ade5-7e782fad3a5d",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 22,
+        "name": "rock"
+      },
+      {
+        "count": 15,
+        "name": "alternative rock"
+      },
+      {
+        "count": 12,
+        "name": "post-grunge"
+      },
+      {
+        "count": 5,
+        "name": "hard rock"
+      },
+      {
+        "count": 3,
+        "name": "grunge"
+      },
+      {
+        "count": 2,
+        "name": "american"
+      },
+      {
+        "count": 0,
+        "name": "indie rock"
+      },
+      {
+        "count": 0,
+        "name": "pop rock"
+      },
+      {
+        "count": 0,
+        "name": "us"
+      },
+      {
+        "count": 0,
+        "name": "rock and indie"
+      },
+      {
+        "count": 0,
+        "name": "everlong"
+      },
+      {
+        "count": 0,
+        "name": "nuno"
+      }
+    ]
+  },
+  "Freddie Mercury": {
+    "count": 4,
+    "matched": true,
+    "name": "Freddie Mercury",
+    "score": 100,
+    "mbid": "022589ac-7177-460d-a178-9976cf70e29f",
+    "type": "Person",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 6,
+        "name": "rock"
+      },
+      {
+        "count": 4,
+        "name": "dance-pop"
+      },
+      {
+        "count": 3,
+        "name": "pop"
+      },
+      {
+        "count": 3,
+        "name": "hard rock"
+      },
+      {
+        "count": 2,
+        "name": "classic rock"
+      },
+      {
+        "count": 2,
+        "name": "pop rock"
+      },
+      {
+        "count": 2,
+        "name": "classical crossover"
+      },
+      {
+        "count": 1,
+        "name": "classical"
+      },
+      {
+        "count": 1,
+        "name": "progressive rock"
+      },
+      {
+        "count": 1,
+        "name": "british"
+      },
+      {
+        "count": 1,
+        "name": "synth-pop"
+      },
+      {
+        "count": 1,
+        "name": "disco"
+      },
+      {
+        "count": 1,
+        "name": "glam rock"
+      },
+      {
+        "count": 1,
+        "name": "album rock"
+      }
+    ]
+  },
+  "Guns N' Roses": {
+    "count": 4,
+    "matched": true,
+    "name": "Guns N’ Roses",
+    "score": 100,
+    "mbid": "eeb1195b-f213-4ce1-b28c-8565211f8e43",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 30,
+        "name": "hard rock"
+      },
+      {
+        "count": 9,
+        "name": "glam metal"
+      },
+      {
+        "count": 5,
+        "name": "heavy metal"
+      },
+      {
+        "count": 4,
+        "name": "rock"
+      },
+      {
+        "count": 2,
+        "name": "art rock"
+      },
+      {
+        "count": 2,
+        "name": "aor"
+      },
+      {
+        "count": 1,
+        "name": "punk rock"
+      },
+      {
+        "count": 1,
+        "name": "arena rock"
+      },
+      {
+        "count": 0,
+        "name": "metal"
+      },
+      {
+        "count": 0,
+        "name": "folk rock"
+      },
+      {
+        "count": 0,
+        "name": "glam punk"
+      },
+      {
+        "count": 0,
+        "name": "estados unidos"
+      }
+    ]
+  },
+  "Jay-Z": {
+    "count": 4,
+    "matched": true,
+    "name": "Jay Z",
+    "score": 69,
+    "mbid": "e1a54a6f-608f-461f-875e-3f55eb1d1144",
+    "type": "Person",
+    "country": null,
+    "area": null,
+    "tags": []
+  },
+  "JAY-Z": {
+    "count": 4,
+    "matched": true,
+    "name": "Jay Z",
+    "score": 69,
+    "mbid": "e1a54a6f-608f-461f-875e-3f55eb1d1144",
+    "type": "Person",
+    "country": null,
+    "area": null,
+    "tags": []
+  },
+  "Karthik": {
+    "count": 4,
+    "matched": true,
+    "name": "Karthik",
+    "score": 100,
+    "mbid": "1585d053-4953-4aac-bb34-bc30c2ddf6cf",
+    "type": "Person",
+    "country": null,
+    "area": "Chennai",
+    "tags": [
+      {
+        "count": 2,
+        "name": "playback singer"
+      },
+      {
+        "count": 1,
+        "name": "filmi"
+      }
+    ]
+  },
+  "Kavinsky": {
+    "count": 4,
+    "matched": true,
+    "name": "Kavinsky",
+    "score": 100,
+    "mbid": "eb6de5f6-98f8-4b5a-bfdc-f87fa4936baa",
+    "type": "Person",
+    "country": "FR",
+    "area": "France",
+    "tags": [
+      {
+        "count": 5,
+        "name": "synthwave"
+      },
+      {
+        "count": 2,
+        "name": "french electro"
+      },
+      {
+        "count": 2,
+        "name": "electro house"
+      },
+      {
+        "count": 2,
+        "name": "synth-pop"
+      },
+      {
+        "count": 2,
+        "name": "french house"
+      },
+      {
+        "count": 1,
+        "name": "electronic"
+      },
+      {
+        "count": 1,
+        "name": "synthpop"
+      },
+      {
+        "count": 0,
+        "name": "italo house"
+      },
+      {
+        "count": 0,
+        "name": "outrun"
+      },
+      {
+        "count": 0,
+        "name": "synth"
+      }
+    ]
+  },
+  "Kenshi Yonezu": {
+    "count": 4,
+    "matched": false,
+    "tags": []
+  },
+  "Masayoshi Yamazaki": {
+    "count": 4,
+    "matched": false,
+    "tags": []
+  },
+  "Ramin Djawadi": {
+    "count": 4,
+    "matched": true,
+    "name": "Ramin Djawadi",
+    "score": 100,
+    "mbid": "f089f636-6b85-4e0e-a192-0d30ed2b44d1",
+    "type": "Person",
+    "country": "DE",
+    "area": "Germany",
+    "tags": [
+      {
+        "count": 2,
+        "name": "soundtrack"
+      },
+      {
+        "count": 2,
+        "name": "composer"
+      },
+      {
+        "count": 2,
+        "name": "cinematic classical"
+      },
+      {
+        "count": 1,
+        "name": "ambient"
+      },
+      {
+        "count": 1,
+        "name": "orchestral"
+      },
+      {
+        "count": 1,
+        "name": "iranian"
+      },
+      {
+        "count": 1,
+        "name": "film composer"
+      },
+      {
+        "count": 1,
+        "name": "modern classical"
+      },
+      {
+        "count": 1,
+        "name": "composition"
+      },
+      {
+        "count": 1,
+        "name": "conducting"
+      },
+      {
+        "count": 1,
+        "name": "motion picture music"
+      },
+      {
+        "count": 1,
+        "name": "film composers"
+      },
+      {
+        "count": 1,
+        "name": "conductors"
+      },
+      {
+        "count": 1,
+        "name": "record producers"
+      }
+    ]
+  },
+  "Taeko Onuki": {
+    "count": 4,
+    "matched": false,
+    "tags": []
+  },
+  "The Turtles": {
+    "count": 4,
+    "matched": true,
+    "name": "The Turtles",
+    "score": 100,
+    "mbid": "335b6182-0da8-4dc6-a5ec-fe13f0f87e4b",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 2,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "folk rock"
+      },
+      {
+        "count": 1,
+        "name": "psychedelic pop"
+      },
+      {
+        "count": 1,
+        "name": "sunshine pop"
+      },
+      {
+        "count": 1,
+        "name": "musical parody"
+      }
+    ]
+  },
+  "Tyler, The Creator": {
+    "count": 4,
+    "matched": true,
+    "name": "Tyler, The Creator",
+    "score": 100,
+    "mbid": "f6beac20-5dfe-4d1f-ae02-0b0a740aafd6",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 7,
+        "name": "hip hop"
+      },
+      {
+        "count": 3,
+        "name": "hardcore hip hop"
+      },
+      {
+        "count": 2,
+        "name": "horrorcore"
+      },
+      {
+        "count": 2,
+        "name": "west coast hip hop"
+      },
+      {
+        "count": 0,
+        "name": "poggers"
+      },
+      {
+        "count": 0,
+        "name": "_fix whosampled dupe url"
+      }
+    ]
+  },
+  "Vijay Prakash": {
+    "count": 4,
+    "matched": true,
+    "name": "Vijay Prakash",
+    "score": 100,
+    "mbid": "acd91eff-bdbb-4c0b-b5b4-664d76c1f14e",
+    "type": "Person",
+    "country": null,
+    "area": "Karnataka",
+    "tags": []
+  },
+  "A$AP Rocky": {
+    "count": 3,
+    "matched": true,
+    "name": "A$AP Rocky",
+    "score": 100,
+    "mbid": "25b7b584-d952-4662-a8b9-dd8cdfbfeb64",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 16,
+        "name": "hip hop"
+      },
+      {
+        "count": 5,
+        "name": "east coast hip hop"
+      },
+      {
+        "count": 3,
+        "name": "cloud rap"
+      },
+      {
+        "count": 2,
+        "name": "experimental hip hop"
+      },
+      {
+        "count": 1,
+        "name": "pop rap"
+      },
+      {
+        "count": 1,
+        "name": "hardcore hip hop"
+      },
+      {
+        "count": 1,
+        "name": "trap"
+      },
+      {
+        "count": 0,
+        "name": "rap"
+      },
+      {
+        "count": 0,
+        "name": "nigo"
+      }
+    ]
+  },
+  "AC/DC": {
+    "count": 3,
+    "matched": true,
+    "name": "AC/DC",
+    "score": 100,
+    "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
+    "type": "Group",
+    "country": "AU",
+    "area": "Australia",
+    "tags": [
+      {
+        "count": 49,
+        "name": "hard rock"
+      },
+      {
+        "count": 16,
+        "name": "rock"
+      },
+      {
+        "count": 12,
+        "name": "blues rock"
+      },
+      {
+        "count": 2,
+        "name": "rock and roll"
+      },
+      {
+        "count": 0,
+        "name": "classic rock"
+      },
+      {
+        "count": 0,
+        "name": "hard & heavy"
+      }
+    ]
+  },
+  "Alluri": {
+    "count": 3,
+    "matched": true,
+    "name": "Alluri",
+    "score": 100,
+    "mbid": "a9c3f545-be5a-4f9e-befa-6ae1f2f7f22b",
+    "type": null,
+    "country": null,
+    "area": null,
+    "tags": []
+  },
+  "Anirudh Ravichander": {
+    "count": 3,
+    "matched": true,
+    "name": "Anirudh Ravichander",
+    "score": 100,
+    "mbid": "cf76861a-c1f5-456d-8d17-5994d05eecf8",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": [
+      {
+        "count": 1,
+        "name": "filmi"
+      },
+      {
+        "count": 1,
+        "name": "composer"
+      },
+      {
+        "count": 1,
+        "name": "film composer"
+      }
+    ]
+  },
+  "Anurag Kulkarni": {
+    "count": 3,
+    "matched": true,
+    "name": "Anurag Kulkarni",
+    "score": 100,
+    "mbid": "3d379964-9045-4ac2-9678-d22b87f2021d",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "ASIAN KUNG-FU GENERATION": {
+    "count": 3,
+    "matched": true,
+    "name": "ASIAN KUNG-FU GENERATION",
+    "score": 100,
+    "mbid": "14e410f5-97f2-48ba-b1f7-a3a44cbea05c",
+    "type": "Group",
+    "country": "JP",
+    "area": "Japan",
+    "tags": [
+      {
+        "count": 6,
+        "name": "j-rock"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "alternative rock"
+      },
+      {
+        "count": 1,
+        "name": "power pop"
+      },
+      {
+        "count": 0,
+        "name": "japanese"
+      },
+      {
+        "count": 0,
+        "name": "japanese band"
+      },
+      {
+        "count": 0,
+        "name": "awesomename"
+      },
+      {
+        "count": 0,
+        "name": "likedis auto"
+      }
+    ]
+  },
+  "Creedence Clearwater Revival": {
+    "count": 3,
+    "matched": true,
+    "name": "Creedence Clearwater Revival",
+    "score": 100,
+    "mbid": "109958eb-a335-4c5e-907e-597ff4c6af46",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 14,
+        "name": "swamp rock"
+      },
+      {
+        "count": 10,
+        "name": "rock"
+      },
+      {
+        "count": 9,
+        "name": "country rock"
+      },
+      {
+        "count": 8,
+        "name": "roots rock"
+      },
+      {
+        "count": 7,
+        "name": "blues rock"
+      },
+      {
+        "count": 4,
+        "name": "southern rock"
+      },
+      {
+        "count": 3,
+        "name": "american"
+      },
+      {
+        "count": 3,
+        "name": "classic rock"
+      },
+      {
+        "count": 2,
+        "name": "folk rock"
+      },
+      {
+        "count": 2,
+        "name": "rock and roll"
+      },
+      {
+        "count": 2,
+        "name": "rock & roll"
+      },
+      {
+        "count": 1,
+        "name": "usa"
+      },
+      {
+        "count": 1,
+        "name": "rockabilly"
+      },
+      {
+        "count": 1,
+        "name": "melodic"
+      }
+    ]
+  },
+  "DAOKO": {
+    "count": 3,
+    "matched": true,
+    "name": "Daoko",
+    "score": 100,
+    "mbid": "8627f0c6-7ff3-4dee-b42d-48163e8187db",
+    "type": "Person",
+    "country": "JP",
+    "area": "Japan",
+    "tags": [
+      {
+        "count": 2,
+        "name": "japanese"
+      },
+      {
+        "count": 2,
+        "name": "hip-hop"
+      },
+      {
+        "count": 2,
+        "name": "j-pop"
+      },
+      {
+        "count": 1,
+        "name": "electropop"
+      },
+      {
+        "count": 1,
+        "name": "pop rap"
+      },
+      {
+        "count": 1,
+        "name": "clean up"
+      },
+      {
+        "count": 1,
+        "name": "japanese hip-hop"
+      }
+    ]
+  },
+  "David Bowie": {
+    "count": 3,
+    "matched": true,
+    "name": "David Bowie",
+    "score": 100,
+    "mbid": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+    "type": "Person",
+    "country": null,
+    "area": "England",
+    "tags": [
+      {
+        "count": 22,
+        "name": "glam rock"
+      },
+      {
+        "count": 22,
+        "name": "art rock"
+      },
+      {
+        "count": 11,
+        "name": "alternative rock"
+      },
+      {
+        "count": 10,
+        "name": "pop"
+      },
+      {
+        "count": 8,
+        "name": "rock"
+      },
+      {
+        "count": 7,
+        "name": "art pop"
+      },
+      {
+        "count": 6,
+        "name": "british"
+      },
+      {
+        "count": 6,
+        "name": "uk"
+      },
+      {
+        "count": 5,
+        "name": "new wave"
+      },
+      {
+        "count": 5,
+        "name": "pop rock"
+      },
+      {
+        "count": 3,
+        "name": "classic rock"
+      },
+      {
+        "count": 3,
+        "name": "actors"
+      },
+      {
+        "count": 1,
+        "name": "rock music"
+      },
+      {
+        "count": 1,
+        "name": "composers"
+      }
+    ]
+  },
+  "Drake": {
+    "count": 3,
+    "matched": true,
+    "name": "Drake",
+    "score": 100,
+    "mbid": "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
+    "type": "Person",
+    "country": "CA",
+    "area": "Canada",
+    "tags": [
+      {
+        "count": 18,
+        "name": "hip hop"
+      },
+      {
+        "count": 8,
+        "name": "r&b"
+      },
+      {
+        "count": 7,
+        "name": "pop rap"
+      },
+      {
+        "count": 6,
+        "name": "contemporary r&b"
+      },
+      {
+        "count": 5,
+        "name": "alternative r&b"
+      },
+      {
+        "count": 3,
+        "name": "pop"
+      },
+      {
+        "count": 3,
+        "name": "hip-hop"
+      },
+      {
+        "count": 3,
+        "name": "trap"
+      },
+      {
+        "count": 2,
+        "name": "top 100"
+      },
+      {
+        "count": 2,
+        "name": "trap rap"
+      },
+      {
+        "count": 2,
+        "name": "top 5"
+      },
+      {
+        "count": 1,
+        "name": "rap"
+      },
+      {
+        "count": 1,
+        "name": "southern hip hop"
+      },
+      {
+        "count": 1,
+        "name": "sxsw"
+      }
+    ]
+  },
+  "Ennio Morricone": {
+    "count": 3,
+    "matched": true,
+    "name": "Ennio Morricone",
+    "score": 100,
+    "mbid": "a16e47f5-aa54-47fe-87e4-bb8af91a9fdd",
+    "type": "Person",
+    "country": "IT",
+    "area": "Italy",
+    "tags": [
+      {
+        "count": 6,
+        "name": "modern classical"
+      },
+      {
+        "count": 5,
+        "name": "soundtrack"
+      },
+      {
+        "count": 3,
+        "name": "classical"
+      },
+      {
+        "count": 3,
+        "name": "composer"
+      },
+      {
+        "count": 3,
+        "name": "film score"
+      },
+      {
+        "count": 3,
+        "name": "film soundtrack"
+      },
+      {
+        "count": 3,
+        "name": "spaghetti western"
+      },
+      {
+        "count": 3,
+        "name": "television music"
+      },
+      {
+        "count": 2,
+        "name": "italian"
+      },
+      {
+        "count": 2,
+        "name": "cinematic classical"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "jazz"
+      },
+      {
+        "count": 1,
+        "name": "avant-garde"
+      }
+    ]
+  },
+  "Frank Ocean": {
+    "count": 3,
+    "matched": true,
+    "name": "Frank Ocean",
+    "score": 100,
+    "mbid": "e520459c-dff4-491d-a6e4-c97be35e0044",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 4,
+        "name": "contemporary r&b"
+      },
+      {
+        "count": 2,
+        "name": "pop"
+      },
+      {
+        "count": 2,
+        "name": "rnb"
+      },
+      {
+        "count": 2,
+        "name": "r&b"
+      },
+      {
+        "count": 2,
+        "name": "alternative r&b"
+      },
+      {
+        "count": 1,
+        "name": "queer"
+      },
+      {
+        "count": 0,
+        "name": "server name"
+      }
+    ]
+  },
+  "Gorillaz": {
+    "count": 3,
+    "matched": true,
+    "name": "Gorillaz",
+    "score": 100,
+    "mbid": "e21857d5-3256-4547-afb3-4b6ded592596",
+    "type": "Group",
+    "country": null,
+    "area": "England",
+    "tags": [
+      {
+        "count": 19,
+        "name": "electronic"
+      },
+      {
+        "count": 19,
+        "name": "alternative rock"
+      },
+      {
+        "count": 16,
+        "name": "trip hop"
+      },
+      {
+        "count": 14,
+        "name": "hip hop"
+      },
+      {
+        "count": 12,
+        "name": "electropop"
+      },
+      {
+        "count": 7,
+        "name": "alternative dance"
+      },
+      {
+        "count": 7,
+        "name": "virtual band"
+      },
+      {
+        "count": 6,
+        "name": "british"
+      },
+      {
+        "count": 5,
+        "name": "art pop"
+      },
+      {
+        "count": 4,
+        "name": "fictional"
+      },
+      {
+        "count": 4,
+        "name": "fictitious artist"
+      },
+      {
+        "count": 4,
+        "name": "trip rock"
+      },
+      {
+        "count": 3,
+        "name": "rock"
+      },
+      {
+        "count": 3,
+        "name": "electronica"
+      }
+    ]
+  },
+  "Green Day": {
+    "count": 3,
+    "matched": true,
+    "name": "Green Day",
+    "score": 100,
+    "mbid": "084308bd-1654-436f-ba03-df6697104e19",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 33,
+        "name": "punk rock"
+      },
+      {
+        "count": 30,
+        "name": "pop punk"
+      },
+      {
+        "count": 17,
+        "name": "alternative rock"
+      },
+      {
+        "count": 11,
+        "name": "rock"
+      },
+      {
+        "count": 6,
+        "name": "punk"
+      },
+      {
+        "count": 4,
+        "name": "power pop"
+      },
+      {
+        "count": 3,
+        "name": "queer"
+      },
+      {
+        "count": 2,
+        "name": "american"
+      },
+      {
+        "count": 1,
+        "name": "alternative"
+      },
+      {
+        "count": 0,
+        "name": "pop"
+      },
+      {
+        "count": 0,
+        "name": "grunge"
+      },
+      {
+        "count": 0,
+        "name": "post-punk"
+      },
+      {
+        "count": 0,
+        "name": "ska punk"
+      },
+      {
+        "count": 0,
+        "name": "pop-punk"
+      }
+    ]
+  },
+  "Hans Zimmer": {
+    "count": 3,
+    "matched": true,
+    "name": "Hans Zimmer",
+    "score": 100,
+    "mbid": "e6de1f3b-6484-491c-88dd-6d619f142abc",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 14,
+        "name": "soundtrack"
+      },
+      {
+        "count": 9,
+        "name": "orchestral"
+      },
+      {
+        "count": 9,
+        "name": "modern classical"
+      },
+      {
+        "count": 8,
+        "name": "film composer"
+      },
+      {
+        "count": 5,
+        "name": "cinematic classical"
+      },
+      {
+        "count": 4,
+        "name": "german"
+      },
+      {
+        "count": 3,
+        "name": "composer"
+      },
+      {
+        "count": 3,
+        "name": "contemporary classical"
+      },
+      {
+        "count": 2,
+        "name": "classical"
+      },
+      {
+        "count": 2,
+        "name": "soundtrack composer"
+      },
+      {
+        "count": 2,
+        "name": "film score"
+      },
+      {
+        "count": 2,
+        "name": "european"
+      },
+      {
+        "count": 2,
+        "name": "film soundtrack"
+      },
+      {
+        "count": 1,
+        "name": "instrumental"
+      }
+    ]
+  },
+  "King Crimson": {
+    "count": 3,
+    "matched": true,
+    "name": "King Crimson",
+    "score": 100,
+    "mbid": "b38225b8-8e5f-42aa-bcdc-7bae5b5bdab3",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 23,
+        "name": "progressive rock"
+      },
+      {
+        "count": 7,
+        "name": "art rock"
+      },
+      {
+        "count": 6,
+        "name": "experimental rock"
+      },
+      {
+        "count": 5,
+        "name": "free improvisation"
+      },
+      {
+        "count": 4,
+        "name": "british"
+      },
+      {
+        "count": 4,
+        "name": "jazz fusion"
+      },
+      {
+        "count": 2,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "progressive"
+      },
+      {
+        "count": 1,
+        "name": "symphonic rock"
+      },
+      {
+        "count": 1,
+        "name": "avant-garde"
+      },
+      {
+        "count": 1,
+        "name": "symphonic prog"
+      },
+      {
+        "count": 0,
+        "name": "new wave"
+      },
+      {
+        "count": 0,
+        "name": "uk"
+      },
+      {
+        "count": 0,
+        "name": "improvisation"
+      }
+    ]
+  },
+  "Mai Yamane": {
+    "count": 3,
+    "matched": false,
+    "tags": []
+  },
+  "Masayuki Suzuki": {
+    "count": 3,
+    "matched": false,
+    "tags": []
+  },
+  "Metro Boomin": {
+    "count": 3,
+    "matched": true,
+    "name": "Metro Boomin",
+    "score": 100,
+    "mbid": "59db3d82-86ea-451f-881f-dffc8ec387c9",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 4,
+        "name": "hip hop"
+      },
+      {
+        "count": 3,
+        "name": "trap"
+      }
+    ]
+  },
+  "Mij": {
+    "count": 3,
+    "matched": true,
+    "name": "MIJ",
+    "score": 98,
+    "mbid": "be8302ef-e2cc-437b-9415-60f8b9fac45e",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": []
+  },
+  "Nirvana": {
+    "count": 3,
+    "matched": true,
+    "name": "Nirvana",
+    "score": 100,
+    "mbid": "5b11f4ce-a62d-471e-81fc-a69a8278c7da",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 64,
+        "name": "grunge"
+      },
+      {
+        "count": 29,
+        "name": "alternative rock"
+      },
+      {
+        "count": 23,
+        "name": "rock"
+      },
+      {
+        "count": 12,
+        "name": "noise rock"
+      },
+      {
+        "count": 8,
+        "name": "american"
+      },
+      {
+        "count": 8,
+        "name": "acoustic rock"
+      },
+      {
+        "count": 6,
+        "name": "seattle"
+      },
+      {
+        "count": 4,
+        "name": "90s"
+      },
+      {
+        "count": 3,
+        "name": "sludge metal"
+      },
+      {
+        "count": 2,
+        "name": "usa"
+      },
+      {
+        "count": 1,
+        "name": "punk"
+      },
+      {
+        "count": 1,
+        "name": "punk rock"
+      },
+      {
+        "count": 1,
+        "name": "alternative metal"
+      },
+      {
+        "count": 1,
+        "name": "post-hardcore"
+      }
+    ]
+  },
+  "Nujabes": {
+    "count": 3,
+    "matched": true,
+    "name": "Nujabes",
+    "score": 100,
+    "mbid": "1595addf-f76b-450a-a097-af852ff35f27",
+    "type": "Person",
+    "country": "JP",
+    "area": "Japan",
+    "tags": [
+      {
+        "count": 9,
+        "name": "instrumental hip hop"
+      },
+      {
+        "count": 8,
+        "name": "instrumental"
+      },
+      {
+        "count": 8,
+        "name": "hip hop"
+      },
+      {
+        "count": 6,
+        "name": "alternative hip hop"
+      },
+      {
+        "count": 4,
+        "name": "jazz fusion"
+      },
+      {
+        "count": 2,
+        "name": "japan"
+      },
+      {
+        "count": 1,
+        "name": "boom bap"
+      },
+      {
+        "count": 1,
+        "name": "jazz rap"
+      },
+      {
+        "count": 0,
+        "name": "acid jazz"
+      },
+      {
+        "count": 0,
+        "name": "_edit"
+      },
+      {
+        "count": 0,
+        "name": "death by car crash"
+      }
+    ]
+  },
+  "Platina Jazz": {
+    "count": 3,
+    "matched": true,
+    "name": "Platina Jazz",
+    "score": 100,
+    "mbid": "bd3017a7-cabd-43cc-9d7b-974872f29193",
+    "type": "Group",
+    "country": "SE",
+    "area": "Sweden",
+    "tags": [
+      {
+        "count": 1,
+        "name": "jazz"
+      },
+      {
+        "count": 1,
+        "name": "anime"
+      },
+      {
+        "count": 1,
+        "name": "cover"
+      }
+    ]
+  },
+  "Queens of the Stone Age": {
+    "count": 3,
+    "matched": true,
+    "name": "Queens of the Stone Age",
+    "score": 100,
+    "mbid": "7dc8f5bd-9d0b-4087-9f73-dc164950bbd8",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 21,
+        "name": "stoner rock"
+      },
+      {
+        "count": 12,
+        "name": "hard rock"
+      },
+      {
+        "count": 11,
+        "name": "alternative rock"
+      },
+      {
+        "count": 4,
+        "name": "rock"
+      },
+      {
+        "count": 3,
+        "name": "desert rock"
+      },
+      {
+        "count": 0,
+        "name": "american"
+      },
+      {
+        "count": 0,
+        "name": "art rock"
+      },
+      {
+        "count": 0,
+        "name": "garage rock revival"
+      },
+      {
+        "count": 0,
+        "name": "palm desert scene"
+      },
+      {
+        "count": 0,
+        "name": "nuno"
+      }
+    ]
+  },
+  "RADWIMPS": {
+    "count": 3,
+    "matched": true,
+    "name": "RADWIMPS",
+    "score": 100,
+    "mbid": "6f500293-7396-4903-b4fd-118127d06f9e",
+    "type": "Group",
+    "country": "JP",
+    "area": "Japan",
+    "tags": [
+      {
+        "count": 2,
+        "name": "rock"
+      },
+      {
+        "count": 2,
+        "name": "j-rock"
+      },
+      {
+        "count": 2,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "alternative rock"
+      },
+      {
+        "count": 0,
+        "name": "likedis auto"
+      }
+    ]
+  },
+  "S.P.Balasubramanyam": {
+    "count": 3,
+    "matched": false,
+    "tags": []
+  },
+  "Simon & Garfunkel": {
+    "count": 3,
+    "matched": true,
+    "name": "Simon & Garfunkel",
+    "score": 100,
+    "mbid": "5d02f264-e225-41ff-83f7-d9b1f0b1874a",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 15,
+        "name": "folk rock"
+      },
+      {
+        "count": 6,
+        "name": "folk"
+      },
+      {
+        "count": 5,
+        "name": "folk pop"
+      },
+      {
+        "count": 4,
+        "name": "rock"
+      },
+      {
+        "count": 2,
+        "name": "singer-songwriter"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "contemporary folk"
+      },
+      {
+        "count": 0,
+        "name": "american"
+      },
+      {
+        "count": 0,
+        "name": "classic rock"
+      },
+      {
+        "count": 0,
+        "name": "pop rock"
+      },
+      {
+        "count": 0,
+        "name": "film soundtrack"
+      },
+      {
+        "count": 0,
+        "name": "classic pop and rock"
+      },
+      {
+        "count": 0,
+        "name": "seven"
+      },
+      {
+        "count": 0,
+        "name": "simon-garfunkel"
+      }
+    ]
+  },
+  "System Of A Down": {
+    "count": 3,
+    "matched": true,
+    "name": "System of a Down",
+    "score": 100,
+    "mbid": "cc0b7089-c08d-4c10-b6b0-873582c17fd6",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 18,
+        "name": "alternative metal"
+      },
+      {
+        "count": 6,
+        "name": "alternative rock"
+      },
+      {
+        "count": 5,
+        "name": "nu metal"
+      },
+      {
+        "count": 3,
+        "name": "heavy metal"
+      },
+      {
+        "count": 1,
+        "name": "hard rock"
+      },
+      {
+        "count": 0,
+        "name": "hard alternative"
+      }
+    ]
+  },
+  "The Kinks": {
+    "count": 3,
+    "matched": true,
+    "name": "The Kinks",
+    "score": 100,
+    "mbid": "17b53d9f-5c63-4a09-a593-dde4608e0db9",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 9,
+        "name": "rock"
+      },
+      {
+        "count": 3,
+        "name": "mod"
+      },
+      {
+        "count": 3,
+        "name": "rock & roll"
+      },
+      {
+        "count": 2,
+        "name": "british"
+      },
+      {
+        "count": 2,
+        "name": "pop rock"
+      },
+      {
+        "count": 2,
+        "name": "rock and roll"
+      },
+      {
+        "count": 2,
+        "name": "english"
+      },
+      {
+        "count": 2,
+        "name": "beat music"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "classic rock"
+      },
+      {
+        "count": 1,
+        "name": "garage rock"
+      },
+      {
+        "count": 1,
+        "name": "british invasion"
+      },
+      {
+        "count": 1,
+        "name": "proto-punk"
+      },
+      {
+        "count": 1,
+        "name": "60's"
+      }
+    ]
+  },
+  "Tomoko Aran": {
+    "count": 3,
+    "matched": false,
+    "tags": []
+  },
+  "YUKI": {
+    "count": 3,
+    "matched": true,
+    "name": "YUKI",
+    "score": 100,
+    "mbid": "c45f4716-448b-42ef-8e56-1d711672077b",
+    "type": "Person",
+    "country": "JP",
+    "area": "Japan",
+    "tags": [
+      {
+        "count": 1,
+        "name": "j-pop"
+      },
+      {
+        "count": 1,
+        "name": "singer-songwriter"
+      }
+    ]
+  },
+  "2Pac": {
+    "count": 2,
+    "matched": true,
+    "name": "2Pac",
+    "score": 100,
+    "mbid": "382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 16,
+        "name": "gangsta rap"
+      },
+      {
+        "count": 14,
+        "name": "west coast hip hop"
+      },
+      {
+        "count": 13,
+        "name": "hip hop"
+      },
+      {
+        "count": 10,
+        "name": "political hip hop"
+      },
+      {
+        "count": 9,
+        "name": "conscious hip hop"
+      },
+      {
+        "count": 5,
+        "name": "g-funk"
+      },
+      {
+        "count": 3,
+        "name": "death by murder"
+      },
+      {
+        "count": 2,
+        "name": "90s"
+      },
+      {
+        "count": 1,
+        "name": "pop rap"
+      },
+      {
+        "count": 0,
+        "name": "american"
+      },
+      {
+        "count": 0,
+        "name": "hip-hop"
+      },
+      {
+        "count": 0,
+        "name": "1990s"
+      },
+      {
+        "count": 0,
+        "name": "west coast hip-hop"
+      },
+      {
+        "count": 0,
+        "name": "death by gun"
+      }
+    ]
+  },
+  "A. R. Rahman": {
+    "count": 2,
+    "matched": true,
+    "name": "A. R. Rahman",
+    "score": 100,
+    "mbid": "e0bba708-bdd3-478d-84ea-c706413bedab",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": [
+      {
+        "count": 5,
+        "name": "classical"
+      },
+      {
+        "count": 4,
+        "name": "soundtrack"
+      },
+      {
+        "count": 4,
+        "name": "indian"
+      },
+      {
+        "count": 4,
+        "name": "film score"
+      },
+      {
+        "count": 2,
+        "name": "world fusion"
+      },
+      {
+        "count": 1,
+        "name": "filmi"
+      },
+      {
+        "count": 1,
+        "name": "academy award winner"
+      },
+      {
+        "count": 0,
+        "name": "bollywood"
+      },
+      {
+        "count": 0,
+        "name": "theatre"
+      },
+      {
+        "count": 0,
+        "name": "asian"
+      },
+      {
+        "count": 0,
+        "name": "easy listening soundtracks and musicals"
+      },
+      {
+        "count": 0,
+        "name": "ar-rahman"
+      },
+      {
+        "count": 0,
+        "name": "cham cham"
+      }
+    ]
+  },
+  "AJR": {
+    "count": 2,
+    "matched": true,
+    "name": "AJR",
+    "score": 100,
+    "mbid": "2eb55bd9-cfbf-44fd-a5da-92dd825284c7",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 4,
+        "name": "pop"
+      },
+      {
+        "count": 3,
+        "name": "indie pop"
+      },
+      {
+        "count": 2,
+        "name": "2010s"
+      },
+      {
+        "count": 1,
+        "name": "alternative pop"
+      },
+      {
+        "count": 0,
+        "name": "electropop"
+      }
+    ]
+  },
+  "Anantha Sriram": {
+    "count": 2,
+    "matched": true,
+    "name": "Anantha Sriram",
+    "score": 100,
+    "mbid": "2bb5771e-9cbc-4e80-a00f-1c467af63d33",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "Arijit Singh": {
+    "count": 2,
+    "matched": true,
+    "name": "Arijit Singh",
+    "score": 100,
+    "mbid": "ed3f4831-e3e0-4dc0-9381-f5649e9df221",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": [
+      {
+        "count": 4,
+        "name": "bollywood"
+      },
+      {
+        "count": 3,
+        "name": "filmi"
+      },
+      {
+        "count": 3,
+        "name": "indian pop"
+      },
+      {
+        "count": 0,
+        "name": "gaana"
+      }
+    ]
+  },
+  "Bad Bunny": {
+    "count": 2,
+    "matched": true,
+    "name": "Bad Bunny",
+    "score": 100,
+    "mbid": "89aa5ecb-59ad-46f5-b3eb-2d424e941f19",
+    "type": "Person",
+    "country": "PR",
+    "area": "Puerto Rico",
+    "tags": [
+      {
+        "count": 5,
+        "name": "reggaeton"
+      },
+      {
+        "count": 3,
+        "name": "trap latino"
+      },
+      {
+        "count": 2,
+        "name": "latin"
+      },
+      {
+        "count": 2,
+        "name": "latin trap"
+      },
+      {
+        "count": 1,
+        "name": "hip hop"
+      },
+      {
+        "count": 0,
+        "name": "pop"
+      },
+      {
+        "count": 0,
+        "name": "spanish"
+      },
+      {
+        "count": 0,
+        "name": "english"
+      },
+      {
+        "count": 0,
+        "name": "latin urban"
+      }
+    ]
+  },
+  "Bob Marley & The Wailers": {
+    "count": 2,
+    "matched": true,
+    "name": "Bob Marley & The Wailers",
+    "score": 100,
+    "mbid": "c296e10c-110a-4103-9e77-47bfebb7fb2e",
+    "type": "Group",
+    "country": "JM",
+    "area": "Jamaica",
+    "tags": [
+      {
+        "count": 23,
+        "name": "reggae"
+      },
+      {
+        "count": 9,
+        "name": "roots reggae"
+      },
+      {
+        "count": 2,
+        "name": "ska"
+      },
+      {
+        "count": 1,
+        "name": "dub"
+      },
+      {
+        "count": 1,
+        "name": "rocksteady"
+      },
+      {
+        "count": 1,
+        "name": "reggae music"
+      },
+      {
+        "count": 1,
+        "name": "jamaican ska"
+      },
+      {
+        "count": 0,
+        "name": "jamaican"
+      },
+      {
+        "count": 0,
+        "name": "soul"
+      },
+      {
+        "count": 0,
+        "name": "ambient dub"
+      },
+      {
+        "count": 0,
+        "name": "english"
+      },
+      {
+        "count": 0,
+        "name": "jamaica"
+      },
+      {
+        "count": 0,
+        "name": "banbarra"
+      }
+    ]
+  },
+  "Boney M.": {
+    "count": 2,
+    "matched": true,
+    "name": "Boney M.",
+    "score": 100,
+    "mbid": "5403bf6e-bc1d-4e62-b31f-926a2bf66a14",
+    "type": "Group",
+    "country": "DE",
+    "area": "Germany",
+    "tags": [
+      {
+        "count": 7,
+        "name": "disco"
+      },
+      {
+        "count": 3,
+        "name": "pop"
+      },
+      {
+        "count": 3,
+        "name": "europop"
+      },
+      {
+        "count": 2,
+        "name": "dance-pop"
+      },
+      {
+        "count": 1,
+        "name": "soul"
+      },
+      {
+        "count": 0,
+        "name": "classic pop and rock"
+      },
+      {
+        "count": 0,
+        "name": "booka-shade"
+      },
+      {
+        "count": 0,
+        "name": "euro-disco"
+      },
+      {
+        "count": 0,
+        "name": "ma baker"
+      }
+    ]
+  },
+  "Carpenters": {
+    "count": 2,
+    "matched": true,
+    "name": "Carpenters",
+    "score": 100,
+    "mbid": "4580d83b-093e-4241-91fb-2dd71f5f1f3f",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 5,
+        "name": "easy listening"
+      },
+      {
+        "count": 4,
+        "name": "soft rock"
+      },
+      {
+        "count": 4,
+        "name": "adult contemporary"
+      },
+      {
+        "count": 3,
+        "name": "pop"
+      },
+      {
+        "count": 3,
+        "name": "baroque pop"
+      },
+      {
+        "count": 3,
+        "name": "country pop"
+      },
+      {
+        "count": 2,
+        "name": "christmas music"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "2008 universal fire victim"
+      },
+      {
+        "count": 0,
+        "name": "classical"
+      },
+      {
+        "count": 0,
+        "name": "orchestral"
+      },
+      {
+        "count": 0,
+        "name": "pop rock"
+      },
+      {
+        "count": 0,
+        "name": "classic pop and rock"
+      }
+    ]
+  },
+  "Chitra": {
+    "count": 2,
+    "matched": true,
+    "name": "Chitra",
+    "score": 91,
+    "mbid": "be8b4f67-0e20-4c1c-a9c7-10666c3062d8",
+    "type": "Person",
+    "country": null,
+    "area": null,
+    "tags": []
+  },
+  "CHOWRAASTA": {
+    "count": 2,
+    "matched": true,
+    "name": "Chowraasta",
+    "score": 100,
+    "mbid": "a2226d66-7b81-4b6d-9d11-7c6b70e82487",
+    "type": "Group",
+    "country": null,
+    "area": null,
+    "tags": []
+  },
+  "Clinton": {
+    "count": 2,
+    "matched": true,
+    "name": "Bill Clinton",
+    "score": 100,
+    "mbid": "a11bd200-7f0b-43a6-b7fe-4ea04929a42b",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 2,
+        "name": "politician"
+      },
+      {
+        "count": 1,
+        "name": "has german audiobooks"
+      },
+      {
+        "count": 0,
+        "name": "adulterer"
+      },
+      {
+        "count": 0,
+        "name": "non-musician"
+      }
+    ]
+  },
+  "Coldplay": {
+    "count": 2,
+    "matched": true,
+    "name": "Coldplay",
+    "score": 100,
+    "mbid": "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 33,
+        "name": "alternative rock"
+      },
+      {
+        "count": 13,
+        "name": "pop"
+      },
+      {
+        "count": 11,
+        "name": "pop rock"
+      },
+      {
+        "count": 10,
+        "name": "british"
+      },
+      {
+        "count": 4,
+        "name": "rock"
+      },
+      {
+        "count": 3,
+        "name": "post-britpop"
+      },
+      {
+        "count": 2,
+        "name": "uk"
+      },
+      {
+        "count": 2,
+        "name": "piano rock"
+      },
+      {
+        "count": 1,
+        "name": "britpop"
+      },
+      {
+        "count": 1,
+        "name": "dream pop"
+      },
+      {
+        "count": 1,
+        "name": "art pop"
+      },
+      {
+        "count": 0,
+        "name": "britannique"
+      },
+      {
+        "count": 0,
+        "name": "indie rock"
+      },
+      {
+        "count": 0,
+        "name": "indie pop"
+      }
+    ]
+  },
+  "Danger Mouse": {
+    "count": 2,
+    "matched": true,
+    "name": "Danger Mouse",
+    "score": 100,
+    "mbid": "4b356f05-bcc2-4544-925b-fd9a1bf708be",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 2,
+        "name": "hip hop"
+      },
+      {
+        "count": 1,
+        "name": "electronic"
+      },
+      {
+        "count": 1,
+        "name": "electronica"
+      },
+      {
+        "count": 1,
+        "name": "producteur"
+      },
+      {
+        "count": 1,
+        "name": "producer"
+      },
+      {
+        "count": 1,
+        "name": "batteur"
+      },
+      {
+        "count": 1,
+        "name": "drummer"
+      }
+    ]
+  },
+  "Darbuka Siva": {
+    "count": 2,
+    "matched": true,
+    "name": "Darbuka Siva",
+    "score": 100,
+    "mbid": "13ae9e92-e384-4962-a77d-5e84f0aaa436",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "Deepu": {
+    "count": 2,
+    "matched": true,
+    "name": "Deepu",
+    "score": 100,
+    "mbid": "3d6c0a3f-352e-4125-87a8-77c14c4e26e5",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "Don McLean": {
+    "count": 2,
+    "matched": true,
+    "name": "Don McLean",
+    "score": 100,
+    "mbid": "fa19ee38-c2a9-4ed1-9b24-a18100cf9db3",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 6,
+        "name": "folk rock"
+      },
+      {
+        "count": 3,
+        "name": "folk"
+      },
+      {
+        "count": 3,
+        "name": "contemporary folk"
+      },
+      {
+        "count": 2,
+        "name": "singer-songwriter"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "american"
+      },
+      {
+        "count": 1,
+        "name": "usa"
+      },
+      {
+        "count": 1,
+        "name": "new york"
+      },
+      {
+        "count": 1,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "english"
+      },
+      {
+        "count": 1,
+        "name": "folk pop"
+      },
+      {
+        "count": 1,
+        "name": "soft"
+      },
+      {
+        "count": 1,
+        "name": "united states"
+      },
+      {
+        "count": 1,
+        "name": "poetic"
+      }
+    ]
+  },
+  "Electric Light Orchestra": {
+    "count": 2,
+    "matched": true,
+    "name": "Electric Light Orchestra",
+    "score": 100,
+    "mbid": "0c502791-4ee9-4c5f-9696-0602b721ff3b",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 13,
+        "name": "progressive rock"
+      },
+      {
+        "count": 8,
+        "name": "art rock"
+      },
+      {
+        "count": 5,
+        "name": "pop rock"
+      },
+      {
+        "count": 4,
+        "name": "symphonic rock"
+      },
+      {
+        "count": 4,
+        "name": "symphonic prog"
+      },
+      {
+        "count": 2,
+        "name": "rock"
+      },
+      {
+        "count": 2,
+        "name": "pop"
+      },
+      {
+        "count": 2,
+        "name": "progressive"
+      },
+      {
+        "count": 2,
+        "name": "crossover prog"
+      },
+      {
+        "count": 2,
+        "name": "progressive pop"
+      },
+      {
+        "count": 1,
+        "name": "classic rock"
+      }
+    ]
+  },
+  "Elvis Presley": {
+    "count": 2,
+    "matched": true,
+    "name": "Elvis Presley",
+    "score": 100,
+    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 10,
+        "name": "rockabilly"
+      },
+      {
+        "count": 10,
+        "name": "rock and roll"
+      },
+      {
+        "count": 8,
+        "name": "rock"
+      },
+      {
+        "count": 7,
+        "name": "pop"
+      },
+      {
+        "count": 7,
+        "name": "country"
+      },
+      {
+        "count": 5,
+        "name": "blues"
+      },
+      {
+        "count": 4,
+        "name": "blue-eyed soul"
+      },
+      {
+        "count": 4,
+        "name": "gospel"
+      },
+      {
+        "count": 3,
+        "name": "pop rock"
+      },
+      {
+        "count": 3,
+        "name": "film soundtrack"
+      },
+      {
+        "count": 3,
+        "name": "r&b"
+      },
+      {
+        "count": 3,
+        "name": "rock & roll"
+      },
+      {
+        "count": 2,
+        "name": "soul"
+      },
+      {
+        "count": 2,
+        "name": "christmas music"
+      }
+    ]
+  },
+  "Fujii Kaze": {
+    "count": 2,
+    "matched": false,
+    "tags": []
+  },
+  "George Harrison": {
+    "count": 2,
+    "matched": true,
+    "name": "George Harrison",
+    "score": 100,
+    "mbid": "42a8f507-8412-4611-854f-926571049fa0",
+    "type": "Person",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 5,
+        "name": "rock"
+      },
+      {
+        "count": 2,
+        "name": "electronic"
+      },
+      {
+        "count": 2,
+        "name": "singer/songwriter"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "folk"
+      },
+      {
+        "count": 1,
+        "name": "experimental"
+      },
+      {
+        "count": 1,
+        "name": "british"
+      },
+      {
+        "count": 1,
+        "name": "psychedelic rock"
+      },
+      {
+        "count": 1,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "folk pop"
+      },
+      {
+        "count": 0,
+        "name": "uk"
+      },
+      {
+        "count": 0,
+        "name": "english"
+      },
+      {
+        "count": 0,
+        "name": "united kingdom"
+      },
+      {
+        "count": 0,
+        "name": "classic pop and rock"
+      }
+    ]
+  },
+  "Georges Bizet": {
+    "count": 2,
+    "matched": true,
+    "name": "Georges Bizet",
+    "score": 100,
+    "mbid": "9bd20e6a-b41d-4983-a5b6-c0ff849fa235",
+    "type": "Person",
+    "country": "FR",
+    "area": "France",
+    "tags": [
+      {
+        "count": 4,
+        "name": "classical"
+      },
+      {
+        "count": 3,
+        "name": "opera"
+      },
+      {
+        "count": 2,
+        "name": "french"
+      },
+      {
+        "count": 2,
+        "name": "french composer"
+      },
+      {
+        "count": 2,
+        "name": "romantic classical"
+      },
+      {
+        "count": 1,
+        "name": "orchestral"
+      },
+      {
+        "count": 1,
+        "name": "piano"
+      },
+      {
+        "count": 1,
+        "name": "romantic"
+      },
+      {
+        "count": 1,
+        "name": "european"
+      },
+      {
+        "count": 1,
+        "name": "chorale"
+      },
+      {
+        "count": 1,
+        "name": "symphony"
+      },
+      {
+        "count": 0,
+        "name": "composer"
+      }
+    ]
+  },
+  "Hariharan": {
+    "count": 2,
+    "matched": true,
+    "name": "Hariharan",
+    "score": 100,
+    "mbid": "dd8f223c-66a0-4a5d-b4ca-5a4e884ddb80",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": [
+      {
+        "count": 1,
+        "name": "ghazal"
+      },
+      {
+        "count": 1,
+        "name": "filmi"
+      },
+      {
+        "count": 1,
+        "name": "bhajan"
+      }
+    ]
+  },
+  "Harry Styles": {
+    "count": 2,
+    "matched": true,
+    "name": "Harry Styles",
+    "score": 100,
+    "mbid": "7eb1ce54-a355-41f9-8d68-e018b096d427",
+    "type": "Person",
+    "country": null,
+    "area": "England",
+    "tags": [
+      {
+        "count": 8,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "new wave"
+      },
+      {
+        "count": 1,
+        "name": "funk"
+      },
+      {
+        "count": 1,
+        "name": "soul"
+      },
+      {
+        "count": 1,
+        "name": "synth-pop"
+      },
+      {
+        "count": 1,
+        "name": "soft rock"
+      },
+      {
+        "count": 1,
+        "name": "2020s"
+      },
+      {
+        "count": 1,
+        "name": "nuno"
+      },
+      {
+        "count": 0,
+        "name": "english"
+      }
+    ]
+  },
+  "I Monster": {
+    "count": 2,
+    "matched": true,
+    "name": "I Monster",
+    "score": 100,
+    "mbid": "f3c3803a-3149-467a-a816-c667146f3bed",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 3,
+        "name": "electronic"
+      },
+      {
+        "count": 3,
+        "name": "electronica"
+      },
+      {
+        "count": 3,
+        "name": "electropop"
+      },
+      {
+        "count": 3,
+        "name": "trip hop"
+      },
+      {
+        "count": 2,
+        "name": "sheffield"
+      },
+      {
+        "count": 1,
+        "name": "downtempo"
+      },
+      {
+        "count": 1,
+        "name": "electro"
+      },
+      {
+        "count": 1,
+        "name": "synth-pop"
+      },
+      {
+        "count": 1,
+        "name": "hauntology"
+      },
+      {
+        "count": 1,
+        "name": "neo-psychedelia"
+      },
+      {
+        "count": 1,
+        "name": "sampledelia"
+      },
+      {
+        "count": 0,
+        "name": "pop and chart"
+      }
+    ]
+  },
+  "Iron Maiden": {
+    "count": 2,
+    "matched": true,
+    "name": "Iron Maiden",
+    "score": 100,
+    "mbid": "ca891d65-d9b0-4258-89f7-e6ba29d83767",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 52,
+        "name": "heavy metal"
+      },
+      {
+        "count": 18,
+        "name": "nwobhm"
+      },
+      {
+        "count": 13,
+        "name": "metal"
+      },
+      {
+        "count": 7,
+        "name": "new wave of british heavy metal"
+      },
+      {
+        "count": 6,
+        "name": "british"
+      }
+    ]
+  },
+  "J. Cole": {
+    "count": 2,
+    "matched": true,
+    "name": "J. Cole",
+    "score": 100,
+    "mbid": "875203e1-8e58-4b86-8dcb-7190faf411c5",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 7,
+        "name": "hip hop"
+      },
+      {
+        "count": 2,
+        "name": "rap"
+      },
+      {
+        "count": 0,
+        "name": "hip-hop"
+      }
+    ]
+  },
+  "Javed Ali": {
+    "count": 2,
+    "matched": true,
+    "name": "Javed Ali",
+    "score": 100,
+    "mbid": "cd4131f3-c7c5-45ca-8f6c-e510a650bdff",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "JAŸ-Z": {
+    "count": 2,
+    "matched": true,
+    "name": "JAŸ‐Z",
+    "score": 100,
+    "mbid": "f82bcf78-5b69-4622-a5ef-73800768d9ac",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 10,
+        "name": "pop rap"
+      },
+      {
+        "count": 9,
+        "name": "east coast hip hop"
+      },
+      {
+        "count": 6,
+        "name": "hip hop"
+      },
+      {
+        "count": 2,
+        "name": "grammy winner"
+      },
+      {
+        "count": 2,
+        "name": "boom bap"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "hardcore hip hop"
+      },
+      {
+        "count": 1,
+        "name": "chipmunk soul"
+      },
+      {
+        "count": 0,
+        "name": "rap"
+      },
+      {
+        "count": 0,
+        "name": "rapper"
+      },
+      {
+        "count": 0,
+        "name": "us"
+      },
+      {
+        "count": 0,
+        "name": "mashup"
+      },
+      {
+        "count": 0,
+        "name": "new york hip hop"
+      },
+      {
+        "count": 0,
+        "name": "luxury rap"
+      }
+    ]
+  },
+  "Johann Sebastian Bach": {
+    "count": 2,
+    "matched": true,
+    "name": "Johann Sebastian Bach",
+    "score": 100,
+    "mbid": "24f1766e-9635-4d58-a4d4-9413f9f98a4c",
+    "type": "Person",
+    "country": "DE",
+    "area": "Germany",
+    "tags": [
+      {
+        "count": 19,
+        "name": "classical"
+      },
+      {
+        "count": 13,
+        "name": "baroque"
+      },
+      {
+        "count": 11,
+        "name": "composer"
+      },
+      {
+        "count": 8,
+        "name": "german"
+      },
+      {
+        "count": 5,
+        "name": "european"
+      },
+      {
+        "count": 3,
+        "name": "gramophone selection"
+      },
+      {
+        "count": 1,
+        "name": "german composer"
+      },
+      {
+        "count": 1,
+        "name": "orchestral"
+      },
+      {
+        "count": 1,
+        "name": "organist"
+      },
+      {
+        "count": 1,
+        "name": "bach"
+      },
+      {
+        "count": 1,
+        "name": "mass"
+      },
+      {
+        "count": 1,
+        "name": "wagner"
+      },
+      {
+        "count": 1,
+        "name": "six"
+      },
+      {
+        "count": 1,
+        "name": "motet"
+      }
+    ]
+  },
+  "John Williams": {
+    "count": 2,
+    "matched": true,
+    "name": "John Williams",
+    "score": 100,
+    "mbid": "53b106e7-0cc6-42cc-ac95-ed8d30a3a98e",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 13,
+        "name": "soundtrack"
+      },
+      {
+        "count": 9,
+        "name": "classical"
+      },
+      {
+        "count": 6,
+        "name": "composer"
+      },
+      {
+        "count": 5,
+        "name": "orchestral"
+      },
+      {
+        "count": 5,
+        "name": "film composer"
+      },
+      {
+        "count": 3,
+        "name": "conductor"
+      },
+      {
+        "count": 3,
+        "name": "score"
+      },
+      {
+        "count": 2,
+        "name": "contemporary classical"
+      },
+      {
+        "count": 2,
+        "name": "modern classical"
+      },
+      {
+        "count": 1,
+        "name": "jazz"
+      },
+      {
+        "count": 1,
+        "name": "american"
+      },
+      {
+        "count": 1,
+        "name": "game"
+      },
+      {
+        "count": 1,
+        "name": "video game"
+      },
+      {
+        "count": 1,
+        "name": "pianist"
+      }
+    ]
+  },
+  "Josh LaSota": {
+    "count": 2,
+    "matched": false,
+    "tags": []
+  },
+  "Julian Casablancas": {
+    "count": 2,
+    "matched": true,
+    "name": "Julian Casablancas",
+    "score": 100,
+    "mbid": "c5ce487b-0462-444e-a184-4de0fef7e028",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 2,
+        "name": "american"
+      },
+      {
+        "count": 1,
+        "name": "alternative dance"
+      },
+      {
+        "count": 1,
+        "name": "synth-pop"
+      },
+      {
+        "count": 1,
+        "name": "experimental rock"
+      },
+      {
+        "count": 1,
+        "name": "neo-psychedelia"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "américain"
+      },
+      {
+        "count": 1,
+        "name": "alternative"
+      },
+      {
+        "count": 1,
+        "name": "usa"
+      },
+      {
+        "count": 0,
+        "name": "indie rock"
+      },
+      {
+        "count": 0,
+        "name": "alternative rock"
+      }
+    ]
+  },
+  "Junko Ohashi": {
+    "count": 2,
+    "matched": false,
+    "tags": []
+  },
+  "K.K": {
+    "count": 2,
+    "matched": true,
+    "name": "KK Null",
+    "score": 100,
+    "mbid": "9c51604c-a456-4e3e-8f85-cc96ec0df439",
+    "type": "Person",
+    "country": "JP",
+    "area": "Japan",
+    "tags": []
+  },
+  "K.S. Chithra": {
+    "count": 2,
+    "matched": false,
+    "tags": []
+  },
+  "Kaala Bhairava": {
+    "count": 2,
+    "matched": true,
+    "name": "Kaala Bhairava",
+    "score": 100,
+    "mbid": "4d836ef3-a767-46ad-a4cf-a68b413087b2",
+    "type": "Person",
+    "country": null,
+    "area": null,
+    "tags": []
+  },
+  "kensuke ushio": {
+    "count": 2,
+    "matched": false,
+    "tags": []
+  },
+  "KIDS SEE GHOSTS": {
+    "count": 2,
+    "matched": true,
+    "name": "KIDS SEE GHOSTS",
+    "score": 100,
+    "mbid": "793e220b-64f8-46d9-954d-e033dbcfeef4",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 3,
+        "name": "hip hop"
+      },
+      {
+        "count": 1,
+        "name": "pop rap"
+      },
+      {
+        "count": 1,
+        "name": "experimental hip hop"
+      }
+    ]
+  },
+  "Led Zeppelin": {
+    "count": 2,
+    "matched": true,
+    "name": "Led Zeppelin",
+    "score": 100,
+    "mbid": "678d88b2-87b0-403b-b63d-5da7465aecc3",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 34,
+        "name": "hard rock"
+      },
+      {
+        "count": 23,
+        "name": "rock"
+      },
+      {
+        "count": 18,
+        "name": "blues rock"
+      },
+      {
+        "count": 8,
+        "name": "classic rock"
+      },
+      {
+        "count": 5,
+        "name": "british"
+      },
+      {
+        "count": 5,
+        "name": "folk rock"
+      },
+      {
+        "count": 4,
+        "name": "heavy metal"
+      },
+      {
+        "count": 2,
+        "name": "arena rock"
+      },
+      {
+        "count": 1,
+        "name": "progressive rock"
+      },
+      {
+        "count": 0,
+        "name": "prog related"
+      },
+      {
+        "count": 0,
+        "name": "reino unido"
+      }
+    ]
+  },
+  "Lil Wayne": {
+    "count": 2,
+    "matched": true,
+    "name": "Lil Wayne",
+    "score": 100,
+    "mbid": "ac9a487a-d9d2-4f27-bb23-0f4686488345",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 9,
+        "name": "hip hop"
+      },
+      {
+        "count": 9,
+        "name": "southern hip hop"
+      },
+      {
+        "count": 8,
+        "name": "gangsta rap"
+      },
+      {
+        "count": 4,
+        "name": "pop rap"
+      },
+      {
+        "count": 4,
+        "name": "rap rock"
+      },
+      {
+        "count": 4,
+        "name": "r&b"
+      },
+      {
+        "count": 2,
+        "name": "pop"
+      },
+      {
+        "count": 2,
+        "name": "2000s"
+      },
+      {
+        "count": 2,
+        "name": "2010s"
+      },
+      {
+        "count": 2,
+        "name": "trap"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "underground hip hop"
+      },
+      {
+        "count": 1,
+        "name": "top 100"
+      },
+      {
+        "count": 1,
+        "name": "top 10"
+      }
+    ]
+  },
+  "LINKIN PARK": {
+    "count": 2,
+    "matched": true,
+    "name": "Linkin Park",
+    "score": 100,
+    "mbid": "f59c5520-5f46-4d2c-b2c4-822eabf53419",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 38,
+        "name": "nu metal"
+      },
+      {
+        "count": 22,
+        "name": "rock"
+      },
+      {
+        "count": 15,
+        "name": "rap rock"
+      },
+      {
+        "count": 13,
+        "name": "metal"
+      },
+      {
+        "count": 7,
+        "name": "alternative rock"
+      },
+      {
+        "count": 6,
+        "name": "rap metal"
+      },
+      {
+        "count": 1,
+        "name": "alt rock"
+      },
+      {
+        "count": 0,
+        "name": "american"
+      },
+      {
+        "count": 0,
+        "name": "usa"
+      },
+      {
+        "count": 0,
+        "name": "electropop"
+      },
+      {
+        "count": 0,
+        "name": "art rock"
+      },
+      {
+        "count": 0,
+        "name": "alternative metal"
+      },
+      {
+        "count": 0,
+        "name": "pop rock"
+      },
+      {
+        "count": 0,
+        "name": "rapcore"
+      }
+    ]
+  },
+  "London Philharmonic Orchestra": {
+    "count": 2,
+    "matched": true,
+    "name": "London Philharmonic Orchestra",
+    "score": 100,
+    "mbid": "fa37018e-3557-4cb7-973f-555003c30174",
+    "type": "Orchestra",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 3,
+        "name": "classical"
+      },
+      {
+        "count": 3,
+        "name": "orchestra"
+      },
+      {
+        "count": 2,
+        "name": "symphony orchestra"
+      },
+      {
+        "count": 1,
+        "name": "london"
+      },
+      {
+        "count": 1,
+        "name": "philharmonic orchestra"
+      },
+      {
+        "count": 1,
+        "name": "british orchestra"
+      }
+    ]
+  },
+  "London Symphony Orchestra": {
+    "count": 2,
+    "matched": true,
+    "name": "London Symphony Orchestra",
+    "score": 100,
+    "mbid": "38712b4c-0fd4-4c65-8c7a-45676fecc973",
+    "type": "Orchestra",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 3,
+        "name": "classical"
+      },
+      {
+        "count": 0,
+        "name": "symphony orchestra"
+      },
+      {
+        "count": 0,
+        "name": "orchestra"
+      },
+      {
+        "count": 0,
+        "name": "star wars"
+      },
+      {
+        "count": 0,
+        "name": "british orchestra"
+      }
+    ]
+  },
+  "M.M. Keeravani": {
+    "count": 2,
+    "matched": false,
+    "tags": []
+  },
+  "Madhan Karky": {
+    "count": 2,
+    "matched": true,
+    "name": "Madhan Karky",
+    "score": 100,
+    "mbid": "1c89ba7b-4674-438e-8965-b50a46f37185",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "Megumi Hayashibara": {
+    "count": 2,
+    "matched": false,
+    "tags": []
+  },
+  "Michel Plasson": {
+    "count": 2,
+    "matched": true,
+    "name": "Michel Plasson",
+    "score": 100,
+    "mbid": "b3168445-9c90-409b-9112-12a0fdd2e5df",
+    "type": "Person",
+    "country": "FR",
+    "area": "France",
+    "tags": [
+      {
+        "count": 1,
+        "name": "classical"
+      },
+      {
+        "count": 1,
+        "name": "conductor"
+      },
+      {
+        "count": 1,
+        "name": "french conductor"
+      }
+    ]
+  },
+  "Miki Matsubara": {
+    "count": 2,
+    "matched": false,
+    "tags": []
+  },
+  "Mitski": {
+    "count": 2,
+    "matched": true,
+    "name": "Mitski",
+    "score": 100,
+    "mbid": "fa58cf24-0e44-421d-8519-8bf461dcfaa5",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 6,
+        "name": "indie rock"
+      },
+      {
+        "count": 4,
+        "name": "rock"
+      },
+      {
+        "count": 3,
+        "name": "singer-songwriter"
+      },
+      {
+        "count": 2,
+        "name": "alternative rock"
+      },
+      {
+        "count": 2,
+        "name": "indie"
+      },
+      {
+        "count": 2,
+        "name": "garage rock"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "punk rock"
+      },
+      {
+        "count": 1,
+        "name": "folk rock"
+      },
+      {
+        "count": 1,
+        "name": "j-pop"
+      },
+      {
+        "count": 1,
+        "name": "alternative"
+      },
+      {
+        "count": 1,
+        "name": "indie dance"
+      },
+      {
+        "count": 1,
+        "name": "folk punk"
+      },
+      {
+        "count": 1,
+        "name": "alternative/indie rock"
+      }
+    ]
+  },
+  "Moby": {
+    "count": 2,
+    "matched": true,
+    "name": "Moby",
+    "score": 100,
+    "mbid": "8970d868-0723-483b-a75b-51088913d3d4",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 13,
+        "name": "electronic"
+      },
+      {
+        "count": 9,
+        "name": "ambient"
+      },
+      {
+        "count": 6,
+        "name": "downtempo"
+      },
+      {
+        "count": 6,
+        "name": "techno"
+      },
+      {
+        "count": 4,
+        "name": "electronica"
+      },
+      {
+        "count": 3,
+        "name": "house"
+      },
+      {
+        "count": 3,
+        "name": "vegan"
+      },
+      {
+        "count": 2,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "trance"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "american"
+      },
+      {
+        "count": 1,
+        "name": "ambient techno"
+      },
+      {
+        "count": 1,
+        "name": "trip hop"
+      }
+    ]
+  },
+  "Montserrat Caballé": {
+    "count": 2,
+    "matched": true,
+    "name": "Montserrat Caballé",
+    "score": 100,
+    "mbid": "a96e61bc-1da0-45d0-816d-ebd00b70ff9d",
+    "type": "Person",
+    "country": "ES",
+    "area": "Spain",
+    "tags": [
+      {
+        "count": 2,
+        "name": "spanish"
+      },
+      {
+        "count": 2,
+        "name": "soprano"
+      },
+      {
+        "count": 2,
+        "name": "spanish soprano"
+      },
+      {
+        "count": 1,
+        "name": "european"
+      },
+      {
+        "count": 1,
+        "name": "classical"
+      }
+    ]
+  },
+  "My Chemical Romance": {
+    "count": 2,
+    "matched": true,
+    "name": "My Chemical Romance",
+    "score": 100,
+    "mbid": "c07f0676-9143-4217-8a9f-4c26bd636f13",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 14,
+        "name": "pop punk"
+      },
+      {
+        "count": 11,
+        "name": "alternative rock"
+      },
+      {
+        "count": 10,
+        "name": "emo"
+      },
+      {
+        "count": 7,
+        "name": "rock"
+      },
+      {
+        "count": 6,
+        "name": "alternative"
+      },
+      {
+        "count": 5,
+        "name": "post-hardcore"
+      },
+      {
+        "count": 1,
+        "name": "hard rock"
+      },
+      {
+        "count": 1,
+        "name": "indie rock"
+      },
+      {
+        "count": 1,
+        "name": "power pop"
+      },
+      {
+        "count": 1,
+        "name": "post-punk revival"
+      },
+      {
+        "count": 1,
+        "name": "rock opera"
+      },
+      {
+        "count": 1,
+        "name": "emo pop"
+      },
+      {
+        "count": 1,
+        "name": "pop screamo"
+      },
+      {
+        "count": 0,
+        "name": "punk"
+      }
+    ]
+  },
+  "Nancy Sinatra": {
+    "count": 2,
+    "matched": true,
+    "name": "Nancy Sinatra",
+    "score": 100,
+    "mbid": "c2e36518-9c3b-4dcb-82ad-a3fc7fe99c67",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 3,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "classic rock"
+      },
+      {
+        "count": 1,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "classic pop and rock"
+      }
+    ]
+  },
+  "Naveen": {
+    "count": 2,
+    "matched": true,
+    "name": "Naveen",
+    "score": 100,
+    "mbid": "5f2415c5-a47b-40f1-94f1-79eb4394a83e",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "Oasis": {
+    "count": 2,
+    "matched": true,
+    "name": "Oasis",
+    "score": 100,
+    "mbid": "39ab1aed-75e0-4140-bd47-540276886b60",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 14,
+        "name": "britpop"
+      },
+      {
+        "count": 12,
+        "name": "alternative rock"
+      },
+      {
+        "count": 8,
+        "name": "rock"
+      },
+      {
+        "count": 5,
+        "name": "british"
+      },
+      {
+        "count": 3,
+        "name": "neo-psychedelia"
+      },
+      {
+        "count": 2,
+        "name": "indie rock"
+      },
+      {
+        "count": 2,
+        "name": "psychedelic rock"
+      },
+      {
+        "count": 1,
+        "name": "madchester"
+      },
+      {
+        "count": 1,
+        "name": "hard rock"
+      },
+      {
+        "count": 1,
+        "name": "indie"
+      },
+      {
+        "count": 1,
+        "name": "acoustic rock"
+      },
+      {
+        "count": 1,
+        "name": "noise pop"
+      },
+      {
+        "count": 1,
+        "name": "pop rock"
+      },
+      {
+        "count": 0,
+        "name": "shoegaze"
+      }
+    ]
+  },
+  "Olivia Newton-John": {
+    "count": 2,
+    "matched": true,
+    "name": "Olivia Newton‐John",
+    "score": 100,
+    "mbid": "10ccb5d8-f9d5-4954-9441-3419b522a214",
+    "type": "Person",
+    "country": "AU",
+    "area": "Australia",
+    "tags": [
+      {
+        "count": 2,
+        "name": "pop"
+      },
+      {
+        "count": 2,
+        "name": "classic pop and rock"
+      },
+      {
+        "count": 1,
+        "name": "death by breast cancer"
+      },
+      {
+        "count": 1,
+        "name": "country"
+      },
+      {
+        "count": 1,
+        "name": "country pop"
+      },
+      {
+        "count": 1,
+        "name": "ballad"
+      },
+      {
+        "count": 1,
+        "name": "australian"
+      },
+      {
+        "count": 1,
+        "name": "british"
+      },
+      {
+        "count": 1,
+        "name": "disco"
+      },
+      {
+        "count": 1,
+        "name": "2008 universal fire victim"
+      }
+    ]
+  },
+  "Outkast": {
+    "count": 2,
+    "matched": true,
+    "name": "OutKast",
+    "score": 100,
+    "mbid": "73fdb566-a9b1-494c-9f32-51768ec9fd27",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 10,
+        "name": "hip hop"
+      },
+      {
+        "count": 6,
+        "name": "southern hip hop"
+      },
+      {
+        "count": 3,
+        "name": "pop rap"
+      },
+      {
+        "count": 2,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "funk"
+      },
+      {
+        "count": 1,
+        "name": "neo-soul"
+      },
+      {
+        "count": 1,
+        "name": "dirty south"
+      },
+      {
+        "count": 1,
+        "name": "contemporary r&b"
+      },
+      {
+        "count": 1,
+        "name": "conscious hip hop"
+      },
+      {
+        "count": 1,
+        "name": "atlanta hip hop"
+      },
+      {
+        "count": 0,
+        "name": "american"
+      },
+      {
+        "count": 0,
+        "name": "hip-hop"
+      },
+      {
+        "count": 0,
+        "name": "alternative hip-hop"
+      },
+      {
+        "count": 0,
+        "name": "southern hip-hop"
+      }
+    ]
+  },
+  "Paul Simon": {
+    "count": 2,
+    "matched": true,
+    "name": "Paul Simon",
+    "score": 100,
+    "mbid": "05517043-ff78-4988-9c22-88c68588ebb9",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 7,
+        "name": "pop"
+      },
+      {
+        "count": 7,
+        "name": "folk"
+      },
+      {
+        "count": 3,
+        "name": "singer-songwriter"
+      },
+      {
+        "count": 3,
+        "name": "folk rock"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "contemporary folk"
+      },
+      {
+        "count": 1,
+        "name": "folk pop"
+      },
+      {
+        "count": 1,
+        "name": "singer/songwriter"
+      },
+      {
+        "count": 0,
+        "name": "american"
+      },
+      {
+        "count": 0,
+        "name": "world"
+      },
+      {
+        "count": 0,
+        "name": "classic"
+      },
+      {
+        "count": 0,
+        "name": "classic pop and rock"
+      },
+      {
+        "count": 0,
+        "name": "various artists"
+      }
+    ]
+  },
+  "Rahul Nambiar": {
+    "count": 2,
+    "matched": true,
+    "name": "Rahul Nambiar",
+    "score": 100,
+    "mbid": "55d5d1dd-6ee5-4a59-9744-65b458ae440a",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": [
+      {
+        "count": 1,
+        "name": "filmi"
+      }
+    ]
+  },
+  "Redbone": {
+    "count": 2,
+    "matched": true,
+    "name": "Redbone",
+    "score": 100,
+    "mbid": "b3fa0e6f-93db-4aa5-b76e-393e24de35ba",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 4,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "american"
+      },
+      {
+        "count": 1,
+        "name": "funk rock"
+      },
+      {
+        "count": 1,
+        "name": "album rock"
+      },
+      {
+        "count": 1,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "rock and roll"
+      },
+      {
+        "count": 1,
+        "name": "swamp rock"
+      },
+      {
+        "count": 1,
+        "name": "blues-rock"
+      },
+      {
+        "count": 1,
+        "name": "rock and indie"
+      },
+      {
+        "count": 1,
+        "name": "pop soul"
+      },
+      {
+        "count": 1,
+        "name": "am pop"
+      },
+      {
+        "count": 1,
+        "name": "contemporary pop/rock"
+      },
+      {
+        "count": 1,
+        "name": "native american music"
+      }
+    ]
+  },
+  "Rush Garcia": {
+    "count": 2,
+    "matched": true,
+    "name": "Rush Garcia",
+    "score": 100,
+    "mbid": "e3cd585d-921c-4955-89f0-6e6df54b1917",
+    "type": "Person",
+    "country": null,
+    "area": "Chicago",
+    "tags": []
+  },
+  "S. Janaki": {
+    "count": 2,
+    "matched": true,
+    "name": "S. Janaki",
+    "score": 100,
+    "mbid": "ea5c9518-f1e4-4304-a6ed-9ead3a60ac2e",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": [
+      {
+        "count": 1,
+        "name": "filmi"
+      }
+    ]
+  },
+  "Saito Yuki": {
+    "count": 2,
+    "matched": false,
+    "tags": []
+  },
+  "samonpromotion": {
+    "count": 2,
+    "matched": false,
+    "tags": []
+  },
+  "Shafqat Amanat Ali": {
+    "count": 2,
+    "matched": true,
+    "name": "Shafqat Amanat Ali",
+    "score": 100,
+    "mbid": "8c5415fd-5653-43b0-a375-9f8062883029",
+    "type": "Person",
+    "country": "PK",
+    "area": "Pakistan",
+    "tags": [
+      {
+        "count": 1,
+        "name": "pakistani semi-classical"
+      },
+      {
+        "count": 1,
+        "name": "pakistani pop"
+      },
+      {
+        "count": 1,
+        "name": "pakistani"
+      }
+    ]
+  },
+  "Sooraj Santhosh": {
+    "count": 2,
+    "matched": true,
+    "name": "Sooraj Santhosh",
+    "score": 100,
+    "mbid": "ebf0c4bd-4901-43ca-8c41-3df8c6ebd033",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "Spriggangirl": {
+    "count": 2,
+    "matched": false,
+    "tags": []
+  },
+  "Steely Dan": {
+    "count": 2,
+    "matched": true,
+    "name": "Steely Dan",
+    "score": 100,
+    "mbid": "e01c3376-15fa-40d7-b747-5f219bdefdd7",
+    "type": "Group",
+    "country": null,
+    "area": "New York",
+    "tags": [
+      {
+        "count": 5,
+        "name": "jazz rock"
+      },
+      {
+        "count": 5,
+        "name": "yacht rock"
+      },
+      {
+        "count": 4,
+        "name": "pop rock"
+      },
+      {
+        "count": 3,
+        "name": "rock"
+      },
+      {
+        "count": 3,
+        "name": "soft rock"
+      },
+      {
+        "count": 3,
+        "name": "jazz-rock"
+      },
+      {
+        "count": 2,
+        "name": "jazz pop"
+      },
+      {
+        "count": 2,
+        "name": "sophisti-pop"
+      },
+      {
+        "count": 2,
+        "name": "sophisticated rock"
+      },
+      {
+        "count": 0,
+        "name": "jazz"
+      }
+    ]
+  },
+  "Steve Conte": {
+    "count": 2,
+    "matched": true,
+    "name": "Steve Conte",
+    "score": 100,
+    "mbid": "f6beabda-c961-4642-850a-efa2d8d48a73",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": []
+  },
+  "Stevie Wonder": {
+    "count": 2,
+    "matched": true,
+    "name": "Stevie Wonder",
+    "score": 100,
+    "mbid": "1ee18fb3-18a6-4c7f-8ba0-bc41cdd0462e",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 10,
+        "name": "soul"
+      },
+      {
+        "count": 3,
+        "name": "funk"
+      },
+      {
+        "count": 3,
+        "name": "contemporary r&b"
+      },
+      {
+        "count": 3,
+        "name": "rhythm & blues"
+      },
+      {
+        "count": 2,
+        "name": "pop"
+      },
+      {
+        "count": 2,
+        "name": "film soundtrack"
+      },
+      {
+        "count": 2,
+        "name": "pop soul"
+      },
+      {
+        "count": 1,
+        "name": "vegan"
+      },
+      {
+        "count": 1,
+        "name": "grammy winner"
+      },
+      {
+        "count": 0,
+        "name": "rock and indie"
+      }
+    ]
+  },
+  "SZA": {
+    "count": 2,
+    "matched": true,
+    "name": "SZA",
+    "score": 100,
+    "mbid": "272989c8-5535-492d-a25c-9f58803e027f",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 3,
+        "name": "contemporary r&b"
+      },
+      {
+        "count": 2,
+        "name": "electronic"
+      },
+      {
+        "count": 2,
+        "name": "r&b"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "american"
+      },
+      {
+        "count": 1,
+        "name": "neo-soul"
+      },
+      {
+        "count": 1,
+        "name": "soul"
+      },
+      {
+        "count": 1,
+        "name": "rnb"
+      },
+      {
+        "count": 1,
+        "name": "female vocals"
+      },
+      {
+        "count": 1,
+        "name": "neo soul"
+      },
+      {
+        "count": 1,
+        "name": "alternative rnb"
+      },
+      {
+        "count": 1,
+        "name": "hip hop soul"
+      },
+      {
+        "count": 1,
+        "name": "alternative r&b"
+      },
+      {
+        "count": 0,
+        "name": "chillwave"
+      }
+    ]
+  },
+  "The 1975": {
+    "count": 2,
+    "matched": true,
+    "name": "The 1975",
+    "score": 100,
+    "mbid": "5b6ebfe0-f72b-4902-bba9-74c8af0f1af0",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 7,
+        "name": "indie rock"
+      },
+      {
+        "count": 5,
+        "name": "pop rock"
+      },
+      {
+        "count": 4,
+        "name": "art pop"
+      },
+      {
+        "count": 3,
+        "name": "new wave"
+      },
+      {
+        "count": 2,
+        "name": "synthpop"
+      },
+      {
+        "count": 2,
+        "name": "ambient pop"
+      },
+      {
+        "count": 1,
+        "name": "alternative rock"
+      },
+      {
+        "count": 1,
+        "name": "synth-pop"
+      },
+      {
+        "count": 1,
+        "name": "indie pop"
+      },
+      {
+        "count": 1,
+        "name": "leftfield"
+      },
+      {
+        "count": 1,
+        "name": "post-punk revival"
+      },
+      {
+        "count": 1,
+        "name": "alternative pop"
+      },
+      {
+        "count": 1,
+        "name": "indietronica"
+      },
+      {
+        "count": 1,
+        "name": "tumblr"
+      }
+    ]
+  },
+  "The Black Keys": {
+    "count": 2,
+    "matched": true,
+    "name": "The Black Keys",
+    "score": 100,
+    "mbid": "d15721d8-56b4-453d-b506-fc915b14cba2",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 19,
+        "name": "blues rock"
+      },
+      {
+        "count": 7,
+        "name": "rock"
+      },
+      {
+        "count": 6,
+        "name": "blues"
+      },
+      {
+        "count": 4,
+        "name": "garage rock"
+      },
+      {
+        "count": 2,
+        "name": "alternative rock"
+      },
+      {
+        "count": 1,
+        "name": "indie rock"
+      },
+      {
+        "count": 1,
+        "name": "garage rock revival"
+      },
+      {
+        "count": 0,
+        "name": "rock and indie"
+      }
+    ]
+  },
+  "The Cat Empire": {
+    "count": 2,
+    "matched": true,
+    "name": "The Cat Empire",
+    "score": 100,
+    "mbid": "a530492f-8806-4bd7-9c14-80c237eb92fe",
+    "type": "Group",
+    "country": "AU",
+    "area": "Australia",
+    "tags": [
+      {
+        "count": 4,
+        "name": "jazz"
+      },
+      {
+        "count": 4,
+        "name": "ska"
+      },
+      {
+        "count": 2,
+        "name": "reggae"
+      },
+      {
+        "count": 2,
+        "name": "alternative"
+      },
+      {
+        "count": 2,
+        "name": "melbourne"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "folk"
+      },
+      {
+        "count": 1,
+        "name": "australian"
+      },
+      {
+        "count": 1,
+        "name": "acid jazz"
+      },
+      {
+        "count": 1,
+        "name": "latin"
+      },
+      {
+        "count": 1,
+        "name": "horns"
+      },
+      {
+        "count": 0,
+        "name": "rock and indie"
+      }
+    ]
+  },
+  "The Doors": {
+    "count": 2,
+    "matched": true,
+    "name": "The Doors",
+    "score": 100,
+    "mbid": "9efff43b-3b29-4082-824e-bc82f646f93d",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 21,
+        "name": "psychedelic rock"
+      },
+      {
+        "count": 18,
+        "name": "blues rock"
+      },
+      {
+        "count": 11,
+        "name": "acid rock"
+      },
+      {
+        "count": 10,
+        "name": "rock"
+      },
+      {
+        "count": 8,
+        "name": "classic rock"
+      },
+      {
+        "count": 4,
+        "name": "hard rock"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "gothic"
+      },
+      {
+        "count": 1,
+        "name": "psychedelic"
+      },
+      {
+        "count": 1,
+        "name": "art rock"
+      },
+      {
+        "count": 1,
+        "name": "rock and roll"
+      },
+      {
+        "count": 1,
+        "name": "gothic rock"
+      },
+      {
+        "count": 1,
+        "name": "proto-punk"
+      },
+      {
+        "count": 0,
+        "name": "album rock"
+      }
+    ]
+  },
+  "The Voidz": {
+    "count": 2,
+    "matched": true,
+    "name": "The Voidz",
+    "score": 100,
+    "mbid": "6a93cb2b-d33a-42fc-a41a-542e3a887ba6",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 1,
+        "name": "indie rock"
+      },
+      {
+        "count": 1,
+        "name": "experimental rock"
+      }
+    ]
+  },
+  "TheDigimonEmperor - RETIRED": {
+    "count": 2,
+    "matched": false,
+    "tags": []
+  },
+  "TV Girl": {
+    "count": 2,
+    "matched": true,
+    "name": "TV Girl",
+    "score": 100,
+    "mbid": "38f0c7ac-46eb-49ca-b3ab-c785ccd05a60",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 2,
+        "name": "electronic"
+      },
+      {
+        "count": 2,
+        "name": "pop"
+      },
+      {
+        "count": 2,
+        "name": "hip hop"
+      },
+      {
+        "count": 2,
+        "name": "lo-fi"
+      },
+      {
+        "count": 2,
+        "name": "indie pop"
+      },
+      {
+        "count": 1,
+        "name": "indie rock"
+      },
+      {
+        "count": 1,
+        "name": "indie"
+      },
+      {
+        "count": 1,
+        "name": "dream pop"
+      },
+      {
+        "count": 1,
+        "name": "indie electronic"
+      },
+      {
+        "count": 1,
+        "name": "alternative/indie rock"
+      }
+    ]
+  },
+  "Varijashree Venugopal": {
+    "count": 2,
+    "matched": true,
+    "name": "Varijashree Venugopal",
+    "score": 100,
+    "mbid": "ab0f421e-164c-44ed-992e-78912d4563cf",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "Yellow Magic Orchestra": {
+    "count": 2,
+    "matched": true,
+    "name": "Yellow Magic Orchestra",
+    "score": 100,
+    "mbid": "ac5af671-1df0-4312-8b7b-e61992ecc883",
+    "type": "Group",
+    "country": "JP",
+    "area": "Japan",
+    "tags": [
+      {
+        "count": 4,
+        "name": "synth-pop"
+      },
+      {
+        "count": 2,
+        "name": "electronic"
+      },
+      {
+        "count": 2,
+        "name": "synthpop"
+      },
+      {
+        "count": 2,
+        "name": "electropop"
+      },
+      {
+        "count": 2,
+        "name": "techno kayō"
+      },
+      {
+        "count": 1,
+        "name": "bitpop"
+      },
+      {
+        "count": 1,
+        "name": "art pop"
+      },
+      {
+        "count": 1,
+        "name": "electro-disco"
+      },
+      {
+        "count": 1,
+        "name": "city pop"
+      },
+      {
+        "count": 0,
+        "name": "70s"
+      },
+      {
+        "count": 0,
+        "name": "80s"
+      },
+      {
+        "count": 0,
+        "name": "japanese"
+      },
+      {
+        "count": 0,
+        "name": "techno"
+      },
+      {
+        "count": 0,
+        "name": "electronica"
+      }
+    ]
+  },
+  "Yes": {
+    "count": 2,
+    "matched": true,
+    "name": "Yes",
+    "score": 100,
+    "mbid": "c1d4f2ba-cf39-460c-9528-6b827d3417a1",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 29,
+        "name": "progressive rock"
+      },
+      {
+        "count": 7,
+        "name": "symphonic prog"
+      },
+      {
+        "count": 5,
+        "name": "rock"
+      },
+      {
+        "count": 4,
+        "name": "british"
+      },
+      {
+        "count": 4,
+        "name": "art rock"
+      },
+      {
+        "count": 3,
+        "name": "progressive pop"
+      },
+      {
+        "count": 2,
+        "name": "classic rock"
+      },
+      {
+        "count": 2,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "electronic"
+      },
+      {
+        "count": 1,
+        "name": "hard rock"
+      },
+      {
+        "count": 1,
+        "name": "progressive"
+      },
+      {
+        "count": 1,
+        "name": "synth-pop"
+      },
+      {
+        "count": 1,
+        "name": "disco"
+      },
+      {
+        "count": 1,
+        "name": "psychedelic rock"
+      }
+    ]
+  },
+  "¡Get in the robot!": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "3ee": {
+    "count": 1,
+    "matched": true,
+    "name": "3ee",
+    "score": 100,
+    "mbid": "fb1b0faf-c1bd-4153-82e0-7c4ce9294f53",
+    "type": "Person",
+    "country": null,
+    "area": null,
+    "tags": []
+  },
+  "Adarsh Rao": {
+    "count": 1,
+    "matched": true,
+    "name": "Adarsh Rao",
+    "score": 100,
+    "mbid": "db15781e-6676-4432-9b7e-056e5aa2bf33",
+    "type": null,
+    "country": null,
+    "area": null,
+    "tags": []
+  },
+  "Adoniran Barbosa": {
+    "count": 1,
+    "matched": true,
+    "name": "Adoniran Barbosa",
+    "score": 100,
+    "mbid": "b3cf1138-7300-4c6a-9f5d-79457848499b",
+    "type": "Person",
+    "country": "BR",
+    "area": "Brazil",
+    "tags": []
+  },
+  "Aerosmith": {
+    "count": 1,
+    "matched": true,
+    "name": "Aerosmith",
+    "score": 100,
+    "mbid": "3d2b98e5-556f-4451-a3ff-c50ea18d57cb",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 30,
+        "name": "hard rock"
+      },
+      {
+        "count": 16,
+        "name": "blues rock"
+      },
+      {
+        "count": 11,
+        "name": "rock"
+      },
+      {
+        "count": 5,
+        "name": "classic rock"
+      },
+      {
+        "count": 4,
+        "name": "glam metal"
+      },
+      {
+        "count": 3,
+        "name": "arena rock"
+      },
+      {
+        "count": 3,
+        "name": "rock and roll"
+      },
+      {
+        "count": 3,
+        "name": "aor"
+      },
+      {
+        "count": 0,
+        "name": "american"
+      },
+      {
+        "count": 0,
+        "name": "1980s"
+      },
+      {
+        "count": 0,
+        "name": "1970s"
+      },
+      {
+        "count": 0,
+        "name": "pop rock"
+      },
+      {
+        "count": 0,
+        "name": "roots rock"
+      },
+      {
+        "count": 0,
+        "name": "blues-rock"
+      }
+    ]
+  },
+  "Air": {
+    "count": 1,
+    "matched": true,
+    "name": "Air",
+    "score": 100,
+    "mbid": "cb67438a-7f50-4f2b-a6f1-2bb2729fd538",
+    "type": "Group",
+    "country": "FR",
+    "area": "France",
+    "tags": [
+      {
+        "count": 21,
+        "name": "electronic"
+      },
+      {
+        "count": 13,
+        "name": "downtempo"
+      },
+      {
+        "count": 10,
+        "name": "ambient"
+      },
+      {
+        "count": 8,
+        "name": "french"
+      },
+      {
+        "count": 6,
+        "name": "ambient pop"
+      },
+      {
+        "count": 5,
+        "name": "electronica"
+      },
+      {
+        "count": 3,
+        "name": "trip hop"
+      },
+      {
+        "count": 1,
+        "name": "trip-hop"
+      },
+      {
+        "count": 1,
+        "name": "alternative rock"
+      },
+      {
+        "count": 1,
+        "name": "chillout"
+      },
+      {
+        "count": 1,
+        "name": "experimental"
+      },
+      {
+        "count": 1,
+        "name": "indie rock"
+      },
+      {
+        "count": 1,
+        "name": "2000s"
+      },
+      {
+        "count": 1,
+        "name": "film score"
+      }
+    ]
+  },
+  "Aishwarya Ravichandran": {
+    "count": 1,
+    "matched": true,
+    "name": "Aishwarya Ravichandran",
+    "score": 100,
+    "mbid": "59237766-50e7-4fce-b097-a6c910dbbc61",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "Alicia Keys": {
+    "count": 1,
+    "matched": true,
+    "name": "Alicia Keys",
+    "score": 100,
+    "mbid": "8ef1df30-ae4f-4dbd-9351-1a32b208a01e",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 5,
+        "name": "r&b"
+      },
+      {
+        "count": 5,
+        "name": "contemporary r&b"
+      },
+      {
+        "count": 3,
+        "name": "soul"
+      },
+      {
+        "count": 3,
+        "name": "neo soul"
+      },
+      {
+        "count": 2,
+        "name": "pop"
+      },
+      {
+        "count": 2,
+        "name": "jazz"
+      },
+      {
+        "count": 2,
+        "name": "neo-soul"
+      },
+      {
+        "count": 2,
+        "name": "jazz pop"
+      },
+      {
+        "count": 2,
+        "name": "pop soul"
+      },
+      {
+        "count": 2,
+        "name": "adult contemporary r&b"
+      },
+      {
+        "count": 1,
+        "name": "rap"
+      },
+      {
+        "count": 1,
+        "name": "hip hop"
+      },
+      {
+        "count": 1,
+        "name": "female vocals"
+      },
+      {
+        "count": 1,
+        "name": "southern soul"
+      }
+    ]
+  },
+  "Alisha Chinai": {
+    "count": 1,
+    "matched": true,
+    "name": "Alisha Chinai",
+    "score": 100,
+    "mbid": "6b69e1fa-0dd9-4be0-a5f0-dfb46f379c8d",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": [
+      {
+        "count": 2,
+        "name": "indian pop"
+      }
+    ]
+  },
+  "AlisonLCarter25": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "Ally Kerr": {
+    "count": 1,
+    "matched": true,
+    "name": "Ally Kerr",
+    "score": 100,
+    "mbid": "86672b4c-a841-42e2-a5c2-20eb1e31f929",
+    "type": "Person",
+    "country": null,
+    "area": "Scotland",
+    "tags": []
+  },
+  "alt-J": {
+    "count": 1,
+    "matched": true,
+    "name": "alt‐J",
+    "score": 100,
+    "mbid": "fc7bbf00-fbaa-4736-986b-b3ac0266ca9b",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 10,
+        "name": "indie rock"
+      },
+      {
+        "count": 5,
+        "name": "indie pop"
+      },
+      {
+        "count": 4,
+        "name": "alternative rock"
+      },
+      {
+        "count": 4,
+        "name": "art pop"
+      },
+      {
+        "count": 2,
+        "name": "art rock"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "british"
+      },
+      {
+        "count": 1,
+        "name": "indie"
+      },
+      {
+        "count": 1,
+        "name": "alternative"
+      },
+      {
+        "count": 1,
+        "name": "blues rock"
+      },
+      {
+        "count": 1,
+        "name": "experimental rock"
+      },
+      {
+        "count": 1,
+        "name": "trip hop"
+      },
+      {
+        "count": 1,
+        "name": "indietronica"
+      },
+      {
+        "count": 1,
+        "name": "folktronica"
+      }
+    ]
+  },
+  "ALTÉGO": {
+    "count": 1,
+    "matched": true,
+    "name": "ALTÈGO",
+    "score": 100,
+    "mbid": "a2dfdd09-d02a-43f7-9075-8bbf625de7a4",
+    "type": "Person",
+    "country": null,
+    "area": null,
+    "tags": []
+  },
+  "AMITABH BHATTACHARYA": {
+    "count": 1,
+    "matched": true,
+    "name": "Amitabh Bhattacharya",
+    "score": 100,
+    "mbid": "2b3ac722-4fe2-4d08-b582-b86f610ae55b",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": [
+      {
+        "count": 1,
+        "name": "filmi"
+      },
+      {
+        "count": 1,
+        "name": "lyricist"
+      }
+    ]
+  },
+  "Angel Meléndez": {
+    "count": 1,
+    "matched": true,
+    "name": "Angel Meléndez",
+    "score": 100,
+    "mbid": "a4830928-a24d-4556-9570-2d026b8a7272",
+    "type": "Person",
+    "country": null,
+    "area": null,
+    "tags": []
+  },
+  "Anime World": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "Anitha": {
+    "count": 1,
+    "matched": true,
+    "name": "Anitha",
+    "score": 100,
+    "mbid": "b000668f-e022-4423-9999-4c63768edc7e",
+    "type": "Person",
+    "country": null,
+    "area": "Chennai",
+    "tags": [
+      {
+        "count": 1,
+        "name": "filmi"
+      }
+    ]
+  },
+  "Anne Amie": {
+    "count": 1,
+    "matched": true,
+    "name": "Anne Amie",
+    "score": 100,
+    "mbid": "1c5a8f56-6a36-4618-a71a-736c76914877",
+    "type": "Person",
+    "country": null,
+    "area": null,
+    "tags": []
+  },
+  "Another Katherine": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "Another Sunny Day": {
+    "count": 1,
+    "matched": true,
+    "name": "Another Sunny Day",
+    "score": 100,
+    "mbid": "8b0b1402-88f7-4eda-a857-f07f134d9a85",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 1,
+        "name": "c86"
+      },
+      {
+        "count": 1,
+        "name": "indie pop"
+      }
+    ]
+  },
+  "Anurag kulkarni": {
+    "count": 1,
+    "matched": true,
+    "name": "Anurag Kulkarni",
+    "score": 100,
+    "mbid": "3d379964-9045-4ac2-9678-d22b87f2021d",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "Anwar Ali": {
+    "count": 1,
+    "matched": true,
+    "name": "Anwar Ali",
+    "score": 100,
+    "mbid": "2c4e787d-90a1-40d6-962e-d494f99683ba",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "araki ichiro": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "Arash Tabatabaee": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "Ari Abdul": {
+    "count": 1,
+    "matched": true,
+    "name": "Ari Abdul",
+    "score": 100,
+    "mbid": "d49abf5b-0d72-4239-8ec8-c3d7464707f6",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 2,
+        "name": "alternative pop"
+      },
+      {
+        "count": 2,
+        "name": "dark pop"
+      },
+      {
+        "count": 2,
+        "name": "bedroom pop"
+      },
+      {
+        "count": 1,
+        "name": "electronic"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "jungle"
+      },
+      {
+        "count": 1,
+        "name": "dance"
+      },
+      {
+        "count": 1,
+        "name": "club"
+      },
+      {
+        "count": 1,
+        "name": "emo pop"
+      },
+      {
+        "count": 1,
+        "name": "alternative/indie rock"
+      },
+      {
+        "count": 1,
+        "name": "left-field pop"
+      },
+      {
+        "count": 1,
+        "name": "dark r&b"
+      }
+    ]
+  },
+  "Arko Mukhaerjee": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "Ars rediviva/Milan Munclinger": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "auchandy": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "Ayshath Safa": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "Backstreet Boys": {
+    "count": 1,
+    "matched": true,
+    "name": "Backstreet Boys",
+    "score": 100,
+    "mbid": "2f569e60-0a1b-4fb9-95a4-3dc1525d1aad",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 11,
+        "name": "pop"
+      },
+      {
+        "count": 6,
+        "name": "boy band"
+      },
+      {
+        "count": 4,
+        "name": "teen pop"
+      },
+      {
+        "count": 3,
+        "name": "dance-pop"
+      },
+      {
+        "count": 1,
+        "name": "american"
+      },
+      {
+        "count": 1,
+        "name": "electropop"
+      },
+      {
+        "count": 0,
+        "name": "pop rock"
+      },
+      {
+        "count": 0,
+        "name": "alliteration"
+      }
+    ]
+  },
+  "Bad Gamer": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "Badfinger": {
+    "count": 1,
+    "matched": true,
+    "name": "Badfinger",
+    "score": 100,
+    "mbid": "44632683-c340-44de-a65d-328212559f91",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 2,
+        "name": "power pop"
+      },
+      {
+        "count": 2,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "blues rock"
+      },
+      {
+        "count": 0,
+        "name": "british"
+      },
+      {
+        "count": 0,
+        "name": "uk"
+      },
+      {
+        "count": 0,
+        "name": "welsh"
+      },
+      {
+        "count": 0,
+        "name": "classic pop and rock"
+      }
+    ]
+  },
+  "Ben Böhmer": {
+    "count": 1,
+    "matched": true,
+    "name": "Ben Böhmer",
+    "score": 100,
+    "mbid": "e4f12dfc-1ee7-4250-8e24-549b6d46676d",
+    "type": "Person",
+    "country": null,
+    "area": "Berlin",
+    "tags": []
+  },
+  "Ben E. King": {
+    "count": 1,
+    "matched": true,
+    "name": "Ben E. King",
+    "score": 100,
+    "mbid": "837555ba-012e-45f1-9a9c-9628da13ee54",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 4,
+        "name": "soul"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "funk"
+      },
+      {
+        "count": 1,
+        "name": "vocal jazz"
+      },
+      {
+        "count": 1,
+        "name": "jazz pop"
+      },
+      {
+        "count": 1,
+        "name": "pop soul"
+      },
+      {
+        "count": 1,
+        "name": "standards"
+      },
+      {
+        "count": 1,
+        "name": "traditional pop"
+      },
+      {
+        "count": 1,
+        "name": "r&b"
+      },
+      {
+        "count": 1,
+        "name": "rhythm & blues"
+      },
+      {
+        "count": 0,
+        "name": "classic pop and rock"
+      }
+    ]
+  },
+  "BENNY DAYAL": {
+    "count": 1,
+    "matched": true,
+    "name": "Benny Dayal",
+    "score": 100,
+    "mbid": "6b0b4484-442e-489d-bb8e-5e79dcd8e5f4",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": [
+      {
+        "count": 1,
+        "name": "filmi"
+      }
+    ]
+  },
+  "BEYOND": {
+    "count": 1,
+    "matched": true,
+    "name": "Beyond",
+    "score": 100,
+    "mbid": "d84d02ad-d74c-4227-8073-6f13a039cfac",
+    "type": "Group",
+    "country": "HK",
+    "area": "Hong Kong",
+    "tags": [
+      {
+        "count": 2,
+        "name": "rock"
+      },
+      {
+        "count": 2,
+        "name": "cantopop"
+      },
+      {
+        "count": 1,
+        "name": "alternative rock"
+      },
+      {
+        "count": 1,
+        "name": "chinese"
+      },
+      {
+        "count": 1,
+        "name": "cantonese"
+      },
+      {
+        "count": 1,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "乐队组合"
+      },
+      {
+        "count": 1,
+        "name": "1980s hong kong debut"
+      },
+      {
+        "count": 1,
+        "name": "hong kong rock band"
+      }
+    ]
+  },
+  "BhoomijaTrust": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "Bill Conti": {
+    "count": 1,
+    "matched": true,
+    "name": "Bill Conti",
+    "score": 100,
+    "mbid": "631e2d6a-16ac-4c49-89ac-987dc81e60e9",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 2,
+        "name": "soundtrack"
+      },
+      {
+        "count": 2,
+        "name": "film composer"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "american"
+      },
+      {
+        "count": 1,
+        "name": "academy award winner"
+      }
+    ]
+  },
+  "Bill Withers": {
+    "count": 1,
+    "matched": true,
+    "name": "Bill Withers",
+    "score": 100,
+    "mbid": "fd1a2d9d-9bb6-44de-83a3-41560658aba9",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 4,
+        "name": "soul"
+      },
+      {
+        "count": 2,
+        "name": "pop soul"
+      },
+      {
+        "count": 1,
+        "name": "funk"
+      },
+      {
+        "count": 1,
+        "name": "1970s"
+      },
+      {
+        "count": 1,
+        "name": "deep soul"
+      },
+      {
+        "count": 1,
+        "name": "motown"
+      },
+      {
+        "count": 1,
+        "name": "smooth soul"
+      },
+      {
+        "count": 1,
+        "name": "rhythm & blues"
+      },
+      {
+        "count": 0,
+        "name": "classic pop and rock"
+      }
+    ]
+  },
+  "Billos": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "Blaaze": {
+    "count": 1,
+    "matched": true,
+    "name": "Blaaze",
+    "score": 100,
+    "mbid": "6fb61e5e-402e-4b63-b1df-5c05b3608782",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "Black Caviar": {
+    "count": 1,
+    "matched": true,
+    "name": "Black Caviar",
+    "score": 100,
+    "mbid": "1d58c531-b83d-4ec1-98cd-716ab0cebde2",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": []
+  },
+  "Black Eyed Peas": {
+    "count": 1,
+    "matched": true,
+    "name": "Black Eyed Peas",
+    "score": 100,
+    "mbid": "d5be5333-4171-427e-8e12-732087c6b78e",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 8,
+        "name": "hip hop"
+      },
+      {
+        "count": 6,
+        "name": "pop rap"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "dance-pop"
+      },
+      {
+        "count": 1,
+        "name": "west coast hip hop"
+      },
+      {
+        "count": 0,
+        "name": "electronic"
+      },
+      {
+        "count": 0,
+        "name": "electropop"
+      },
+      {
+        "count": 0,
+        "name": "electro house"
+      },
+      {
+        "count": 0,
+        "name": "pop and chart"
+      },
+      {
+        "count": 0,
+        "name": "conscious hip hop"
+      },
+      {
+        "count": 0,
+        "name": "a filk artist"
+      }
+    ]
+  },
+  "Black Thought": {
+    "count": 1,
+    "matched": true,
+    "name": "Black Thought",
+    "score": 100,
+    "mbid": "5f39d33c-a167-4a63-9c44-71d27618b712",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 3,
+        "name": "hip hop"
+      },
+      {
+        "count": 1,
+        "name": "rapper"
+      },
+      {
+        "count": 1,
+        "name": "conscious hip hop"
+      },
+      {
+        "count": 1,
+        "name": "political hip hop"
+      },
+      {
+        "count": 0,
+        "name": "hip-hop"
+      }
+    ]
+  },
+  "Blackway": {
+    "count": 1,
+    "matched": true,
+    "name": "Blackway",
+    "score": 100,
+    "mbid": "53bd2b79-eda7-4457-b20a-14fe4c8a0c49",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": []
+  },
+  "Blondie": {
+    "count": 1,
+    "matched": true,
+    "name": "Blondie",
+    "score": 100,
+    "mbid": "4d2956d1-a3f7-44bb-9a41-67563e1a0c94",
+    "type": "Group",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 15,
+        "name": "new wave"
+      },
+      {
+        "count": 6,
+        "name": "disco"
+      },
+      {
+        "count": 5,
+        "name": "rock"
+      },
+      {
+        "count": 5,
+        "name": "pop"
+      },
+      {
+        "count": 4,
+        "name": "punk"
+      },
+      {
+        "count": 3,
+        "name": "power pop"
+      },
+      {
+        "count": 3,
+        "name": "pop rock"
+      },
+      {
+        "count": 2,
+        "name": "new york punk"
+      },
+      {
+        "count": 1,
+        "name": "punk rock"
+      },
+      {
+        "count": 1,
+        "name": "female vocals"
+      },
+      {
+        "count": 0,
+        "name": "american"
+      },
+      {
+        "count": 0,
+        "name": "classic pop and rock"
+      },
+      {
+        "count": 0,
+        "name": "pop/rock"
+      },
+      {
+        "count": 0,
+        "name": "pop reggae"
+      }
+    ]
+  },
+  "Bobby Caldwell": {
+    "count": 1,
+    "matched": true,
+    "name": "Bobby Caldwell",
+    "score": 100,
+    "mbid": "139a00a8-6b21-47c3-9315-60ac5ab2c715",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 1,
+        "name": "jazz"
+      },
+      {
+        "count": 1,
+        "name": "singer-songwriter"
+      },
+      {
+        "count": 1,
+        "name": "soul"
+      },
+      {
+        "count": 1,
+        "name": "blue-eyed soul"
+      },
+      {
+        "count": 1,
+        "name": "jazz-funk"
+      },
+      {
+        "count": 1,
+        "name": "white soul"
+      },
+      {
+        "count": 1,
+        "name": "aor"
+      },
+      {
+        "count": 1,
+        "name": "r&b"
+      }
+    ]
+  },
+  "Bombay Jayashree": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "Bombay Jayashri": {
+    "count": 1,
+    "matched": true,
+    "name": "Bombay Jayashri",
+    "score": 100,
+    "mbid": "fc5db44d-8b22-4b0c-8005-00c60553662d",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": [
+      {
+        "count": 1,
+        "name": "carnatic classical"
+      },
+      {
+        "count": 1,
+        "name": "filmi"
+      }
+    ]
+  },
+  "Bombay Jeyashree": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "Bonnie Tyler": {
+    "count": 1,
+    "matched": true,
+    "name": "Bonnie Tyler",
+    "score": 100,
+    "mbid": "0aa8294b-6332-4b65-b677-e3a1f8591d3b",
+    "type": "Person",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 5,
+        "name": "rock"
+      },
+      {
+        "count": 3,
+        "name": "pop"
+      },
+      {
+        "count": 3,
+        "name": "pop rock"
+      },
+      {
+        "count": 2,
+        "name": "country rock"
+      },
+      {
+        "count": 2,
+        "name": "aor"
+      },
+      {
+        "count": 1,
+        "name": "female vocals"
+      },
+      {
+        "count": 1,
+        "name": "soft rock"
+      },
+      {
+        "count": 1,
+        "name": "arena rock"
+      },
+      {
+        "count": 1,
+        "name": "country pop"
+      },
+      {
+        "count": 1,
+        "name": "wagnerian rock"
+      }
+    ]
+  },
+  "Bossacucanova": {
+    "count": 1,
+    "matched": true,
+    "name": "Bossacucanova",
+    "score": 100,
+    "mbid": "ebc52916-ae5b-450b-b06f-6b7a9bfb3e24",
+    "type": "Group",
+    "country": null,
+    "area": "Rio de Janeiro",
+    "tags": [
+      {
+        "count": 1,
+        "name": "electronica"
+      },
+      {
+        "count": 1,
+        "name": "world"
+      },
+      {
+        "count": 1,
+        "name": "bossa nova"
+      },
+      {
+        "count": 1,
+        "name": "brazilian"
+      }
+    ]
+  },
+  "boywonder2600": {
+    "count": 1,
+    "matched": false,
+    "tags": []
+  },
+  "Brad Fiedel": {
+    "count": 1,
+    "matched": true,
+    "name": "Brad Fiedel",
+    "score": 100,
+    "mbid": "4836c400-a9fe-4bf5-9a56-bc658d1d03d1",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 1,
+        "name": "electronic"
+      },
+      {
+        "count": 1,
+        "name": "soundtrack"
+      },
+      {
+        "count": 1,
+        "name": "classical"
+      },
+      {
+        "count": 1,
+        "name": "industrial"
+      },
+      {
+        "count": 1,
+        "name": "american"
+      },
+      {
+        "count": 1,
+        "name": "score"
+      },
+      {
+        "count": 1,
+        "name": "composer"
+      },
+      {
+        "count": 1,
+        "name": "modern classical"
+      },
+      {
+        "count": 0,
+        "name": "check it"
+      }
+    ]
+  },
+  "BRADIO": {
+    "count": 1,
+    "matched": true,
+    "name": "BRADIO",
+    "score": 100,
+    "mbid": "2563398a-e68a-4ddc-af02-235473c16a9b",
+    "type": "Group",
+    "country": "JP",
+    "area": "Japan",
+    "tags": [
+      {
+        "count": 1,
+        "name": "funk rock"
+      },
+      {
+        "count": 1,
+        "name": "j-rock"
+      }
+    ]
+  },
+  "Brendan Moon": {
+    "count": 1,
+    "matched": true,
+    "name": "Brendan Moon",
+    "score": 100,
+    "mbid": "c85b21a0-8f15-450d-8764-9858aa563e82",
+    "type": "Person",
+    "country": null,
+    "area": null,
+    "tags": []
+  },
+  "Bring Me The Horizon": {
+    "count": 1,
+    "matched": true,
+    "name": "Bring Me the Horizon",
+    "score": 100,
+    "mbid": "074e3847-f67f-49f9-81f1-8c8cea147e8e",
+    "type": "Group",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 19,
+        "name": "metalcore"
+      },
+      {
+        "count": 13,
+        "name": "alternative rock"
+      },
+      {
+        "count": 10,
+        "name": "alternative metal"
+      },
+      {
+        "count": 10,
+        "name": "deathcore"
+      },
+      {
+        "count": 7,
+        "name": "pop rock"
+      },
+      {
+        "count": 6,
+        "name": "post-hardcore"
+      },
+      {
+        "count": 4,
+        "name": "melodic metalcore"
+      },
+      {
+        "count": 3,
+        "name": "emo"
+      },
+      {
+        "count": 2,
+        "name": "electronic"
+      },
+      {
+        "count": 2,
+        "name": "nu metal"
+      },
+      {
+        "count": 2,
+        "name": "psychedelic rock"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "pop"
+      },
+      {
+        "count": 1,
+        "name": "drum and bass"
+      }
+    ]
+  },
+  "Britney Spears": {
+    "count": 1,
+    "matched": true,
+    "name": "Britney Spears",
+    "score": 100,
+    "mbid": "45a663b5-b1cb-4a91-bff6-2bef7bbfdd76",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 22,
+        "name": "pop"
+      },
+      {
+        "count": 8,
+        "name": "teen pop"
+      },
+      {
+        "count": 7,
+        "name": "american"
+      },
+      {
+        "count": 6,
+        "name": "dance-pop"
+      },
+      {
+        "count": 5,
+        "name": "2000s"
+      },
+      {
+        "count": 4,
+        "name": "electropop"
+      },
+      {
+        "count": 4,
+        "name": "y2k"
+      },
+      {
+        "count": 3,
+        "name": "electro house"
+      },
+      {
+        "count": 1,
+        "name": "dance"
+      },
+      {
+        "count": 1,
+        "name": "usa"
+      },
+      {
+        "count": 1,
+        "name": "américain"
+      },
+      {
+        "count": 1,
+        "name": "female vocals"
+      },
+      {
+        "count": 1,
+        "name": "urban pop"
+      },
+      {
+        "count": 1,
+        "name": "pop and chart"
+      }
+    ]
+  },
+  "Bruce Reitherman": {
+    "count": 1,
+    "matched": true,
+    "name": "Bruce Reitherman",
+    "score": 100,
+    "mbid": "402107aa-56fc-4d06-831d-8150a95a9c84",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": []
+  },
+  "Candelabro": {
+    "count": 1,
+    "matched": true,
+    "name": "Candelabro",
+    "score": 100,
+    "mbid": "74bcc936-9b3d-4f87-afd1-d1b6c1fd5f66",
+    "type": "Group",
+    "country": "CL",
+    "area": "Chile",
+    "tags": [
+      {
+        "count": 1,
+        "name": "progressive rock"
+      },
+      {
+        "count": 1,
+        "name": "latin rock"
+      }
+    ]
+  },
+  "Caralisa Monteiro": {
+    "count": 1,
+    "matched": true,
+    "name": "Caralisa Monteiro",
+    "score": 100,
+    "mbid": "6f790f73-cc42-4c6e-93a5-e42f5509fb2d",
+    "type": "Person",
+    "country": "IN",
+    "area": "India",
+    "tags": []
+  },
+  "Carl Douglas": {
+    "count": 1,
+    "matched": true,
+    "name": "Carl Douglas",
+    "score": 100,
+    "mbid": "2100ca6c-5a1d-463e-b50b-7e649debc454",
+    "type": "Person",
+    "country": "JM",
+    "area": "Jamaica",
+    "tags": [
+      {
+        "count": 1,
+        "name": "jamaican"
+      },
+      {
+        "count": 1,
+        "name": "disco"
+      },
+      {
+        "count": 1,
+        "name": "soul"
+      },
+      {
+        "count": 1,
+        "name": "pop soul"
+      }
+    ]
+  },
+  "CASIOPEA": {
+    "count": 1,
+    "matched": true,
+    "name": "Casiopea",
+    "score": 100,
+    "mbid": "b2853652-db74-44b7-b4b3-ffb72af6b910",
+    "type": "Group",
+    "country": "JP",
+    "area": "Japan",
+    "tags": [
+      {
+        "count": 5,
+        "name": "jazz fusion"
+      },
+      {
+        "count": 3,
+        "name": "jazz"
+      },
+      {
+        "count": 3,
+        "name": "fusion"
+      },
+      {
+        "count": 2,
+        "name": "contemporary jazz"
+      },
+      {
+        "count": 1,
+        "name": "rock"
+      },
+      {
+        "count": 1,
+        "name": "instrumental"
+      },
+      {
+        "count": 1,
+        "name": "jazz rock"
+      },
+      {
+        "count": 1,
+        "name": "jazz-funk"
+      },
+      {
+        "count": 1,
+        "name": "jazz pop"
+      },
+      {
+        "count": 1,
+        "name": "smooth jazz"
+      },
+      {
+        "count": 1,
+        "name": "instrumental jazz"
+      },
+      {
+        "count": 1,
+        "name": "city pop"
+      },
+      {
+        "count": 0,
+        "name": "j-pop"
+      },
+      {
+        "count": 0,
+        "name": "likedis auto"
+      }
+    ]
+  },
+  "Cat Stevens": {
+    "count": 1,
+    "matched": true,
+    "name": "Cat Stevens",
+    "score": 100,
+    "mbid": "e2345fdf-2be7-47c5-a6dd-be64353ad134",
+    "type": "Person",
+    "country": "GB",
+    "area": "United Kingdom",
+    "tags": [
+      {
+        "count": 3,
+        "name": "rock"
+      },
+      {
+        "count": 3,
+        "name": "folk rock"
+      },
+      {
+        "count": 2,
+        "name": "singer-songwriter"
+      },
+      {
+        "count": 1,
+        "name": "folk"
+      },
+      {
+        "count": 1,
+        "name": "baroque pop"
+      },
+      {
+        "count": 1,
+        "name": "soft rock"
+      },
+      {
+        "count": 1,
+        "name": "pop rock"
+      },
+      {
+        "count": 1,
+        "name": "contemporary folk"
+      },
+      {
+        "count": 1,
+        "name": "folk pop"
+      },
+      {
+        "count": 1,
+        "name": "katmandu"
+      },
+      {
+        "count": 1,
+        "name": "2008 universal fire victim"
+      }
+    ]
+  },
+  "CeeLo Green": {
+    "count": 1,
+    "matched": true,
+    "name": "CeeLo Green",
+    "score": 100,
+    "mbid": "2c69465c-0f76-45ce-90a2-1ed0fdacc997",
+    "type": "Person",
+    "country": "US",
+    "area": "United States",
+    "tags": [
+      {
+        "count": 3,
+        "name": "pop"
+      },
+      {
+        "count": 3,
+        "name": "soul"
+      },
+      {
+        "count": 3,
+        "name": "r&b"
+      },
+      {
+        "count": 2,
+        "name": "hip hop"
+      },
+      {
+        "count": 1,
+        "name": "funk"
+      },
+      {
+        "count": 1,
+        "name": "southern hip hop"
+      },
+      {
+        "count": 1,
+        "name": "neo soul"
+      },
+      {
+        "count": 1,
+        "name": "dirty south"
+      },
+      {
+        "count": 1,
+        "name": "contemporary r&b"
+      },
+      {
+        "count": 1,
+        "name": "2010s"
+      },
+      {
+        "count": 0,
+        "name": "hip-hop"
+      },
+      {
+        "count": 0,
+        "name": "rnb"
+      },
+      {
+        "count": 0,
+        "name": "hip hop rnb and dance hall"
+      },
+      {
+        "count": 0,
+        "name": "criminal"
+      }
+    ]
+  }
+}
