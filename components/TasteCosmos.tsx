@@ -87,22 +87,8 @@ type Mode = "regions" | "chronology" | "gravity";
 
 const clusterColors = [
   "#f0c84b", "#76d7c4", "#cf78b6", "#6f9fff", "#ff8e61",
-  "#a3cf62", "#b7a2e8", "#ef6a52", "#65c7e8", "#e9e4d5",
+  "#a3cf62", "#b7a2e8", "#ef6a52", "#65c7e8", "#4d778f",
 ];
-
-const genreColors: Record<string, string> = {
-  "South Asian": "#a3cf62",
-  "Hip-hop & R&B": "#cf78b6",
-  "Rock & Alternative": "#6f9fff",
-  "Classic Pop & Rock": "#f0c84b",
-  "Japanese & City Pop": "#ff8e61",
-  "Scores & Classical": "#76d7c4",
-  "Electronic & Dance": "#65c7e8",
-  "Jazz, Soul & Funk": "#ef6a52",
-  "Latin & Global": "#ffa85b",
-  "Pop & Indie": "#e9e4d5",
-  Other: "#8e939c",
-};
 
 const formatDate = (value: string | null, options?: Intl.DateTimeFormatOptions) => value
   ? new Intl.DateTimeFormat("en-SG", { timeZone: "Asia/Singapore", day: "numeric", month: "short", year: "numeric", ...options }).format(new Date(value))
@@ -110,6 +96,7 @@ const formatDate = (value: string | null, options?: Intl.DateTimeFormatOptions) 
 
 const timeLabel = (hour: number) => `${hour % 12 || 12}${hour < 12 ? "am" : "pm"}`;
 const svgNumber = (value: number) => Number(value.toFixed(3));
+const retentionColor = (rate: number) => rate >= 80 ? "#76d7c4" : rate >= 50 ? "#f0c84b" : "#ff6a4d";
 
 function Cover({ videoId, title }: { videoId: string; title: string }) {
   return (
@@ -239,7 +226,7 @@ function RadialClock({ hours }: { hours: TasteModel["hourlyLikes"] }) {
         const angle = (hour / 24) * Math.PI * 2 - Math.PI / 2;
         const inner = 112;
         const outer = inner + 54 * (count / max);
-        return <line key={hour} aria-label={`${timeLabel(hour)}: ${count} dated likes`} x1={svgNumber(180 + Math.cos(angle) * inner)} y1={svgNumber(180 + Math.sin(angle) * inner)} x2={svgNumber(180 + Math.cos(angle) * outer)} y2={svgNumber(180 + Math.sin(angle) * outer)} stroke={hour >= 18 || hour < 1 ? "#ff6a4d" : "#76d7c4"} strokeWidth="10" strokeLinecap="square" />;
+        return <line key={hour} aria-label={`${timeLabel(hour)}: ${count} dated likes`} x1={svgNumber(180 + Math.cos(angle) * inner)} y1={svgNumber(180 + Math.sin(angle) * inner)} x2={svgNumber(180 + Math.cos(angle) * outer)} y2={svgNumber(180 + Math.sin(angle) * outer)} stroke={hour === 18 || hour === 19 ? "#ff6a4d" : "#697078"} strokeWidth="10" strokeLinecap="square" />;
       })}
       {[0, 6, 12, 18].map((hour) => {
         const angle = (hour / 24) * Math.PI * 2 - Math.PI / 2;
@@ -271,15 +258,20 @@ function SessionWeather({ model }: { model: TasteModel }) {
       <div className="weather-layout">
         <div className="clock-panel">
           <RadialClock hours={model.hourlyLikes} />
+          <div className="clock-key"><span><i />other hours</span><span><i />6–8pm peak</span></div>
           <p><strong>{model.hourlyLikes[18].count + model.hourlyLikes[19].count}</strong> precisely dated likes landed between 6 and 8pm. Midnight is a smaller second pulse, not an outlier.</p>
         </div>
         <div className="storm-panel">
-          <div className="storm-head"><span>48 HIGH-ENERGY SESSIONS</span><span>TIME OF DAY ↓</span></div>
+          <div className="chart-decoder storm-decoder">
+            <span><b>X</b> date</span><span><b>Y</b> time of day</span><span><b>SIZE</b> songs explored</span>
+            <span className="keep-low"><i /> under 50% kept</span><span className="keep-mid"><i /> 50–79% kept</span><span className="keep-high"><i /> 80%+ kept</span>
+          </div>
+          <div className="storm-head"><span>48 HIGHEST-ENERGY SESSIONS</span><span>LATER IN THE DAY ↓</span></div>
           <svg viewBox="0 0 920 350" role="img" aria-label="High-energy listening sessions plotted by date and time of day">
             {[0, 6, 12, 18, 24].map((hour) => <g key={hour}><line x1="70" x2="870" y1={32 + hour / 24 * 286} y2={32 + hour / 24 * 286} /><text x="55" y={36 + hour / 24 * 286} textAnchor="end">{timeLabel(hour % 24)}</text></g>)}
             {sessions.map((session) => {
               const isSelected = selected.id === session.id;
-              return <circle key={session.id} aria-label={`${formatDate(session.start)} · ${session.uniqueTracks} tracks · ${session.keepRate}% kept`} cx={svgNumber(xFor(session.start))} cy={svgNumber(yFor(session.start))} r={svgNumber(4 + Math.sqrt(session.uniqueTracks) * .9)} fill={genreColors[session.topGenre?.name || "Other"] || genreColors.Other} opacity={isSelected ? 1 : .58} stroke={isSelected ? "#fff" : "none"} strokeWidth="2" onPointerEnter={() => setSelected(session)} onClick={() => setSelected(session)} />;
+              return <circle key={session.id} aria-label={`${formatDate(session.start)} · ${session.uniqueTracks} tracks · ${session.keepRate}% kept`} cx={svgNumber(xFor(session.start))} cy={svgNumber(yFor(session.start))} r={svgNumber(4 + Math.sqrt(session.uniqueTracks) * .9)} fill={retentionColor(session.keepRate)} opacity={isSelected ? 1 : .68} stroke={isSelected ? "#fff" : "none"} strokeWidth="2" onPointerEnter={() => setSelected(session)} onClick={() => setSelected(session)} />;
             })}
             <text x="70" y="342">{formatDate(new Date(minTime).toISOString(), { month: "short", year: "numeric" })}</text>
             <text x="870" y="342" textAnchor="end">{formatDate(new Date(maxTime).toISOString(), { month: "short", year: "numeric" })}</text>
@@ -305,6 +297,7 @@ function GatewayRail({ cosmos }: { cosmos: Cosmos }) {
         <h2>The tracks that connect<br /><em>otherwise distant selves.</em></h2>
         <p>These sit near borders in the learned map and have neighbors from multiple regions. They are not merely favorites; they are bridges that make the rest of your taste feel internally coherent.</p>
       </div>
+      <div className="gateway-decoder"><span><b>LEFT → RIGHT</b> strongest bridge score</span><span><b>RING + LABEL</b> home taste region</span></div>
       <div className="gateway-line">
         {cosmos.gateways.slice(0, 7).map((point, index) => (
           <a href={`https://music.youtube.com/watch?v=${point.videoId}`} target="_blank" rel="noreferrer" key={`${point.rank}-${point.videoId}`} className="gateway-stop">
@@ -334,10 +327,10 @@ function TasteBoundary({ model }: { model: TasteModel }) {
       <div className="boundary-axis"><span>LIKED + REPLAYED</span><i /><span>REPLAYED, NOT FOUND IN CURRENT LIKES</span></div>
       <div className="boundary-grid">
         <div className="boundary-side kept-side">
-          {kept.map((track, index) => <a key={`${track.rank}-${track.videoId}`} href={`https://music.youtube.com/watch?v=${track.videoId}`} target="_blank" rel="noreferrer" className="boundary-track"><span className="boundary-rank">{index + 1}</span><div><Cover videoId={track.videoId} title={track.title} /><b>{track.listenCount}</b></div><span><strong>{track.title}</strong><small>{track.primaryArtist}</small></span></a>)}
+          {kept.map((track, index) => <a key={`${track.rank}-${track.videoId}`} href={`https://music.youtube.com/watch?v=${track.videoId}`} target="_blank" rel="noreferrer" className="boundary-track"><span className="boundary-rank">{index + 1}</span><div><Cover videoId={track.videoId} title={track.title} /><b><strong>{track.listenCount}</strong><small>watches</small></b></div><span><strong>{track.title}</strong><small>{track.primaryArtist}</small></span></a>)}
         </div>
         <div className="boundary-side missed-side">
-          {missed.map((track, index) => <a key={track.videoId} href={`https://music.youtube.com/watch?v=${track.videoId}`} target="_blank" rel="noreferrer" className="boundary-track"><span className="boundary-rank">{index + 1}</span><div><Cover videoId={track.videoId} title={track.title} /><b>{track.plays}</b></div><span><strong>{track.title}</strong><small>{(track.channel || "Unknown channel").replace(" - Topic", "")}</small></span></a>)}
+          {missed.map((track, index) => <a key={track.videoId} href={`https://music.youtube.com/watch?v=${track.videoId}`} target="_blank" rel="noreferrer" className="boundary-track"><span className="boundary-rank">{index + 1}</span><div><Cover videoId={track.videoId} title={track.title} /><b><strong>{track.plays}</strong><small>watches</small></b></div><span><strong>{track.title}</strong><small>{(track.channel || "Unknown channel").replace(" - Topic", "")}</small></span></a>)}
         </div>
       </div>
       <div className="boundary-verdict"><Flame size={20} /><p><strong>King Kunta</strong> is your strongest confirmed magnet at 56 watches. The strangest edge case is <strong>Runaway</strong>: 44 watches across thirteen months, yet this exact upload is absent from the current liked playlist.</p></div>
@@ -353,15 +346,30 @@ function Transformation({ cosmos }: { cosmos: Cosmos }) {
       recent: count(cosmos.points.filter((point) => point.rank <= 200)),
     };
   }, [cosmos]);
+  const shifts = useMemo(() => groups.old.map((old) => {
+    const recent = groups.recent.find((item) => item.id === old.id) || { count: 0 };
+    return { ...old, oldCount: old.count, recentCount: recent.count, delta: recent.count - old.count };
+  }).sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta)), [groups]);
+  const shiftMax = Math.max(...shifts.flatMap((item) => [item.oldCount, item.recentCount]));
   return (
     <section className="transform-section" id="transform">
       <div className="section-title dark-copy">
         <p className="kicker"><Activity size={16} /> THE TRANSFORMATION</p>
         <h2>Not a replacement.<br /><em>An expansion of emotional scale.</em></h2>
       </div>
-      <div className="era-compare">
-        <div className="era-row"><span><b>OLDEST 200</b><small>the surviving foundation</small></span><div>{groups.old.map((cluster) => <i key={cluster.id} style={{ width: `${cluster.count / 2}%`, background: clusterColors[cluster.id] }} title={`${cluster.name}: ${cluster.count}`} />)}</div></div>
-        <div className="era-row"><span><b>NEWEST 200</b><small>the current frontier</small></span><div>{groups.recent.map((cluster) => <i key={cluster.id} style={{ width: `${cluster.count / 2}%`, background: clusterColors[cluster.id] }} title={`${cluster.name}: ${cluster.count}`} />)}</div></div>
+      <div className="shift-table">
+        <div className="shift-head"><span>REGION</span><span>OLDEST 200</span><span>OLD → NEW</span><span>NEWEST 200</span><span>CHANGE</span></div>
+        {shifts.map((cluster) => {
+          const oldPosition = cluster.oldCount / shiftMax * 100;
+          const newPosition = cluster.recentCount / shiftMax * 100;
+          return <div className="shift-row" key={cluster.id}>
+            <span className="shift-name"><i style={{ background: clusterColors[cluster.id] }} /><strong>{cluster.name}</strong></span>
+            <b>{cluster.oldCount}</b>
+            <span className="shift-track"><i style={{ left: `${Math.min(oldPosition, newPosition)}%`, width: `${Math.abs(newPosition - oldPosition)}%`, background: clusterColors[cluster.id] }} /><b className="old-dot" style={{ left: `${oldPosition}%`, borderColor: clusterColors[cluster.id] }} /><b className="new-dot" style={{ left: `${newPosition}%`, background: clusterColors[cluster.id] }} /></span>
+            <b>{cluster.recentCount}</b>
+            <em className={cluster.delta > 0 ? "rise" : cluster.delta < 0 ? "fall" : "flat"}>{cluster.delta > 0 ? "+" : ""}{cluster.delta}</em>
+          </div>;
+        })}
       </div>
       <div className="transform-findings">
         <article><span>+40</span><h3>Cinema becomes personal</h3><p><strong>Cinema in Full Color</strong> rises from 7 of the oldest 200 to 47 of the newest. South Asian film music is no longer a side room; it is the largest current territory.</p></article>
@@ -403,7 +411,7 @@ export default function TasteCosmos({ cosmos, model }: { cosmos: Cosmos; model: 
     <main>
       <header className="site-header">
         <a className="brand" href="#cosmos"><Disc3 size={20} />KUSHAL / TASTE LAB</a>
-        <nav><a href="#weather">Weather</a><a href="#gateways">Gateways</a><a href="#boundary">Boundary</a><a href="#evidence">Evidence</a></nav>
+        <nav><a href="#transform">Shift</a><a href="#weather">Weather</a><a href="#gateways">Gateways</a><a href="#boundary">Boundary</a><a href="#evidence">Evidence</a></nav>
         <span className="header-count">1,111 LIKES</span>
       </header>
       <CosmosMap cosmos={cosmos} />
