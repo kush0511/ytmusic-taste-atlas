@@ -2,18 +2,22 @@
 
 import { useMemo, useState } from "react";
 import {
-  Activity,
+  ArrowDown,
   ArrowUpRight,
+  AudioLines,
+  Check,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
   Clock3,
   Disc3,
-  Fingerprint,
-  Flame,
-  GitBranch,
+  Headphones,
   Info,
   Layers3,
-  Orbit,
-  Radar,
+  Map,
+  Search,
   Sparkles,
+  X,
 } from "lucide-react";
 
 type Cluster = {
@@ -42,14 +46,24 @@ type Point = {
 };
 
 type Cosmos = {
-  method: { seed: string; features: number; umap: { neighbors: number; minDist: number; epochs: number }; clusters: number };
+  method: {
+    seed: string;
+    features: number;
+    umap: { neighbors: number; minDist: number; epochs: number };
+    clusters: number;
+  };
   clusters: Cluster[];
   points: Point[];
   gateways: Point[];
   outliers: Point[];
 };
 
-type SessionTrack = { videoId: string; title: string; channel: string | null; kept: boolean };
+type SessionTrack = {
+  videoId: string;
+  title: string;
+  channel: string | null;
+  kept: boolean;
+};
 type Session = {
   id: number;
   start: string;
@@ -63,10 +77,28 @@ type Session = {
   topGenre: { name: string; count: number } | null;
   representative: SessionTrack[];
 };
-type NearMiss = { videoId: string; title: string; channel: string | null; plays: number; firstWatchAt: string; lastWatchAt: string };
-type ModelTrack = { rank: number; videoId: string; title: string; primaryArtist: string; listenCount: number };
+type NearMiss = {
+  videoId: string;
+  title: string;
+  channel: string | null;
+  plays: number;
+  firstWatchAt: string;
+  lastWatchAt: string;
+};
+type ModelTrack = {
+  rank: number;
+  videoId: string;
+  title: string;
+  primaryArtist: string;
+  listenCount: number;
+};
 type TasteModel = {
-  provenance: { archive: string; sha256: string; watchFile: string; searchFile: string };
+  provenance: {
+    archive: string;
+    sha256: string;
+    watchFile: string;
+    searchFile: string;
+  };
   coverage: {
     tracks: number;
     exactActivities: number;
@@ -75,7 +107,10 @@ type TasteModel = {
     musicWatches: number;
     sessions: number;
   };
-  calibration: { exactLikesWithWatchMatch: number; medianMinutesFromWatchToLike: number | null };
+  calibration: {
+    exactLikesWithWatchMatch: number;
+    medianMinutesFromWatchToLike: number | null;
+  };
   hourlyLikes: { hour: number; count: number }[];
   monthlyLikes: { month: string; count: number }[];
   tracks: ModelTrack[];
@@ -86,203 +121,810 @@ type TasteModel = {
 type Mode = "regions" | "chronology" | "gravity";
 
 const clusterColors = [
-  "#f0c84b", "#76d7c4", "#cf78b6", "#6f9fff", "#ff8e61",
-  "#a3cf62", "#b7a2e8", "#ef6a52", "#65c7e8", "#4d778f",
+  "#c49c25",
+  "#37998c",
+  "#cb689b",
+  "#688fe7",
+  "#df8a53",
+  "#92b458",
+  "#9986c5",
+  "#da6651",
+  "#4ba7be",
+  "#719096",
 ];
+const formatDate = (value: string) =>
+  new Intl.DateTimeFormat("en-SG", {
+    timeZone: "Asia/Singapore",
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }).format(new Date(value));
+const timeLabel = (hour: number) =>
+  `${hour % 12 || 12}${hour < 12 ? "am" : "pm"}`;
+const confidenceLabel = (value: string) =>
+  (
+    ({
+      exact: "Exact like date",
+      "watch-anchored": "Watch-based estimate",
+      "rank-interpolated": "Interpolated date",
+      "rank-only": "Playlist order only",
+    }) as Record<string, string>
+  )[value] || "Playlist evidence";
+const musicUrl = (id: string) => `https://music.youtube.com/watch?v=${id}`;
 
-const formatDate = (value: string | null, options?: Intl.DateTimeFormatOptions) => value
-  ? new Intl.DateTimeFormat("en-SG", { timeZone: "Asia/Singapore", day: "numeric", month: "short", year: "numeric", ...options }).format(new Date(value))
-  : "Older playlist order";
-
-const timeLabel = (hour: number) => `${hour % 12 || 12}${hour < 12 ? "am" : "pm"}`;
-const svgNumber = (value: number) => Number(value.toFixed(3));
-const retentionColor = (rate: number) => rate >= 80 ? "#76d7c4" : rate >= 50 ? "#f0c84b" : "#ff6a4d";
-
-function Cover({ videoId, title }: { videoId: string; title: string }) {
+function Cover({ videoId }: { videoId: string }) {
+  // These mixed music/video uploads have no consistent album-art source.
   return (
-    // YouTube thumbnails are the only consistent artwork source across music videos and uploads.
     // eslint-disable-next-line @next/next/no-img-element
-    <img src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`} alt={`Artwork for ${title}`} loading="lazy" />
+    <img
+      src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+      alt=""
+      loading="lazy"
+      onError={(event) => {
+        event.currentTarget.style.visibility = "hidden";
+      }}
+    />
   );
 }
 
-function confidenceLabel(value: string) {
-  return ({
-    exact: "Exact like time",
-    "watch-anchored": "Watch anchored",
-    "rank-interpolated": "Between real anchors",
-    "rank-only": "Playlist order only",
-  } as Record<string, string>)[value] || "Playlist evidence";
+function SectionHeading({
+  number,
+  label,
+  title,
+  children,
+}: {
+  number: string;
+  label: string;
+  title: React.ReactNode;
+  children?: React.ReactNode;
+}) {
+  return (
+    <div className="section-heading">
+      <div>
+        <p className="eyebrow">
+          <span>{number}</span> {label}
+        </p>
+        <h2>{title}</h2>
+      </div>
+      {children && <p className="section-description">{children}</p>}
+    </div>
+  );
 }
 
 function CosmosMap({ cosmos }: { cosmos: Cosmos }) {
   const [mode, setMode] = useState<Mode>("regions");
   const [activeCluster, setActiveCluster] = useState<number | null>(null);
-  const [selected, setSelected] = useState<Point>(cosmos.gateways.find((point) => point.title === "Clocks") || cosmos.points[0]);
-  const maxListens = Math.max(...cosmos.points.map((point) => point.listens));
-  const clusterById = useMemo(() => new Map(cosmos.clusters.map((cluster) => [cluster.id, cluster])), [cosmos.clusters]);
-
-  const pointColor = (point: Point) => {
-    if (mode === "regions") return clusterColors[point.cluster];
-    if (mode === "gravity") return point.listens > 20 ? "#ff6a4d" : point.listens > 8 ? "#f0c84b" : "#76d7c4";
-    const age = (point.rank - 1) / Math.max(1, cosmos.points.length - 1);
-    return age < .2 ? "#ff6a4d" : age < .4 ? "#f0c84b" : age < .6 ? "#76d7c4" : age < .8 ? "#6f9fff" : "#b7a2e8";
+  const [query, setQuery] = useState("");
+  const [selected, setSelected] = useState(
+    cosmos.gateways.find((point) => point.title === "Clocks") ||
+      cosmos.points[0],
+  );
+  const maxListens = Math.max(
+    1,
+    ...cosmos.points.map((point) => point.listens),
+  );
+  const points = useMemo(
+    () =>
+      cosmos.points.filter(
+        (p) => activeCluster === null || p.cluster === activeCluster,
+      ),
+    [cosmos.points, activeCluster],
+  );
+  const results = useMemo(
+    () =>
+      points
+        .filter((p) =>
+          `${p.title} ${p.artist}`
+            .toLowerCase()
+            .includes(query.trim().toLowerCase()),
+        )
+        .slice(0, 5),
+    [points, query],
+  );
+  const bounds = useMemo(() => {
+    if (activeCluster === null) return { x: 0, y: 0, width: 1, height: 1 };
+    const minX = Math.min(...points.map((p) => p.x));
+    const minY = Math.min(...points.map((p) => p.y));
+    const size =
+      Math.max(
+        0.15,
+        Math.max(...points.map((p) => p.x)) - minX,
+        Math.max(...points.map((p) => p.y)) - minY,
+      ) * 1.15;
+    return {
+      x: (minX + Math.max(...points.map((p) => p.x)) - size) / 2,
+      y: (minY + Math.max(...points.map((p) => p.y)) - size) / 2,
+      width: size,
+      height: size,
+    };
+  }, [points, activeCluster]);
+  const position = (p: Point) => ({
+    x: 24 + ((p.x - bounds.x) / bounds.width) * 552,
+    y: 24 + (1 - (p.y - bounds.y) / bounds.height) * 552,
+  });
+  const color = (p: Point) =>
+    mode === "regions"
+      ? clusterColors[p.cluster]
+      : mode === "gravity"
+        ? p.listens > 20
+          ? "#ff825d"
+          : p.listens > 8
+            ? "#e8ce78"
+            : "#87b6aa"
+        : p.rank < cosmos.points.length / 3
+          ? "#ff825d"
+          : p.rank < (cosmos.points.length * 2) / 3
+            ? "#e8ce78"
+            : "#969bd2";
+  const chooseRegion = (value: string) => {
+    const id = value === "all" ? null : Number(value);
+    setActiveCluster(id);
+    if (id !== null) setSelected(cosmos.points.find((p) => p.cluster === id)!);
   };
-
+  const region = cosmos.clusters.find((c) => c.id === activeCluster);
   return (
-    <section className="cosmos-section" id="cosmos">
-      <div className="cosmos-intro">
-        <div>
-          <p className="kicker"><Orbit size={16} /> LATENT TASTE SPACE</p>
-          <h1>Chronology removed.<br /><em>Your musical mind, mapped.</em></h1>
-        </div>
-        <p>Every dot is a liked song. Distance means similarity across genre, artist, country, tags, duration, and listening behavior. The algorithm found ten regions without being told what to call them.</p>
-      </div>
-
-      <div className="cosmos-workbench">
-        <aside className="region-index" aria-label="Taste regions">
-          <div className="region-index-head"><span>REGIONS</span><strong>{cosmos.clusters.length}</strong></div>
-          {cosmos.clusters.map((cluster) => (
+    <section className="atlas-section section" id="atlas">
+      <SectionHeading
+        number="01"
+        label="THE TASTE MAP"
+        title={
+          <>
+            Different worlds.
+            <br />
+            <em>One playlist.</em>
+          </>
+        }
+      >
+        Nearby dots have similar musical traits. Pick a region to zoom in, then
+        tap the map or search for a song.
+      </SectionHeading>
+      <div className="atlas-workbench">
+        <div className="map-panel">
+          <div className="map-toolbar">
+            <span>
+              <i className="status-dot" />{" "}
+              {activeCluster === null
+                ? "ALL 1,111 SONGS"
+                : `${points.length} SONGS IN FOCUS`}
+            </span>
             <button
-              key={cluster.id}
-              className={activeCluster === cluster.id ? "active" : ""}
               type="button"
-              onClick={() => setActiveCluster((current) => current === cluster.id ? null : cluster.id)}
+              disabled={activeCluster === null}
+              onClick={() => chooseRegion("all")}
             >
-              <i style={{ background: clusterColors[cluster.id] }} />
-              <span><strong>{cluster.name}</strong><small>{cluster.topArtists.slice(0, 2).map((artist) => artist.name).join(" · ")}</small></span>
-              <b>{cluster.size}</b>
+              <Map size={14} /> Full map
             </button>
-          ))}
-        </aside>
-
-        <div className="cosmos-stage">
-          <div className="mode-switch" aria-label="Map color mode">
-            <button className={mode === "regions" ? "active" : ""} type="button" title="Color by taste region" onClick={() => setMode("regions")}><Layers3 size={16} /><span>Regions</span></button>
-            <button className={mode === "chronology" ? "active" : ""} type="button" title="Color from newest to oldest" onClick={() => setMode("chronology")}><Clock3 size={16} /><span>Age</span></button>
-            <button className={mode === "gravity" ? "active" : ""} type="button" title="Emphasize repeat listens" onClick={() => setMode("gravity")}><Activity size={16} /><span>Gravity</span></button>
           </div>
-
-          <svg className="cosmos-svg" viewBox="0 0 1000 660" role="img" aria-label="Map of 1,111 liked songs grouped by musical similarity">
+          <div className="map-region-control">
+            <label className="field-label" htmlFor="region">
+              Taste region
+            </label>
+            <div className="select-wrap">
+              <select
+                id="region"
+                value={activeCluster ?? "all"}
+                onChange={(e) => chooseRegion(e.target.value)}
+              >
+                <option value="all">All regions · 1,111 songs</option>
+                {cosmos.clusters.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {c.name} · {c.size}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown size={16} />
+            </div>
+          </div>
+          <div className="segmented map-modes" aria-label="Map color">
+            <button
+              type="button"
+              aria-pressed={mode === "regions"}
+              onClick={() => setMode("regions")}
+            >
+              <Layers3 size={15} /> Regions
+            </button>
+            <button
+              type="button"
+              aria-pressed={mode === "chronology"}
+              onClick={() => setMode("chronology")}
+            >
+              <Clock3 size={15} /> Age
+            </button>
+            <button
+              type="button"
+              aria-pressed={mode === "gravity"}
+              onClick={() => setMode("gravity")}
+            >
+              <AudioLines size={15} /> Replays
+            </button>
+          </div>
+          <svg
+            className="taste-map"
+            viewBox="0 0 600 600"
+            role="group"
+            tabIndex={0}
+            aria-label="Interactive song map. Tap to select a nearby song. Use left and right arrow keys to browse songs."
+            onKeyDown={(event) => {
+              if (!["ArrowRight", "ArrowLeft"].includes(event.key)) return;
+              event.preventDefault();
+              const index = points.findIndex((p) => p.rank === selected.rank);
+              setSelected(
+                points[
+                  (index +
+                    (event.key === "ArrowRight" ? 1 : -1) +
+                    points.length) %
+                    points.length
+                ],
+              );
+            }}
+            onClick={(event) => {
+              const box = event.currentTarget.getBoundingClientRect();
+              const x = ((event.clientX - box.left) / box.width) * 600;
+              const y = ((event.clientY - box.top) / box.height) * 600;
+              const nearest = points.reduce((a, b) =>
+                Math.hypot(position(a).x - x, position(a).y - y) <
+                Math.hypot(position(b).x - x, position(b).y - y)
+                  ? a
+                  : b,
+              );
+              setSelected(nearest);
+            }}
+          >
             <defs>
-              <radialGradient id="field" cx="50%" cy="45%" r="70%"><stop offset="0" stopColor="#24272b" /><stop offset="1" stopColor="#111315" /></radialGradient>
-              <filter id="dotGlow"><feGaussianBlur stdDeviation="4" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+              <radialGradient id="map-background">
+                <stop stopColor="#2a3037" />
+                <stop offset="1" stopColor="#181e25" />
+              </radialGradient>
+              <pattern
+                id="map-grid"
+                width="60"
+                height="60"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M 60 0 L 0 0 0 60"
+                  fill="none"
+                  stroke="#ffffff"
+                  strokeOpacity=".055"
+                />
+              </pattern>
             </defs>
-            <rect width="1000" height="660" fill="url(#field)" />
-            <g className="field-grid">
-              {[100, 200, 300, 400, 500, 600, 700, 800, 900].map((x) => <line key={`x-${x}`} x1={x} y1="0" x2={x} y2="660" />)}
-              {[110, 220, 330, 440, 550].map((y) => <line key={`y-${y}`} x1="0" y1={y} x2="1000" y2={y} />)}
-            </g>
-            {cosmos.clusters.map((cluster) => (
-              <circle key={`halo-${cluster.id}`} cx={40 + cluster.centroid[0] * 920} cy={25 + (1 - cluster.centroid[1]) * 600} r={34 + Math.sqrt(cluster.size) * 2.4} fill={clusterColors[cluster.id]} opacity={activeCluster === null || activeCluster === cluster.id ? .035 : .01} />
-            ))}
-            <g>
-              {cosmos.points.map((point) => {
-                const isSelected = selected.videoId === point.videoId && selected.rank === point.rank;
-                const dimmed = activeCluster !== null && activeCluster !== point.cluster;
-                const radius = mode === "gravity" ? 2.1 + 6 * Math.sqrt(point.listens / maxListens) : point.gatewayScore > 2200 ? 4.2 : 2.35;
-                return (
-                  <circle
-                    key={`${point.rank}-${point.videoId}`}
-                    cx={40 + point.x * 920}
-                    cy={25 + (1 - point.y) * 600}
-                    r={isSelected ? radius + 4 : radius}
-                    fill={pointColor(point)}
-                    opacity={dimmed ? .05 : isSelected ? 1 : .68}
-                    stroke={isSelected ? "#fff" : "none"}
-                    strokeWidth={isSelected ? 2 : 0}
-                    filter={isSelected ? "url(#dotGlow)" : undefined}
-                    onPointerEnter={() => setSelected(point)}
-                    onClick={() => setSelected(point)}
-                  />
-                );
-              })}
-            </g>
+            <rect width="600" height="600" fill="url(#map-background)" />
+            <rect width="600" height="600" fill="url(#map-grid)" />
+            {activeCluster === null &&
+              cosmos.clusters.map((c) => (
+                <circle
+                  key={c.id}
+                  cx={24 + c.centroid[0] * 552}
+                  cy={24 + (1 - c.centroid[1]) * 552}
+                  r={24 + Math.sqrt(c.size) * 1.7}
+                  fill={clusterColors[c.id]}
+                  opacity=".07"
+                />
+              ))}
+            {points.map((p) => {
+              const pos = position(p);
+              return (
+                <circle
+                  key={p.rank}
+                  cx={pos.x}
+                  cy={pos.y}
+                  r={
+                    mode === "gravity"
+                      ? 2.5 + 5 * Math.sqrt(p.listens / maxListens)
+                      : 2.5
+                  }
+                  fill={color(p)}
+                  opacity=".85"
+                />
+              );
+            })}
+            <circle
+              cx={position(selected).x}
+              cy={position(selected).y}
+              r="10"
+              fill="none"
+              stroke="#faf6eb"
+              strokeWidth="1.5"
+            />
+            <circle
+              cx={position(selected).x}
+              cy={position(selected).y}
+              r="4"
+              fill={color(selected)}
+            />
           </svg>
-
-          <div className="map-key"><span><i />{mode === "gravity" ? "low replay" : mode === "chronology" ? "newest" : "individual song"}</span><span><i />{mode === "gravity" ? "high replay" : mode === "chronology" ? "oldest" : "gateway song"}</span></div>
-          <a className="selected-track" href={`https://music.youtube.com/watch?v=${selected.videoId}`} target="_blank" rel="noreferrer">
-            <Cover videoId={selected.videoId} title={selected.title} />
-            <span className="selected-track-copy">
-              <small style={{ color: clusterColors[selected.cluster] }}>{clusterById.get(selected.cluster)?.name}</small>
+          <div className="map-legend">
+            {mode === "regions" ? (
+              <>
+                <span>
+                  <i style={{ background: "#e8ce78" }} />
+                  One dot = one liked song
+                </span>
+                <span>Tap anywhere to explore</span>
+              </>
+            ) : mode === "chronology" ? (
+              <>
+                <span>
+                  <i style={{ background: "#ff825d" }} />
+                  Newest likes
+                </span>
+                <span>
+                  <i style={{ background: "#969bd2" }} />
+                  Oldest likes
+                </span>
+              </>
+            ) : (
+              <>
+                <span>
+                  <i style={{ background: "#87b6aa" }} />
+                  0–8 watches
+                </span>
+                <span>
+                  <i style={{ background: "#e8ce78" }} />
+                  9–20
+                </span>
+                <span>
+                  <i style={{ background: "#ff825d" }} />
+                  21+
+                </span>
+              </>
+            )}
+          </div>
+          <a
+            className="now-selected"
+            href={musicUrl(selected.videoId)}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="art">
+              <Cover videoId={selected.videoId} />
+            </div>
+            <div>
+              <span
+                className="micro"
+                style={{ color: clusterColors[selected.cluster] }}
+              >
+                {cosmos.clusters.find((c) => c.id === selected.cluster)?.name}
+              </span>
               <strong>{selected.title}</strong>
-              <span>{selected.artist}</span>
-              <em>{selected.listens} watches · {confidenceLabel(selected.dateConfidence)}{selected.likeAt ? ` · ${formatDate(selected.likeAt)}` : ""}</em>
+              <p>
+                {selected.artist} <span>· {selected.listens} watches</span>
+              </p>
+              <small>
+                {confidenceLabel(selected.dateConfidence)}
+                {selected.likeAt ? ` · ${formatDate(selected.likeAt)}` : ""}
+              </small>
+            </div>
+            <ArrowUpRight size={20} />
+          </a>
+        </div>
+        <aside className="explorer-panel">
+          <div className="explorer-heading">
+            <h3>Find your corner.</h3>
+            <span>{cosmos.clusters.length} regions</span>
+          </div>
+          <div className="region-caption">
+            {region ? (
+              <>
+                <i style={{ background: clusterColors[region.id] }} />
+                <p>
+                  {region.topArtists
+                    .slice(0, 3)
+                    .map((a) => a.name)
+                    .join(" / ")}
+                </p>
+              </>
+            ) : (
+              <p>From A.R. Rahman to Radiohead. There’s room for all of it.</p>
+            )}
+          </div>
+          <label className="field-label" htmlFor="song-search">
+            Search songs & artists
+          </label>
+          <div className="search-field">
+            <Search size={17} />
+            <input
+              id="song-search"
+              type="search"
+              placeholder="Try Kendrick, Clocks…"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+            {query && (
+              <button
+                type="button"
+                aria-label="Clear search"
+                onClick={() => setQuery("")}
+              >
+                <X size={16} />
+              </button>
+            )}
+          </div>
+          <p className="results-label" aria-live="polite">
+            {query
+              ? `${results.length === 5 ? "Top 5" : results.length} matches${activeCluster !== null ? " in this region" : ""}`
+              : "START EXPLORING"}
+          </p>
+          <div className="song-results">
+            {results.map((p) => (
+              <button
+                type="button"
+                key={p.rank}
+                aria-pressed={selected.rank === p.rank}
+                onClick={() => setSelected(p)}
+              >
+                <i style={{ background: clusterColors[p.cluster] }} />
+                <span>
+                  <strong>{p.title}</strong>
+                  <small>{p.artist}</small>
+                </span>
+                {selected.rank === p.rank ? (
+                  <Check size={16} />
+                ) : (
+                  <ArrowUpRight size={16} />
+                )}
+              </button>
+            ))}
+            {!results.length && (
+              <p className="empty-state">
+                No songs found. Try another artist or choose all regions.
+              </p>
+            )}
+          </div>
+          <a
+            className="explorer-open"
+            href={musicUrl(selected.videoId)}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>
+              Open selected song<strong>{selected.title}</strong>
             </span>
             <ArrowUpRight size={18} />
           </a>
+          <details className="map-method">
+            <summary>
+              <Info size={14} /> What does this map mean?
+            </summary>
+            <p>
+              A seeded UMAP projection of {cosmos.method.features} traits,
+              grouped into ten clusters. Position suggests similarity, not a
+              musical quality score. Region names are interpretations of those
+              groups.
+            </p>
+          </details>
+        </aside>
+      </div>
+    </section>
+  );
+}
+
+function Transformation({ cosmos }: { cosmos: Cosmos }) {
+  const shifts = useMemo(
+    () =>
+      cosmos.clusters
+        .map((c) => {
+          const old = cosmos.points.filter(
+            (p) => p.rank > cosmos.points.length - 200 && p.cluster === c.id,
+          ).length;
+          const recent = cosmos.points.filter(
+            (p) => p.rank <= 200 && p.cluster === c.id,
+          ).length;
+          return { ...c, old, recent, delta: recent - old };
+        })
+        .sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta)),
+    [cosmos],
+  );
+  const max = Math.max(1, ...shifts.flatMap((c) => [c.old, c.recent]));
+  const rising = [...shifts].sort((a, b) => b.delta - a.delta)[0];
+  return (
+    <section className="shift-section section" id="shift">
+      <SectionHeading
+        number="02"
+        label="THE EVOLUTION"
+        title={
+          <>
+            Your taste changed.
+            <br />
+            <em>The old worlds stayed.</em>
+          </>
+        }
+      >
+        The oldest 200 likes versus the newest 200. These are playlist
+        positions, not calendar periods.
+      </SectionHeading>
+      <div className="shift-layout">
+        <div className="shift-story">
+          <span className="big-delta">
+            +{rising.delta}
+            <ArrowUpRight size={32} />
+          </span>
+          <h3>{rising.name}</h3>
+          <p>
+            The biggest arrival: from <strong>{rising.old}</strong> of your
+            oldest likes to <strong>{rising.recent}</strong> of your newest.
+          </p>
+          <div className="story-rule" />
+          <p className="story-note">
+            Film music and rap have taken more space. The melodic thread runs
+            through it all.
+          </p>
+          <span className="micro">SAME PLAYLIST. WIDER HORIZONS.</span>
+        </div>
+        <div className="shift-chart">
+          <div className="chart-key">
+            <span>
+              <i className="old-swatch" />
+              Oldest 200
+            </span>
+            <span>
+              <i className="new-swatch" />
+              Newest 200
+            </span>
+            <span>Number of likes</span>
+          </div>
+          {shifts.map((c) => (
+            <div className="shift-item" key={c.id}>
+              <div className="shift-label">
+                <strong>{c.name}</strong>
+                <span
+                  className={
+                    c.delta > 0 ? "positive" : c.delta < 0 ? "negative" : ""
+                  }
+                >
+                  {c.delta > 0 ? "+" : ""}
+                  {c.delta} likes
+                </span>
+              </div>
+              <div
+                className="paired-bar"
+                aria-label={`${c.name}: ${c.old} oldest likes, ${c.recent} newest likes`}
+              >
+                <div>
+                  <span
+                    style={{ width: `${(c.old / max) * 100}%` }}
+                    className="old-bar"
+                  />
+                  <b>{c.old}</b>
+                </div>
+                <div>
+                  <span
+                    style={{ width: `${(c.recent / max) * 100}%` }}
+                    className="new-bar"
+                  />
+                  <b>{c.recent}</b>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-function RadialClock({ hours }: { hours: TasteModel["hourlyLikes"] }) {
-  const max = Math.max(...hours.map((hour) => hour.count));
+function ListeningRhythm({
+  cosmos,
+  model,
+}: {
+  cosmos: Cosmos;
+  model: TasteModel;
+}) {
+  const [exactOnly, setExactOnly] = useState(false);
+  const [cell, setCell] = useState({ day: 0, bin: 4 });
+  const [sessionIndex, setSessionIndex] = useState(0);
+  const sessions = model.sessions;
+  const session = sessions[sessionIndex];
+  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  const heat = useMemo(() => {
+    const cells = Array.from({ length: 7 }, () => Array(6).fill(0) as number[]);
+    const tracks = cosmos.points.filter(
+      (p) =>
+        p.likeAt &&
+        (p.dateConfidence === "exact" ||
+          (!exactOnly && p.dateConfidence === "watch-anchored")),
+    );
+    for (const p of tracks) {
+      const date = new Date(Date.parse(p.likeAt!) + 8 * 3600000);
+      cells[(date.getUTCDay() + 6) % 7][Math.floor(date.getUTCHours() / 4)] +=
+        1;
+    }
+    return { cells, total: tracks.length, max: Math.max(1, ...cells.flat()) };
+  }, [cosmos.points, exactOnly]);
+  const peakHour = [...model.hourlyLikes].sort((a, b) => b.count - a.count)[0];
   return (
-    <svg className="radial-clock" viewBox="0 0 360 360" role="img" aria-label="Exact and watch-anchored likes by hour of day">
-      <circle cx="180" cy="180" r="105" className="clock-orbit" />
-      {hours.map(({ hour, count }) => {
-        const angle = (hour / 24) * Math.PI * 2 - Math.PI / 2;
-        const inner = 112;
-        const outer = inner + 54 * (count / max);
-        return <line key={hour} aria-label={`${timeLabel(hour)}: ${count} dated likes`} x1={svgNumber(180 + Math.cos(angle) * inner)} y1={svgNumber(180 + Math.sin(angle) * inner)} x2={svgNumber(180 + Math.cos(angle) * outer)} y2={svgNumber(180 + Math.sin(angle) * outer)} stroke={hour === 18 || hour === 19 ? "#ff6a4d" : "#697078"} strokeWidth="10" strokeLinecap="square" />;
-      })}
-      {[0, 6, 12, 18].map((hour) => {
-        const angle = (hour / 24) * Math.PI * 2 - Math.PI / 2;
-        return <text key={hour} x={svgNumber(180 + Math.cos(angle) * 153)} y={svgNumber(185 + Math.sin(angle) * 153)} textAnchor="middle">{timeLabel(hour)}</text>;
-      })}
-      <text x="180" y="166" textAnchor="middle" className="clock-big">6–8pm</text>
-      <text x="180" y="190" textAnchor="middle" className="clock-small">LIKE PEAK</text>
-      <text x="180" y="213" textAnchor="middle" className="clock-note">Singapore time</text>
-    </svg>
-  );
-}
-
-function SessionWeather({ model }: { model: TasteModel }) {
-  const [selected, setSelected] = useState(model.sessions[0]);
-  const sessions = model.sessions.slice(0, 48);
-  const minTime = Math.min(...sessions.map((session) => Date.parse(session.start)));
-  const maxTime = Math.max(...sessions.map((session) => Date.parse(session.start)));
-  const xFor = (value: string) => 70 + ((Date.parse(value) - minTime) / Math.max(1, maxTime - minTime)) * 800;
-  const hourFor = (value: string) => (new Date(value).getUTCHours() + 8) % 24;
-  const yFor = (value: string) => 32 + (hourFor(value) / 24) * 286;
-
-  return (
-    <section className="weather-section" id="weather">
-      <div className="section-title">
-        <p className="kicker"><Radar size={16} /> OBSESSION WEATHER</p>
-        <h2>You do not discover songs one at a time.<br /><em>You move through fronts.</em></h2>
-        <p>Listening sessions behave like weather systems: some are narrow, some exploratory, and some leave half their tracks permanently embedded in the playlist.</p>
-      </div>
-      <div className="weather-layout">
-        <div className="clock-panel">
-          <RadialClock hours={model.hourlyLikes} />
-          <div className="clock-key"><span><i />other hours</span><span><i />6–8pm peak</span></div>
-          <p><strong>{model.hourlyLikes[18].count + model.hourlyLikes[19].count}</strong> precisely dated likes landed between 6 and 8pm. Midnight is a smaller second pulse, not an outlier.</p>
+    <section className="rhythm-section section" id="rhythm">
+      <SectionHeading
+        number="03"
+        label="THE LISTENING RHYTHM"
+        title={
+          <>
+            There’s a time
+            <br />
+            <em>for getting lost.</em>
+          </>
+        }
+      >
+        A heatmap of dated likes, in Singapore time. Each cell covers four
+        hours. Darker means more likes. Tap a cell for its count.
+      </SectionHeading>
+      <div className="rhythm-layout">
+        <div className="heat-card">
+          <div className="card-heading">
+            <h3>When songs stick.</h3>
+            <span className="pill">UTC +8</span>
+          </div>
+          <div className="segmented evidence-toggle">
+            <button
+              type="button"
+              aria-pressed={!exactOnly}
+              onClick={() => setExactOnly(false)}
+            >
+              Exact + watch anchored
+            </button>
+            <button
+              type="button"
+              aria-pressed={exactOnly}
+              onClick={() => setExactOnly(true)}
+            >
+              Exact only
+            </button>
+          </div>
+          <div className="heatmap">
+            <div className="heat-hours">
+              <span />
+              {["12am", "4am", "8am", "12pm", "4pm", "8pm"].map((h) => (
+                <span key={h}>{h}</span>
+              ))}
+            </div>
+            {days.map((day, d) => (
+              <div className="heat-row" key={day}>
+                <span>{day}</span>
+                {heat.cells[d].map((count, b) => (
+                  <button
+                    type="button"
+                    key={b}
+                    aria-label={`${day}, ${timeLabel(b * 4)} to ${timeLabel((b * 4 + 4) % 24)}: ${count} dated likes`}
+                    aria-pressed={cell.day === d && cell.bin === b}
+                    className={
+                      cell.day === d && cell.bin === b ? "selected" : ""
+                    }
+                    style={{
+                      background: count
+                        ? `color-mix(in srgb, #453cb0 ${20 + (count / heat.max) * 80}%, #eeecf8)`
+                        : "#eeecf2",
+                      color: count / heat.max > 0.4 ? "#fff" : "#4c4764",
+                    }}
+                    onClick={() => setCell({ day: d, bin: b })}
+                  >
+                    {count || <span className="zero-dot">·</span>}
+                  </button>
+                ))}
+              </div>
+            ))}
+          </div>
+          <div className="heat-footer">
+            <span>
+              Less <i />
+              <i />
+              <i />
+              <i /> More
+            </span>
+            <small>{heat.total} dated likes</small>
+          </div>
+          <div className="heat-detail" aria-live="polite">
+            <strong>{heat.cells[cell.day][cell.bin]} likes</strong>
+            <span>
+              {days[cell.day]} · {timeLabel(cell.bin * 4)}–
+              {timeLabel((cell.bin * 4 + 4) % 24)}
+            </span>
+          </div>
+          <p className="chart-note">
+            {exactOnly
+              ? "Only confirmed timestamps from like activity."
+              : "88 exact timestamps + 157 dates estimated from watch history."}{" "}
+            Interpolated dates are excluded.
+          </p>
         </div>
-        <div className="storm-panel">
-          <div className="chart-decoder storm-decoder">
-            <span><b>X</b> date</span><span><b>Y</b> time of day</span><span><b>SIZE</b> songs explored</span>
-            <span className="keep-low"><i /> under 50% kept</span><span className="keep-mid"><i /> 50–79% kept</span><span className="keep-high"><i /> 80%+ kept</span>
-          </div>
-          <div className="storm-head"><span>48 HIGHEST-ENERGY SESSIONS</span><span>LATER IN THE DAY ↓</span></div>
-          <svg viewBox="0 0 920 350" role="img" aria-label="High-energy listening sessions plotted by date and time of day">
-            {[0, 6, 12, 18, 24].map((hour) => <g key={hour}><line x1="70" x2="870" y1={32 + hour / 24 * 286} y2={32 + hour / 24 * 286} /><text x="55" y={36 + hour / 24 * 286} textAnchor="end">{timeLabel(hour % 24)}</text></g>)}
-            {sessions.map((session) => {
-              const isSelected = selected.id === session.id;
-              return <circle key={session.id} aria-label={`${formatDate(session.start)} · ${session.uniqueTracks} tracks · ${session.keepRate}% kept`} cx={svgNumber(xFor(session.start))} cy={svgNumber(yFor(session.start))} r={svgNumber(4 + Math.sqrt(session.uniqueTracks) * .9)} fill={retentionColor(session.keepRate)} opacity={isSelected ? 1 : .68} stroke={isSelected ? "#fff" : "none"} strokeWidth="2" onPointerEnter={() => setSelected(session)} onClick={() => setSelected(session)} />;
-            })}
-            <text x="70" y="342">{formatDate(new Date(minTime).toISOString(), { month: "short", year: "numeric" })}</text>
-            <text x="870" y="342" textAnchor="end">{formatDate(new Date(maxTime).toISOString(), { month: "short", year: "numeric" })}</text>
-          </svg>
-          <div className="storm-detail">
-            <span className="storm-date">{formatDate(selected.start)}</span>
-            <div><strong>{selected.uniqueTracks}</strong><small>unique tracks</small></div>
-            <div><strong>{selected.keepRate}%</strong><small>survive in likes</small></div>
-            <div><strong>{selected.durationMinutes}m</strong><small>storm length</small></div>
-            <p><b>{selected.topGenre?.name || "Mixed"}</b> led the front{selected.topArtist ? `, with ${selected.topArtist.name} at its center.` : "."}</p>
-          </div>
+        <div className="rhythm-side">
+          <article className="peak-card">
+            <Clock3 size={22} />
+            <span className="micro">YOUR PEAK HOUR</span>
+            <strong>
+              {timeLabel(peakHour.hour)}
+              <span>–{timeLabel((peakHour.hour + 1) % 24)}</span>
+            </strong>
+            <p>
+              {peakHour.count} exact or watch-anchored likes. An evening ritual,
+              with another pulse around midnight.
+            </p>
+            <div
+              className="hour-bars"
+              role="img"
+              aria-label={`Likes by hour. Peak: ${timeLabel(peakHour.hour)}, ${peakHour.count} likes.`}
+            >
+              {model.hourlyLikes.map((h) => (
+                <i
+                  key={h.hour}
+                  style={{
+                    height: `${Math.max(3, (h.count / peakHour.count) * 100)}%`,
+                    background:
+                      h.hour === peakHour.hour ? "#bace7a" : "#59626b",
+                  }}
+                />
+              ))}
+            </div>
+            <div className="hour-axis">
+              <span>12am</span>
+              <span>12pm</span>
+              <span>11pm</span>
+            </div>
+          </article>
+          <article className="session-card">
+            <div className="card-heading">
+              <h3>A deep dive.</h3>
+              <Headphones size={19} />
+            </div>
+            <label className="field-label" htmlFor="session">
+              Explore 60 high-energy sessions
+            </label>
+            <div className="select-wrap">
+              <select
+                id="session"
+                value={sessionIndex}
+                onChange={(e) => setSessionIndex(Number(e.target.value))}
+              >
+                {sessions.map((s, i) => (
+                  <option value={i} key={s.id}>
+                    {formatDate(s.start)} · {s.uniqueTracks} tracks
+                  </option>
+                ))}
+              </select>
+              <ChevronDown size={16} />
+            </div>
+            <div className="session-stats">
+              <div>
+                <strong>{session.uniqueTracks}</strong>
+                <small>songs explored</small>
+              </div>
+              <div>
+                <strong>{session.keepRate}%</strong>
+                <small>in current likes</small>
+              </div>
+              <div>
+                <strong>{session.durationMinutes}m</strong>
+                <small>session length</small>
+              </div>
+            </div>
+            <p>
+              <strong>{session.topGenre?.name || "A mixed session"}</strong>
+              {session.topArtist ? `, led by ${session.topArtist.name}.` : "."}
+            </p>
+            <div className="session-bottom">
+              <small>
+                Session {sessionIndex + 1} / {sessions.length}
+              </small>
+              <div>
+                <button
+                  type="button"
+                  aria-label="Previous session"
+                  disabled={sessionIndex === 0}
+                  onClick={() => setSessionIndex((v) => v - 1)}
+                >
+                  <ChevronLeft size={18} />
+                </button>
+                <button
+                  type="button"
+                  aria-label="Next session"
+                  disabled={sessionIndex === sessions.length - 1}
+                  onClick={() => setSessionIndex((v) => v + 1)}
+                >
+                  <ChevronRight size={18} />
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -291,136 +933,395 @@ function SessionWeather({ model }: { model: TasteModel }) {
 
 function GatewayRail({ cosmos }: { cosmos: Cosmos }) {
   return (
-    <section className="gateway-section" id="gateways">
-      <div className="section-title dark-copy">
-        <p className="kicker"><GitBranch size={16} /> GATEWAY SONGS</p>
-        <h2>The tracks that connect<br /><em>otherwise distant selves.</em></h2>
-        <p>These sit near borders in the learned map and have neighbors from multiple regions. They are not merely favorites; they are bridges that make the rest of your taste feel internally coherent.</p>
-      </div>
-      <div className="gateway-decoder"><span><b>LEFT → RIGHT</b> strongest bridge score</span><span><b>RING + LABEL</b> home taste region</span></div>
-      <div className="gateway-line">
-        {cosmos.gateways.slice(0, 7).map((point, index) => (
-          <a href={`https://music.youtube.com/watch?v=${point.videoId}`} target="_blank" rel="noreferrer" key={`${point.rank}-${point.videoId}`} className="gateway-stop">
-            <span className="gateway-number">0{index + 1}</span>
-            <div className="gateway-node" style={{ borderColor: clusterColors[point.cluster] }}><Cover videoId={point.videoId} title={point.title} /></div>
-            <strong>{point.title}</strong>
-            <small>{point.artist}</small>
-            <em>{cosmos.clusters[point.cluster].name}</em>
+    <section className="gateway-section section" id="bridges">
+      <SectionHeading
+        number="04"
+        label="THE CONNECTING THREADS"
+        title={
+          <>
+            Some songs
+            <br />
+            <em>open doors.</em>
+          </>
+        }
+      >
+        These tracks sit near neighbors from different regions. Their bridge
+        scores describe the map, not your personal favorites.
+      </SectionHeading>
+      <div className="gateway-grid">
+        {cosmos.gateways.slice(0, 7).map((p, i) => (
+          <a
+            key={p.rank}
+            className="gateway-card"
+            href={musicUrl(p.videoId)}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="gateway-art">
+              <Cover videoId={p.videoId} />
+              <span>0{i + 1}</span>
+              <ArrowUpRight size={20} />
+            </div>
+            <span className="micro" style={{ color: clusterColors[p.cluster] }}>
+              {cosmos.clusters.find((c) => c.id === p.cluster)?.name}
+            </span>
+            <h3>{p.title}</h3>
+            <p>{p.artist}</p>
           </a>
         ))}
       </div>
-      <p className="gateway-reading"><Sparkles size={16} /> The strongest bridges lean classic-rock: <strong>Stairway to Heaven</strong>, <strong>Patience</strong>, <strong>Come and Get Your Love</strong>, and <strong>Clocks</strong>. Your canon phase appears to have acted as a translation layer between cinematic scale, alternative catharsis, and melody-first pop.</p>
+      <p className="bridge-note">
+        <Sparkles size={18} />
+        <span>
+          Classic rock is a connecting thread:{" "}
+          <strong>Stairway to Heaven, Patience, Clocks.</strong> Big emotions
+          meet a melody you can carry.
+        </span>
+      </p>
     </section>
   );
 }
 
 function TasteBoundary({ model }: { model: TasteModel }) {
-  const kept = useMemo(() => [...model.tracks].sort((a, b) => b.listenCount - a.listenCount).slice(0, 6), [model.tracks]);
-  const missed = model.nearMisses.slice(0, 6);
-  return (
-    <section className="boundary-section" id="boundary">
-      <div className="section-title">
-        <p className="kicker"><Fingerprint size={16} /> THE TASTE BOUNDARY</p>
-        <h2>What repetition says<br /><em>that a like cannot.</em></h2>
-        <p>Watch count separates gravitational favorites from songs orbiting the edge of the current playlist. “Not found” can include alternate uploads, so this is a boundary signal, not a rejection verdict.</p>
-      </div>
-      <div className="boundary-axis"><span>LIKED + REPLAYED</span><i /><span>REPLAYED, NOT FOUND IN CURRENT LIKES</span></div>
-      <div className="boundary-grid">
-        <div className="boundary-side kept-side">
-          {kept.map((track, index) => <a key={`${track.rank}-${track.videoId}`} href={`https://music.youtube.com/watch?v=${track.videoId}`} target="_blank" rel="noreferrer" className="boundary-track"><span className="boundary-rank">{index + 1}</span><div><Cover videoId={track.videoId} title={track.title} /><b><strong>{track.listenCount}</strong><small>watches</small></b></div><span><strong>{track.title}</strong><small>{track.primaryArtist}</small></span></a>)}
-        </div>
-        <div className="boundary-side missed-side">
-          {missed.map((track, index) => <a key={track.videoId} href={`https://music.youtube.com/watch?v=${track.videoId}`} target="_blank" rel="noreferrer" className="boundary-track"><span className="boundary-rank">{index + 1}</span><div><Cover videoId={track.videoId} title={track.title} /><b><strong>{track.plays}</strong><small>watches</small></b></div><span><strong>{track.title}</strong><small>{(track.channel || "Unknown channel").replace(" - Topic", "")}</small></span></a>)}
-        </div>
-      </div>
-      <div className="boundary-verdict"><Flame size={20} /><p><strong>King Kunta</strong> is your strongest confirmed magnet at 56 watches. The strangest edge case is <strong>Runaway</strong>: 44 watches across thirteen months, yet this exact upload is absent from the current liked playlist.</p></div>
-    </section>
+  const [tab, setTab] = useState("kept");
+  const kept = useMemo(
+    () =>
+      [...model.tracks]
+        .sort((a, b) => b.listenCount - a.listenCount)
+        .slice(0, 6),
+    [model.tracks],
   );
-}
-
-function Transformation({ cosmos }: { cosmos: Cosmos }) {
-  const groups = useMemo(() => {
-    const count = (points: Point[]) => cosmos.clusters.map((cluster) => ({ ...cluster, count: points.filter((point) => point.cluster === cluster.id).length }));
-    return {
-      old: count(cosmos.points.filter((point) => point.rank > cosmos.points.length - 200)),
-      recent: count(cosmos.points.filter((point) => point.rank <= 200)),
-    };
-  }, [cosmos]);
-  const shifts = useMemo(() => groups.old.map((old) => {
-    const recent = groups.recent.find((item) => item.id === old.id) || { count: 0 };
-    return { ...old, oldCount: old.count, recentCount: recent.count, delta: recent.count - old.count };
-  }).sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta)), [groups]);
-  const shiftMax = Math.max(...shifts.flatMap((item) => [item.oldCount, item.recentCount]));
+  const songs =
+    tab === "kept"
+      ? kept.map((s) => ({
+          ...s,
+          artist: s.primaryArtist,
+          plays: s.listenCount,
+        }))
+      : model.nearMisses.slice(0, 6).map((s) => ({
+          ...s,
+          artist: (s.channel || "Unknown channel").replace(" - Topic", ""),
+        }));
   return (
-    <section className="transform-section" id="transform">
-      <div className="section-title dark-copy">
-        <p className="kicker"><Activity size={16} /> THE TRANSFORMATION</p>
-        <h2>Not a replacement.<br /><em>An expansion of emotional scale.</em></h2>
-      </div>
-      <div className="shift-table">
-        <div className="shift-head"><span>REGION</span><span>OLDEST 200</span><span>OLD → NEW</span><span>NEWEST 200</span><span>CHANGE</span></div>
-        {shifts.map((cluster) => {
-          const oldPosition = cluster.oldCount / shiftMax * 100;
-          const newPosition = cluster.recentCount / shiftMax * 100;
-          return <div className="shift-row" key={cluster.id}>
-            <span className="shift-name"><i style={{ background: clusterColors[cluster.id] }} /><strong>{cluster.name}</strong></span>
-            <b>{cluster.oldCount}</b>
-            <span className="shift-track"><i style={{ left: `${Math.min(oldPosition, newPosition)}%`, width: `${Math.abs(newPosition - oldPosition)}%`, background: clusterColors[cluster.id] }} /><b className="old-dot" style={{ left: `${oldPosition}%`, borderColor: clusterColors[cluster.id] }} /><b className="new-dot" style={{ left: `${newPosition}%`, background: clusterColors[cluster.id] }} /></span>
-            <b>{cluster.recentCount}</b>
-            <em className={cluster.delta > 0 ? "rise" : cluster.delta < 0 ? "fall" : "flat"}>{cluster.delta > 0 ? "+" : ""}{cluster.delta}</em>
-          </div>;
-        })}
-      </div>
-      <div className="transform-findings">
-        <article><span>+40</span><h3>Cinema becomes personal</h3><p><strong>Cinema in Full Color</strong> rises from 7 of the oldest 200 to 47 of the newest. South Asian film music is no longer a side room; it is the largest current territory.</p></article>
-        <article><span>0 → 37</span><h3>Rap arrives as architecture</h3><p>The old edge contains no tracks in the tight rap cluster. The newest edge contains 37, with deep catalog runs through Kendrick and Kanye rather than isolated hits.</p></article>
-        <article><span>46 → 2</span><h3>World-building moves underground</h3><p>Scores fall sharply in new likes, but their preference for scale survives elsewhere: prog epics, album-sequenced rap, and dramatic film songs inherit the same appetite.</p></article>
-        <article><span>28 → 36</span><h3>Melody is the invariant</h3><p>The mixed Beatles–Daft Punk–Billy Joel region barely changes. Across every transformation, memorable melodic construction remains the stable center of gravity.</p></article>
+    <section className="replay-section section" id="replays">
+      <SectionHeading
+        number="05"
+        label="THE REPEAT OFFENDERS"
+        title={
+          <>
+            A like is a moment.
+            <br />
+            <em>A replay says more.</em>
+          </>
+        }
+      >
+        The songs you keep returning to, and the ones that never made this exact
+        liked-playlist snapshot.
+      </SectionHeading>
+      <div className="replay-layout">
+        <div>
+          <div className="segmented replay-tabs">
+            <button
+              type="button"
+              aria-pressed={tab === "kept"}
+              onClick={() => setTab("kept")}
+            >
+              Liked & replayed
+            </button>
+            <button
+              type="button"
+              aria-pressed={tab === "missed"}
+              onClick={() => setTab("missed")}
+            >
+              Outside current likes
+            </button>
+          </div>
+          <div className="replay-list">
+            {songs.map((s, i) => (
+              <a
+                key={s.videoId}
+                href={musicUrl(s.videoId)}
+                target="_blank"
+                rel="noreferrer"
+                className="replay-song"
+              >
+                <span className="song-rank">0{i + 1}</span>
+                <div className="art">
+                  <Cover videoId={s.videoId} />
+                </div>
+                <span className="song-copy">
+                  <strong>{s.title}</strong>
+                  <small>{s.artist}</small>
+                </span>
+                <span className="watch-count">
+                  <strong>{s.plays}</strong>
+                  <small>watches</small>
+                </span>
+                <ArrowUpRight size={17} />
+              </a>
+            ))}
+          </div>
+        </div>
+        <aside className="replay-insight">
+          <Disc3 size={46} strokeWidth={1} />
+          <span className="micro">THE STRONGEST MAGNET</span>
+          <h3>{kept[0].title}</h3>
+          <p>{kept[0].primaryArtist}</p>
+          <strong className="replay-number">
+            {kept[0].listenCount}
+            <span>watches</span>
+          </strong>
+          <p className="chart-note">
+            Watch events can include partial plays. An absent video ID may be an
+            alternate upload, not a rejected song.
+          </p>
+        </aside>
       </div>
     </section>
   );
 }
 
 function Evidence({ model, cosmos }: { model: TasteModel; cosmos: Cosmos }) {
-  const confidence = model.coverage.confidence;
-  const total = model.coverage.tracks;
   const pieces = [
-    ["Exact", confidence.exact, "#ff6a4d"],
-    ["Watch anchored", confidence["watch-anchored"], "#76d7c4"],
-    ["Between anchors", confidence["rank-interpolated"], "#f0c84b"],
-    ["Order only", confidence["rank-only"], "#6f9fff"],
+    ["Exact like date", model.coverage.confidence.exact, "#453cb0"],
+    [
+      "Watch-based estimate",
+      model.coverage.confidence["watch-anchored"],
+      "#8a82c8",
+    ],
+    [
+      "Interpolated date",
+      model.coverage.confidence["rank-interpolated"],
+      "#c3bbdf",
+    ],
+    ["Playlist order only", model.coverage.confidence["rank-only"], "#ded9e7"],
   ] as const;
   return (
-    <section className="evidence-section" id="evidence">
-      <div className="evidence-copy"><p className="kicker"><Info size={16} /> EVIDENCE, NOT VIBES</p><h2>How much of the timeline is real?</h2><p>The Takeout history covers June 2025–July 2026. Google’s separate My Activity export failed, but the signed-in activity page supplied the newest exact likes. Older ranks are never shown as exact dates.</p></div>
-      <div className="confidence-bar">{pieces.map(([label, value, color]) => <i key={label} style={{ width: `${value / total * 100}%`, background: color }} title={`${label}: ${value}`} />)}</div>
-      <div className="confidence-legend">{pieces.map(([label, value, color]) => <span key={label}><i style={{ background: color }} /><b>{value}</b><small>{label}</small></span>)}</div>
-      <div className="method-grid">
-        <div><strong>{model.coverage.musicWatches.toLocaleString()}</strong><span>music watch events</span></div>
-        <div><strong>{model.coverage.sessions.toLocaleString()}</strong><span>listening sessions</span></div>
-        <div><strong>{model.calibration.medianMinutesFromWatchToLike} min</strong><span>median watch → like delay</span></div>
-        <div><strong>{cosmos.method.features}</strong><span>features in the taste model</span></div>
+    <section className="evidence-section section" id="evidence">
+      <div className="evidence-intro">
+        <p className="eyebrow">
+          <span>06</span> BEHIND THE NUMBERS
+        </p>
+        <h2>
+          Good taste.
+          <br />
+          <em>Honest evidence.</em>
+        </h2>
+        <p>
+          A snapshot of your playlist, with watch history from June 2025 to July
+          2026. The timeline has gaps. Here’s exactly where.
+        </p>
       </div>
-      <div className="repro-line"><Disc3 size={18} /><span>Deterministic model seed: <code>{cosmos.method.seed}</code></span><span>Archive fingerprint: <code>{model.provenance.sha256.slice(0, 12)}…</code></span></div>
+      <div className="evidence-body">
+        <div
+          className="confidence-bar"
+          role="img"
+          aria-label={pieces.map(([l, n]) => `${n} ${l}`).join(", ")}
+        >
+          {pieces.map(([l, n, c]) => (
+            <i
+              key={l}
+              style={{
+                width: `${(n / model.coverage.tracks) * 100}%`,
+                background: c,
+              }}
+            />
+          ))}
+        </div>
+        <div className="confidence-grid">
+          {pieces.map(([l, n, c]) => (
+            <div key={l}>
+              <i style={{ background: c }} />
+              <strong>{n}</strong>
+              <span>{l}</span>
+            </div>
+          ))}
+        </div>
+        <details className="evidence-details">
+          <summary>
+            Sources & method <ChevronDown size={18} />
+          </summary>
+          <div>
+            <p>
+              The public site contains song metadata and aggregate behavior. Raw
+              Takeout files remain private and are not published.
+            </p>
+            <p>
+              Only exact and watch-anchored dates power the heatmap.
+              Interpolated dates infer position between anchors; they are never
+              presented as confirmed like times.
+            </p>
+            <dl>
+              <div>
+                <dt>Music watch events</dt>
+                <dd>{model.coverage.musicWatches.toLocaleString()}</dd>
+              </div>
+              <div>
+                <dt>Listening sessions</dt>
+                <dd>{model.coverage.sessions.toLocaleString()}</dd>
+              </div>
+              <div>
+                <dt>Model</dt>
+                <dd>{cosmos.method.features} traits · seeded UMAP</dd>
+              </div>
+              <div>
+                <dt>Seed</dt>
+                <dd>{cosmos.method.seed}</dd>
+              </div>
+              <div>
+                <dt>Archive fingerprint</dt>
+                <dd>{model.provenance.sha256.slice(0, 12)}…</dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+      </div>
     </section>
   );
 }
 
-export default function TasteCosmos({ cosmos, model }: { cosmos: Cosmos; model: TasteModel }) {
+export default function TasteCosmos({
+  cosmos,
+  model,
+}: {
+  cosmos: Cosmos;
+  model: TasteModel;
+}) {
   return (
-    <main>
+    <main id="top">
+      <a className="skip-link" href="#atlas">
+        Skip to the taste map
+      </a>
       <header className="site-header">
-        <a className="brand" href="#cosmos"><Disc3 size={20} />KUSHAL / TASTE LAB</a>
-        <nav><a href="#transform">Shift</a><a href="#weather">Weather</a><a href="#gateways">Gateways</a><a href="#boundary">Boundary</a><a href="#evidence">Evidence</a></nav>
-        <span className="header-count">1,111 LIKES</span>
+        <a className="brand" href="#top">
+          <Disc3 size={25} />
+          <span>
+            TASTE <b>ATLAS</b>
+            <small>KUSHAL’S MUSIC JOURNAL</small>
+          </span>
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="#atlas">The map</a>
+          <a href="#shift">Evolution</a>
+          <a href="#rhythm">Rhythm</a>
+          <a href="#replays">On repeat</a>
+        </nav>
+        <span className="header-edition">
+          VOL. 01 <i /> PERSONAL ARCHIVE
+        </span>
       </header>
+      <section className="hero">
+        <div className="hero-topline">
+          <span className="eyebrow">
+            <i className="status-dot" /> YOUR PLAYLIST, BETWEEN THE LINES
+          </span>
+          <span className="micro">JUN ’25 — JUL ’26 HISTORY</span>
+        </div>
+        <div className="hero-layout">
+          <div className="hero-copy">
+            <h1>
+              ALL OVER
+              <br />
+              <em>THE MAP.</em>
+            </h1>
+            <p>
+              Film scores. Rap rabbit holes. City-pop nights. An atlas of
+              everything that stayed with you.
+            </p>
+            <a className="primary-link" href="#atlas">
+              Explore your taste <ArrowDown size={18} />
+            </a>
+          </div>
+          <div
+            className="hero-record"
+            aria-label="Your music spans ten taste regions"
+          >
+            <div className="cover-sticker sticker-cinema">
+              <Cover videoId={cosmos.points[0].videoId} />
+              <span>CINEMA / SIDE A</span>
+            </div>
+            <div className="cover-sticker sticker-rap">
+              <Cover
+                videoId={
+                  cosmos.points.find((p) => p.title === "King Kunta")
+                    ?.videoId || cosmos.points[0].videoId
+                }
+              />
+              <span>ON REPEAT / SIDE B</span>
+            </div>
+            <div className="record-orbit orbit-one" />
+            <div className="record-orbit orbit-two" />
+            <div className="record-disc">
+              <div className="record-label">
+                <AudioLines size={30} />
+                <strong>1,111</strong>
+                <span>SONGS IN YOUR ORBIT</span>
+              </div>
+            </div>
+            <span className="record-caption caption-one">CINEMA & FEELING</span>
+            <span className="record-caption caption-two">RAP & CATHARSIS</span>
+            <span className="record-caption caption-three">MELODY, ALWAYS</span>
+            <i className="record-star star-one">✳</i>
+            <i className="record-star star-two">+</i>
+          </div>
+        </div>
+        <div className="mixtape-strip" aria-hidden="true">
+          <span>FILM SCORES ↗</span>
+          <span>DEEP RAP CUTS ↗</span>
+          <span>CITY-POP NIGHTS ↗</span>
+          <span>INTERNET ODDITIES ↗</span>
+        </div>
+        <div className="hero-stats">
+          <div>
+            <strong>{model.coverage.tracks.toLocaleString()}</strong>
+            <span>liked songs</span>
+          </div>
+          <div>
+            <strong>{model.coverage.musicWatches.toLocaleString()}</strong>
+            <span>music watches</span>
+          </div>
+          <div>
+            <strong>{cosmos.clusters.length}</strong>
+            <span>taste regions</span>
+          </div>
+          <div>
+            <strong>{model.coverage.sessions.toLocaleString()}</strong>
+            <span>listening sessions</span>
+          </div>
+        </div>
+      </section>
       <CosmosMap cosmos={cosmos} />
       <Transformation cosmos={cosmos} />
-      <SessionWeather model={model} />
+      <ListeningRhythm cosmos={cosmos} model={model} />
       <GatewayRail cosmos={cosmos} />
       <TasteBoundary model={model} />
-      <Evidence model={model} cosmos={cosmos} />
-      <footer><Disc3 size={17} /><span>Built locally from your private YouTube Music and Google Takeout data.</span><a href="#cosmos">Back to cosmos</a></footer>
+      <Evidence cosmos={cosmos} model={model} />
+      <footer>
+        <a className="brand" href="#top">
+          <Disc3 size={24} />
+          TASTE ATLAS
+        </a>
+        <p>Made from the music you came back to.</p>
+        <a href="#top">Back to top ↑</a>
+      </footer>
+      <nav className="mobile-nav" aria-label="Mobile navigation">
+        <a href="#atlas">
+          <Map size={19} />
+          Map
+        </a>
+        <a href="#shift">
+          <Layers3 size={19} />
+          Evolution
+        </a>
+        <a href="#rhythm">
+          <Clock3 size={19} />
+          Rhythm
+        </a>
+        <a href="#replays">
+          <Headphones size={19} />
+          Replays
+        </a>
+      </nav>
     </main>
   );
 }

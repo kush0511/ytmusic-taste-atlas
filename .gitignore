@@ -5,3 +5,6 @@ out/
 *.log
 data/raw/
 data/private/
+
+.playwright-cli/
+output/
