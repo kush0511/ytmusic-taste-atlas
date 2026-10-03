@@ -30,7 +30,7 @@ Raw Takeout contents and parsed private watch history live under `data/raw/` and
 
 The Next.js static site opens as a personal mixtape sleeve and adapts to phone, tablet, and desktop widths. Its mobile navigation links to the map, evolution, listening rhythm, and replays.
 
-- The complete song map fits the viewport. Region selection zooms to that region, search selects a song, and left/right arrow keys browse songs when the map is focused.
+- The complete song map spans the phone width. Drag a finger or pointer to continuously select the nearest visible song; the page does not scroll while scrubbing the plot. Expand the map to fill the available viewport, with a persistent song dock and compact controls. Region selection zooms to that region, search selects a song, and left/right arrow keys browse songs when the map is focused. The expanded view supports Escape, focus trapping, and restores page scrolling when closed.
 - Evolution compares the oldest 200 and newest 200 playlist positions using labeled paired bars.
 - The weekday / four-hour heatmap uses Singapore time and only exact or watch-anchored like dates. The exact-only filter excludes estimated dates; interpolated dates never enter the heatmap.
 - Session browsing exposes the 60 exported high-energy sessions, while the evidence section reports the full 1,457-session dataset.

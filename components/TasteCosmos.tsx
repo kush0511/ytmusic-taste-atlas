@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { memo, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowDown,
   ArrowUpRight,
@@ -15,6 +15,8 @@ import {
   Info,
   Layers3,
   Map,
+  Maximize2,
+  Minimize2,
   Search,
   Sparkles,
   X,
@@ -191,8 +193,119 @@ function SectionHeading({
   );
 }
 
+type MapBounds = { x: number; y: number; width: number; height: number };
+const mapPosition = (point: Point, bounds: MapBounds, height = 600) => ({
+  x: 24 + ((point.x - bounds.x) / bounds.width) * 552,
+  y: 24 + (1 - (point.y - bounds.y) / bounds.height) * (height - 48),
+});
+const mapColor = (point: Point, mode: Mode, total: number) =>
+  mode === "regions"
+    ? clusterColors[point.cluster]
+    : mode === "gravity"
+      ? point.listens > 20
+        ? "#ff825d"
+        : point.listens > 8
+          ? "#e8ce78"
+          : "#87b6aa"
+      : point.rank < total / 3
+        ? "#ff825d"
+        : point.rank < (total * 2) / 3
+          ? "#e8ce78"
+          : "#969bd2";
+
+// Keep the 1,111 static dots out of the rendering work for every finger movement.
+const MapDots = memo(function MapDots({
+  layout,
+  mode,
+  total,
+  maxListens,
+}: {
+  layout: { point: Point; x: number; y: number }[];
+  mode: Mode;
+  total: number;
+  maxListens: number;
+}) {
+  return (
+    <g>
+      {layout.map(({ point, x, y }) => (
+        <circle
+          key={point.rank}
+          cx={x}
+          cy={y}
+          r={
+            mode === "gravity"
+              ? 2.5 + 5 * Math.sqrt(point.listens / maxListens)
+              : 2.5
+          }
+          fill={mapColor(point, mode, total)}
+          opacity=".85"
+        />
+      ))}
+    </g>
+  );
+});
+
 function CosmosMap({ cosmos }: { cosmos: Cosmos }) {
   const [mode, setMode] = useState<Mode>("regions");
+  const [expanded, setExpanded] = useState(false);
+  const [plotHeight, setPlotHeight] = useState(600);
+  const graph = useRef<SVGSVGElement>(null);
+  useEffect(() => {
+    if (!graph.current) return;
+    const observer = new ResizeObserver(([entry]) => {
+      if (entry.contentRect.width > 0)
+        setPlotHeight(
+          (600 * entry.contentRect.height) / entry.contentRect.width,
+        );
+    });
+    observer.observe(graph.current);
+    return () => observer.disconnect();
+  }, []);
+  const [scrubbing, setScrubbing] = useState(false);
+  const pointerId = useRef<number | null>(null);
+  const frame = useRef<number | null>(null);
+  const workbench = useRef<HTMLDivElement>(null);
+  const expandButton = useRef<HTMLButtonElement>(null);
+  useEffect(
+    () => () => {
+      if (frame.current !== null) cancelAnimationFrame(frame.current);
+    },
+    [],
+  );
+  useEffect(() => {
+    if (!expanded) return;
+    const previousOverflow = document.body.style.overflow;
+    const previousFocus = document.activeElement as HTMLElement | null;
+    document.body.style.overflow = "hidden";
+    expandButton.current?.focus();
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setExpanded(false);
+        return;
+      }
+      if (event.key !== "Tab") return;
+      const controls = [
+        ...(workbench.current?.querySelectorAll<HTMLElement>(
+          'button:not(:disabled), select, a[href], [tabindex="0"]',
+        ) || []),
+      ].filter((node) => node.getClientRects().length > 0);
+      const first = controls[0],
+        last = controls.at(-1);
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", onKey);
+      previousFocus?.focus();
+    };
+  }, [expanded]);
   const [activeCluster, setActiveCluster] = useState<number | null>(null);
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(
@@ -238,25 +351,47 @@ function CosmosMap({ cosmos }: { cosmos: Cosmos }) {
       height: size,
     };
   }, [points, activeCluster]);
-  const position = (p: Point) => ({
-    x: 24 + ((p.x - bounds.x) / bounds.width) * 552,
-    y: 24 + (1 - (p.y - bounds.y) / bounds.height) * 552,
-  });
-  const color = (p: Point) =>
-    mode === "regions"
-      ? clusterColors[p.cluster]
-      : mode === "gravity"
-        ? p.listens > 20
-          ? "#ff825d"
-          : p.listens > 8
-            ? "#e8ce78"
-            : "#87b6aa"
-        : p.rank < cosmos.points.length / 3
-          ? "#ff825d"
-          : p.rank < (cosmos.points.length * 2) / 3
-            ? "#e8ce78"
-            : "#969bd2";
+  const position = (p: Point) => mapPosition(p, bounds, plotHeight);
+  const color = (p: Point) => mapColor(p, mode, cosmos.points.length);
+  const layout = useMemo(
+    () =>
+      points.map((point) => ({
+        point,
+        ...mapPosition(point, bounds, plotHeight),
+      })),
+    [points, bounds, plotHeight],
+  );
+  const selectAt = (clientX: number, clientY: number, svg: SVGSVGElement) => {
+    const box = svg.getBoundingClientRect();
+    const x = Math.max(
+      0,
+      Math.min(600, ((clientX - box.left) / box.width) * 600),
+    );
+    const y = Math.max(
+      0,
+      Math.min(plotHeight, ((clientY - box.top) / box.height) * plotHeight),
+    );
+    let nearest = layout[0];
+    let distance = Infinity;
+    for (const entry of layout) {
+      const next =
+        (((entry.x - x) * box.width) / 600) ** 2 +
+        (((entry.y - y) * box.height) / plotHeight) ** 2;
+      if (next < distance) {
+        nearest = entry;
+        distance = next;
+      }
+    }
+    setSelected(nearest.point);
+  };
+  const stopScrubbing = () => {
+    pointerId.current = null;
+    if (frame.current !== null) cancelAnimationFrame(frame.current);
+    frame.current = null;
+    setScrubbing(false);
+  };
   const chooseRegion = (value: string) => {
+    stopScrubbing();
     const id = value === "all" ? null : Number(value);
     setActiveCluster(id);
     if (id !== null) setSelected(cosmos.points.find((p) => p.cluster === id)!);
@@ -275,10 +410,17 @@ function CosmosMap({ cosmos }: { cosmos: Cosmos }) {
           </>
         }
       >
-        Nearby dots have similar musical traits. Pick a region to zoom in, then
-        tap the map or search for a song.
+        Drag across the dots to explore songs. Pick a region to zoom in; nearby
+        dots have similar musical traits.
       </SectionHeading>
-      <div className="atlas-workbench">
+      <div
+        className="atlas-workbench"
+        ref={workbench}
+        data-expanded={expanded}
+        role={expanded ? "dialog" : undefined}
+        aria-modal={expanded ? true : undefined}
+        aria-label={expanded ? "Expanded song map" : undefined}
+      >
         <div className="map-panel">
           <div className="map-toolbar">
             <span>
@@ -287,13 +429,30 @@ function CosmosMap({ cosmos }: { cosmos: Cosmos }) {
                 ? "ALL 1,111 SONGS"
                 : `${points.length} SONGS IN FOCUS`}
             </span>
-            <button
-              type="button"
-              disabled={activeCluster === null}
-              onClick={() => chooseRegion("all")}
-            >
-              <Map size={14} /> Full map
-            </button>
+            <div className="map-actions">
+              <button
+                type="button"
+                disabled={activeCluster === null}
+                aria-label="Full map"
+                onClick={() => chooseRegion("all")}
+              >
+                <Map size={14} />
+                <span>Full map</span>
+              </button>
+              <button
+                ref={expandButton}
+                type="button"
+                aria-label={expanded ? "Close expanded map" : "Expand map"}
+                aria-pressed={expanded}
+                onClick={() => {
+                  stopScrubbing();
+                  setExpanded((value) => !value);
+                }}
+              >
+                {expanded ? <Minimize2 size={17} /> : <Maximize2 size={17} />}
+                <span>{expanded ? "Close" : "Expand"}</span>
+              </button>
+            </div>
           </div>
           <div className="map-region-control">
             <label className="field-label" htmlFor="region">
@@ -302,6 +461,7 @@ function CosmosMap({ cosmos }: { cosmos: Cosmos }) {
             <div className="select-wrap">
               <select
                 id="region"
+                aria-label="Taste region"
                 value={activeCluster ?? "all"}
                 onChange={(e) => chooseRegion(e.target.value)}
               >
@@ -340,10 +500,49 @@ function CosmosMap({ cosmos }: { cosmos: Cosmos }) {
           </div>
           <svg
             className="taste-map"
-            viewBox="0 0 600 600"
+            ref={graph}
+            viewBox={`0 0 600 ${plotHeight}`}
+            preserveAspectRatio="none"
             role="group"
             tabIndex={0}
-            aria-label="Interactive song map. Tap to select a nearby song. Use left and right arrow keys to browse songs."
+            aria-label="Interactive song map. Drag your finger or pointer across the map to select nearby songs. Use left and right arrow keys to browse songs."
+            data-scrubbing={scrubbing}
+            onContextMenu={(event) => event.preventDefault()}
+            onPointerDown={(event) => {
+              if (!event.isPrimary || event.button !== 0) return;
+              if (frame.current !== null) cancelAnimationFrame(frame.current);
+              frame.current = null;
+              pointerId.current = event.pointerId;
+              event.currentTarget.setPointerCapture(event.pointerId);
+              setScrubbing(true);
+              selectAt(event.clientX, event.clientY, event.currentTarget);
+            }}
+            onPointerMove={(event) => {
+              if (
+                pointerId.current !== event.pointerId &&
+                !(
+                  pointerId.current === null &&
+                  event.pointerType === "mouse" &&
+                  event.buttons === 0
+                )
+              )
+                return;
+              const { clientX, clientY, currentTarget } = event;
+              if (frame.current !== null) cancelAnimationFrame(frame.current);
+              frame.current = requestAnimationFrame(() => {
+                frame.current = null;
+                selectAt(clientX, clientY, currentTarget);
+              });
+            }}
+            onPointerUp={(event) => {
+              if (pointerId.current !== event.pointerId) return;
+              selectAt(event.clientX, event.clientY, event.currentTarget);
+              stopScrubbing();
+              if (event.currentTarget.hasPointerCapture(event.pointerId))
+                event.currentTarget.releasePointerCapture(event.pointerId);
+            }}
+            onPointerCancel={stopScrubbing}
+            onLostPointerCapture={stopScrubbing}
             onKeyDown={(event) => {
               if (!["ArrowRight", "ArrowLeft"].includes(event.key)) return;
               event.preventDefault();
@@ -356,18 +555,6 @@ function CosmosMap({ cosmos }: { cosmos: Cosmos }) {
                     points.length
                 ],
               );
-            }}
-            onClick={(event) => {
-              const box = event.currentTarget.getBoundingClientRect();
-              const x = ((event.clientX - box.left) / box.width) * 600;
-              const y = ((event.clientY - box.top) / box.height) * 600;
-              const nearest = points.reduce((a, b) =>
-                Math.hypot(position(a).x - x, position(a).y - y) <
-                Math.hypot(position(b).x - x, position(b).y - y)
-                  ? a
-                  : b,
-              );
-              setSelected(nearest);
             }}
           >
             <defs>
@@ -389,36 +576,25 @@ function CosmosMap({ cosmos }: { cosmos: Cosmos }) {
                 />
               </pattern>
             </defs>
-            <rect width="600" height="600" fill="url(#map-background)" />
-            <rect width="600" height="600" fill="url(#map-grid)" />
+            <rect width="600" height={plotHeight} fill="url(#map-background)" />
+            <rect width="600" height={plotHeight} fill="url(#map-grid)" />
             {activeCluster === null &&
               cosmos.clusters.map((c) => (
                 <circle
                   key={c.id}
                   cx={24 + c.centroid[0] * 552}
-                  cy={24 + (1 - c.centroid[1]) * 552}
+                  cy={24 + (1 - c.centroid[1]) * (plotHeight - 48)}
                   r={24 + Math.sqrt(c.size) * 1.7}
                   fill={clusterColors[c.id]}
                   opacity=".07"
                 />
               ))}
-            {points.map((p) => {
-              const pos = position(p);
-              return (
-                <circle
-                  key={p.rank}
-                  cx={pos.x}
-                  cy={pos.y}
-                  r={
-                    mode === "gravity"
-                      ? 2.5 + 5 * Math.sqrt(p.listens / maxListens)
-                      : 2.5
-                  }
-                  fill={color(p)}
-                  opacity=".85"
-                />
-              );
-            })}
+            <MapDots
+              layout={layout}
+              mode={mode}
+              total={cosmos.points.length}
+              maxListens={maxListens}
+            />
             <circle
               cx={position(selected).x}
               cy={position(selected).y}
@@ -441,7 +617,7 @@ function CosmosMap({ cosmos }: { cosmos: Cosmos }) {
                   <i style={{ background: "#e8ce78" }} />
                   One dot = one liked song
                 </span>
-                <span>Tap anywhere to explore</span>
+                <span>Drag to explore</span>
               </>
             ) : mode === "chronology" ? (
               <>
@@ -473,12 +649,17 @@ function CosmosMap({ cosmos }: { cosmos: Cosmos }) {
           </div>
           <a
             className="now-selected"
+            data-scrubbing={scrubbing}
             href={musicUrl(selected.videoId)}
             target="_blank"
             rel="noreferrer"
           >
             <div className="art">
-              <Cover videoId={selected.videoId} />
+              {scrubbing ? (
+                <Disc3 size={30} />
+              ) : (
+                <Cover videoId={selected.videoId} />
+              )}
             </div>
             <div>
               <span
@@ -487,7 +668,7 @@ function CosmosMap({ cosmos }: { cosmos: Cosmos }) {
               >
                 {cosmos.clusters.find((c) => c.id === selected.cluster)?.name}
               </span>
-              <strong>{selected.title}</strong>
+              <strong title={selected.title}>{selected.title}</strong>
               <p>
                 {selected.artist} <span>· {selected.listens} watches</span>
               </p>
