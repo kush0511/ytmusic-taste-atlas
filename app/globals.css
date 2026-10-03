@@ -2915,3 +2915,14 @@ footer > a:last-child {
     display: none;
   }
 }
+@media (max-width: 900px) {
+  .atlas-section {
+    padding-top: 20px;
+  }
+  .atlas-section .section-heading {
+    margin-bottom: 12px;
+  }
+  .atlas-section .section-description {
+    display: none;
+  }
+}
